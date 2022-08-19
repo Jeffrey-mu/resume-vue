@@ -1,57 +1,22 @@
 <script setup lang="ts">
-const user = useUserStore()
-const name = $ref(user.savedName)
 
-const router = useRouter()
-const go = () => {
-  if (name)
-    router.push(`/hi/${encodeURIComponent(name)}`)
-}
 
-const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <div text-4xl>
-      <div i-carbon-campsite inline-block />
+  <div flex="~ 1 justify-center" class="page" w-300 ma>
+    <div mt-2 flex-1 p-5 class="content">
+      <SelfProfile />
+      <School />
+      <SelfIntroduction />
+      <PersonalSkills />
+      <WorkExperience />
+      <ProjectExperience />
     </div>
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
-      </a>
-    </p>
-    <p>
-      <em text-sm opacity-75>{{ t('intro.desc') }}</em>
-    </p>
-
-    <div py-4 />
-
-    <input
-      id="input"
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      :aria-label="t('intro.whats-your-name')"
-      type="text"
-      autocomplete="false"
-      p="x4 y2"
-      w="250px"
-      text="center"
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
-      @keydown.enter="go"
-    >
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
-
-    <div>
-      <button
-        btn m-3 text-sm
-        :disabled="!name"
-        @click="go"
-      >
-        {{ t('button.go') }}
-      </button>
+    <div w-40 flex="~ col" m-5>
+      <a-button mb-3 bg="#1890ff" c-white>进行配置</a-button>
+      <a-button mb-3 bg="#1890ff" c-white>保存简历</a-button>
+      <a-button mb-3 bg="#1890ff" c-white>PDF下载</a-button>
     </div>
   </div>
 </template>
@@ -60,3 +25,8 @@ const { t } = useI18n()
 meta:
   layout: home
 </route>
+<style scoped>
+.content {
+  box-shadow: 1px 1px 6px 1px #ccc;
+}
+</style>

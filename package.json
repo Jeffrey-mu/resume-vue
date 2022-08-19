@@ -16,6 +16,7 @@
   "dependencies": {
     "@vueuse/core": "^8.9.2",
     "@vueuse/head": "^0.7.6",
+    "ant-design-vue": "^3.2.11",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.16",
     "prism-theme-vars": "^0.2.4",
