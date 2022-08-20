@@ -19,6 +19,7 @@ declare module '@vue/runtime-core' {
     PersonalSkills: typeof import('./components/resume/PersonalSkills.vue')['default']
     ProjectExperience: typeof import('./components/resume/ProjectExperience.vue')['default']
     README: typeof import('./components/README.md')['default']
+    Resume: typeof import('./components/resume/Resume.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     School: typeof import('./components/resume/School.vue')['default']
