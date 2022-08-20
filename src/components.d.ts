@@ -8,9 +8,11 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     2: typeof import('./components/SelfIntroduction copy 2.vue')['default']
+    Collapse: typeof import('./components/resume/Collapse.vue')['default']
     copy: typeof import('./components/SelfIntroduction copy.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
     Divider: typeof import('./components/Divider.vue')['default']
+    Drawer: typeof import('./components/resume/Drawer.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Operation: typeof import('./components/resume/Operation.vue')['default']

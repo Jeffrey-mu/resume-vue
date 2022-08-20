@@ -1,6 +1,4 @@
 <script setup lang="ts">
-
-
 </script>
 
 <template>
@@ -23,8 +21,8 @@
       <ProjectExperience />
     </div>
     <Operation />
-
   </div>
+  <Drawer />
 </template>
 
 <route lang="yaml">
