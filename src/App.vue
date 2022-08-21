@@ -6,6 +6,7 @@ useHead({
   title: "resume",
   meta: [
     { name: "description", content: "Opinionated Vite Starter Template" },
+    { name: "keywords", content: "resume 简历 在线制作简历 下载简历 前端程序员简历 程序员简历 在线写简历 PDF" },
     {
       name: "theme-color",
       content: computed(() => (isDark.value ? "#00aba9" : "#ffffff")),
