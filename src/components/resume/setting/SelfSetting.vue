@@ -1,5 +1,5 @@
 <script setup lang="ts" name="SelfInfo">
-import { selfIntroduce } from "~/composables/resume";
+import { SelfIntroduce as s } from "~/composables/resume";
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import { selfIntroduce } from "~/composables/resume";
   >
     <a-form-item label="" name="">
       <a-textarea
-        v-model:value="selfIntroduce"
+        v-model:value="s"
         :rows="20"
         placeholder="输入个人介绍"
         allow-clear

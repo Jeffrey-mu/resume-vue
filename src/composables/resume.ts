@@ -5,6 +5,8 @@ import SelfSetting from "~/components/resume/setting/SelfSetting.vue";
 import SkillsSetting from "~/components/resume/setting/SkillsSetting.vue";
 import { type Component } from "vue";
 export const radius = ref<string>("50%");
+export const model = ref<boolean>(false);
+export const setModel = () => (model.value = !model.value);
 export const setRadius = (boolean: boolean) => {
   radius.value = boolean ? "50%" : "0%";
 };
@@ -114,7 +116,7 @@ export const activeComponent = computed(() => {
   return settingList.find((item) => item.key === activeKey.value)
     ?.componentName;
 });
-export const selfIntroduce =
+export const SelfIntroduce =
   ref(`Focus on data visualization and analysis 😈 能力项：沟通协调能力、执行力
     自驱型前端工程师，三年多大型复杂产品开发经验，负责蚂蚁集团 BI 产品
     DeepInsight 的可视化建设，参与了从图表库到 BI

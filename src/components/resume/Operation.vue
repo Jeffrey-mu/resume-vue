@@ -1,20 +1,30 @@
 <script setup lang="ts" name="operation">
 import { setVisible } from "~/composables/resume";
-function print() {
-  window.print();
+import { getConfig, exportDataToLocal } from "~/utils";
+import { print } from "~/utils";
+interface BtnList {
+  label: string;
+  fn: Function;
 }
-const BTN_LISt = [
+const exportData = () => {
+  exportDataToLocal(getConfig(), "config");
+};
+const BTN_LISt: BtnList[] = [
   {
     label: "进行配置",
     fn: setVisible,
   },
   {
     label: "保存简历",
-    fn: null,
+    fn: exportData,
+  },
+  {
+    label: "复制配置",
+    fn: () => {},
   },
   {
     label: "导出配置",
-    fn: null,
+    fn: exportData,
   },
   {
     label: "PDF下载",
@@ -23,7 +33,7 @@ const BTN_LISt = [
 ];
 </script>
 <template>
-  <div w-40 flex="~ col" m-5 class="box_btn">
+  <div v-show="model" w-40 flex="~ col" m-5 class="box_btn">
     <Button
       mb-3
       bg="#1890ff"

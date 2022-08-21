@@ -2,7 +2,7 @@
 
 <template>
   <div flex="~ 1 justify-center" h-80vh class="page" w-300 ma>
-    <div mt-2 flex-1 p-5 class="content" m-2>
+    <div mt-2 p-5 max-w-250 class="content" m-2>
       <SelfProfile />
       <Divider title="教育背景" />
       <School />

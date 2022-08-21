@@ -1,14 +1,14 @@
 button:
-  about: Acerca de
-  back: Atrás
-  go: Ir
-  home: Inicio
-  toggle_dark: Alternar modo oscuro
-  toggle_langs: Cambiar idiomas
+  about: 关于
+  back: 返回
+  go: 确定
+  home: 首页
+  toggle_dark: 切换深色模式
+  toggle_langs: 切换语言
 intro:
-  desc: Plantilla de Inicio de Vite Dogmática
-  dynamic-route: Demo de ruta dinámica
-  hi: ¡Hola, {name}!
-  aka: También conocido como
-  whats-your-name: ¿Cómo te llamas?
-not-found: No se ha encontrado
+  desc: 固执己见的 Vite 项目模板
+  dynamic-route: 动态路由演示
+  hi: 你好，{name}
+  aka: 也叫
+  whats-your-name: 输入你的名字
+not-found: 未找到页面

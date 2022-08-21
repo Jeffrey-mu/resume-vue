@@ -11,6 +11,7 @@ declare global {
   const EffectScope: typeof import('vue')['EffectScope']
   const PersonalSkillsState: typeof import('./composables/resume')['PersonalSkillsState']
   const SchoolState: typeof import('./composables/resume')['SchoolState']
+  const SelfIntroduce: typeof import('./composables/resume')['SelfIntroduce']
   const SelfProfileState: typeof import('./composables/resume')['SelfProfileState']
   const activeComponent: typeof import('./composables/resume')['activeComponent']
   const activeKey: typeof import('./composables/resume')['activeKey']
@@ -57,6 +58,7 @@ declare global {
   const logicOr: typeof import('@vueuse/core')['logicOr']
   const makeDestructurable: typeof import('@vueuse/core')['makeDestructurable']
   const markRaw: typeof import('vue')['markRaw']
+  const model: typeof import('./composables/resume')['model']
   const nextTick: typeof import('vue')['nextTick']
   const onActivated: typeof import('vue')['onActivated']
   const onBeforeMount: typeof import('vue')['onBeforeMount']
@@ -96,8 +98,8 @@ declare global {
   const resolveRef: typeof import('@vueuse/core')['resolveRef']
   const resolveUnref: typeof import('@vueuse/core')['resolveUnref']
   const selfFilter: typeof import('./composables/resume')['selfFilter']
-  const selfIntroduce: typeof import('./composables/resume')['selfIntroduce']
   const setChildrenDrawer: typeof import('./composables/resume')['setChildrenDrawer']
+  const setModel: typeof import('./composables/resume')['setModel']
   const setRadius: typeof import('./composables/resume')['setRadius']
   const setVisible: typeof import('./composables/resume')['setVisible']
   const settingList: typeof import('./composables/resume')['settingList']
@@ -292,6 +294,7 @@ declare module '@vue/runtime-core' {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly PersonalSkillsState: UnwrapRef<typeof import('./composables/resume')['PersonalSkillsState']>
     readonly SchoolState: UnwrapRef<typeof import('./composables/resume')['SchoolState']>
+    readonly SelfIntroduce: UnwrapRef<typeof import('./composables/resume')['SelfIntroduce']>
     readonly SelfProfileState: UnwrapRef<typeof import('./composables/resume')['SelfProfileState']>
     readonly activeComponent: UnwrapRef<typeof import('./composables/resume')['activeComponent']>
     readonly activeKey: UnwrapRef<typeof import('./composables/resume')['activeKey']>
@@ -338,6 +341,7 @@ declare module '@vue/runtime-core' {
     readonly logicOr: UnwrapRef<typeof import('@vueuse/core')['logicOr']>
     readonly makeDestructurable: UnwrapRef<typeof import('@vueuse/core')['makeDestructurable']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
+    readonly model: UnwrapRef<typeof import('./composables/resume')['model']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
@@ -377,8 +381,8 @@ declare module '@vue/runtime-core' {
     readonly resolveRef: UnwrapRef<typeof import('@vueuse/core')['resolveRef']>
     readonly resolveUnref: UnwrapRef<typeof import('@vueuse/core')['resolveUnref']>
     readonly selfFilter: UnwrapRef<typeof import('./composables/resume')['selfFilter']>
-    readonly selfIntroduce: UnwrapRef<typeof import('./composables/resume')['selfIntroduce']>
     readonly setChildrenDrawer: UnwrapRef<typeof import('./composables/resume')['setChildrenDrawer']>
+    readonly setModel: UnwrapRef<typeof import('./composables/resume')['setModel']>
     readonly setRadius: UnwrapRef<typeof import('./composables/resume')['setRadius']>
     readonly setVisible: UnwrapRef<typeof import('./composables/resume')['setVisible']>
     readonly settingList: UnwrapRef<typeof import('./composables/resume')['settingList']>
