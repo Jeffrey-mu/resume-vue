@@ -5,7 +5,7 @@ function keys(item) {
   return Object.keys(item);
 }
 
-const schoolName = "schoolName"
+const schoolName = "schoolName";
 </script>
 
 <template>
@@ -24,7 +24,11 @@ const schoolName = "schoolName"
         :name="el"
       >
         <a-input v-if="el === schoolName" v-model:value="item[el]" />
-        <a-date-picker v-else v-model:value="item[el]" valueFormat="YYYY-MM-DD"/>
+        <a-date-picker
+          v-else
+          v-model:value="item[el]"
+          valueFormat="YYYY-MM-DD"
+        />
       </a-form-item>
     </template>
   </a-form>

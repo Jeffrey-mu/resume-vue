@@ -1,13 +1,11 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <Resume/>
+  <Resume />
 </template>
 
 <route lang="yaml">
 meta:
   layout: home
 </route>
-<style scoped>
-</style>
+<style scoped></style>

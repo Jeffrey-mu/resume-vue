@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {activeKey} from "~/composables/resume"
+import { activeKey } from "~/composables/resume";
 </script>
 <template>
   <a-collapse v-model:activeKey="activeKey" ghost accordion>
@@ -13,6 +13,3 @@ import {activeKey} from "~/composables/resume"
     </a-collapse-panel>
   </a-collapse>
 </template>
-
-
-

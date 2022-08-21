@@ -12,11 +12,9 @@
       width="320"
       @close="setChildrenDrawer"
     >
-    <component :is="activeComponent"></component>
+      <component :is="activeComponent"></component>
     </a-drawer>
     <Collapse />
   </a-drawer>
 </template>
-<script setup lang="ts">
-</script>
-
+<script setup lang="ts"></script>

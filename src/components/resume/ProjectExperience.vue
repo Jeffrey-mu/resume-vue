@@ -1,5 +1,4 @@
-<script setup lang="ts" name="ProjectExperience">
-</script>
+<script setup lang="ts" name="ProjectExperience"></script>
 <template>
   <div>
     数据作战室2019.04 - 2020.06 前端负责人 项目描述：面向总裁和高管以及决策 BI

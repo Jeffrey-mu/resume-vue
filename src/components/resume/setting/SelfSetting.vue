@@ -11,7 +11,12 @@ import { selfIntroduce } from "~/composables/resume";
     autocomplete="off"
   >
     <a-form-item label="" name="">
-      <a-textarea v-model:value="selfIntroduce" :rows="20"  placeholder="输入个人介绍" allow-clear />
+      <a-textarea
+        v-model:value="selfIntroduce"
+        :rows="20"
+        placeholder="输入个人介绍"
+        allow-clear
+      />
     </a-form-item>
   </a-form>
 </template>

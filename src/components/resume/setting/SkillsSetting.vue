@@ -30,10 +30,14 @@ function setPersonalSkillsState(type: Type, index: number) {
         <div flex lh-4 mt-2>
           熟练度：<a-rate inline-block flex v-model:value="item.level" />
         </div>
-        <a-button my-2 danger float-right @click="setPersonalSkillsState(Type.del, index)"
+        <a-button
+          my-2
+          danger
+          float-right
+          @click="setPersonalSkillsState(Type.del, index)"
           >删除</a-button
         >
-        <a-divider/>
+        <a-divider />
       </a-form-item>
     </div>
     <Button block @click="setPersonalSkillsState(Type.add, index)">添加</Button>

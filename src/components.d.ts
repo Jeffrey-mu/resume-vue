@@ -7,16 +7,16 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    2: typeof import('./components/SelfIntroduction copy 2.vue')['default']
+    2: typeof import("./components/SelfIntroduction copy 2.vue")["default"]
     Button: typeof import('./components/Button.vue')['default']
     Collapse: typeof import('./components/resume/Collapse.vue')['default']
-    copy: typeof import('./components/resume/setting/SelfSetting.vue')['default']
+    copy: typeof import("./components/resume/setting/SelfSetting.vue")["default"]
     Counter: typeof import('./components/Counter.vue')['default']
     Divider: typeof import('./components/Divider.vue')['default']
     Drawer: typeof import('./components/resume/Drawer.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
-    HeadImg: typeof import('./components/resume/setting/HeadImg.vue')['default']
+    HeadImg: typeof import("./components/resume/setting/HeadImg.vue")["default"]
     HeadImgSetting: typeof import('./components/resume/setting/HeadImgSetting.vue')['default']
     Operation: typeof import('./components/resume/Operation.vue')['default']
     PersonalSkills: typeof import('./components/resume/PersonalSkills.vue')['default']
@@ -27,13 +27,13 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     School: typeof import('./components/resume/School.vue')['default']
     SchoolSetting: typeof import('./components/resume/setting/SchoolSetting.vue')['default']
-    SelfInfo: typeof import('./components/resume/setting/SelfInfo.vue')['default']
+    SelfInfo: typeof import("./components/resume/setting/SelfInfo.vue")["default"]
     SelfInfoSetting: typeof import('./components/resume/setting/SelfInfoSetting.vue')['default']
     SelfIntroduction: typeof import('./components/resume/SelfIntroduction.vue')['default']
     SelfProfile: typeof import('./components/resume/SelfProfile.vue')['default']
     SelfSetting: typeof import('./components/resume/setting/SelfSetting.vue')['default']
     SkillsSetting: typeof import('./components/resume/setting/SkillsSetting.vue')['default']
-    Sohcol: typeof import('./components/Sohcol.vue')['default']
+    Sohcol: typeof import("./components/Sohcol.vue")["default"]
     WorkExperience: typeof import('./components/resume/WorkExperience.vue')['default']
   }
 }
