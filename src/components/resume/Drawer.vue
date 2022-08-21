@@ -2,16 +2,17 @@
   <a-drawer
     :visible="visible"
     class="custom-class"
-    title=""
+    title="配置界面"
     placement="right"
     @close="setVisible"
   >
     <a-drawer
       :visible="childrenDrawer"
-      title="Two-level Drawer"
+      :title="activeName"
       width="320"
       @close="setChildrenDrawer"
     >
+    <component :is="activeComponent"></component>
     </a-drawer>
     <Collapse />
   </a-drawer>

@@ -1,13 +1,15 @@
 <script setup lang="ts" name="School">
-
 </script>
 <template>
-<div flex="~" justify-between>
+<div>
+  <div flex="~" justify-between v-for="item,index in SchoolState" :key="index">
   <div>
-    华南理工大学网络工程(本科)
+    {{item.schoolName}}
   </div>
   <div>
-    2014.09.01 ~ 2018.06.30
+    {{item.start}}~{{item.end}}
   </div>
 </div>
+</div>
+
 </template>

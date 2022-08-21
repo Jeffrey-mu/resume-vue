@@ -9,6 +9,12 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
+  const PersonalSkillsState: typeof import('./composables/resume')['PersonalSkillsState']
+  const SchoolState: typeof import('./composables/resume')['SchoolState']
+  const SelfProfileState: typeof import('./composables/resume')['SelfProfileState']
+  const activeComponent: typeof import('./composables/resume')['activeComponent']
+  const activeKey: typeof import('./composables/resume')['activeKey']
+  const activeName: typeof import('./composables/resume')['activeName']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const childrenDrawer: typeof import('./composables/resume')['childrenDrawer']
@@ -89,9 +95,12 @@ declare global {
   const resolveComponent: typeof import('vue')['resolveComponent']
   const resolveRef: typeof import('@vueuse/core')['resolveRef']
   const resolveUnref: typeof import('@vueuse/core')['resolveUnref']
+  const selfFilter: typeof import('./composables/resume')['selfFilter']
+  const selfIntroduce: typeof import('./composables/resume')['selfIntroduce']
   const setChildrenDrawer: typeof import('./composables/resume')['setChildrenDrawer']
   const setRadius: typeof import('./composables/resume')['setRadius']
   const setVisible: typeof import('./composables/resume')['setVisible']
+  const settingList: typeof import('./composables/resume')['settingList']
   const shallowReactive: typeof import('vue')['shallowReactive']
   const shallowReadonly: typeof import('vue')['shallowReadonly']
   const shallowRef: typeof import('vue')['shallowRef']
@@ -281,6 +290,12 @@ declare module '@vue/runtime-core' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly PersonalSkillsState: UnwrapRef<typeof import('./composables/resume')['PersonalSkillsState']>
+    readonly SchoolState: UnwrapRef<typeof import('./composables/resume')['SchoolState']>
+    readonly SelfProfileState: UnwrapRef<typeof import('./composables/resume')['SelfProfileState']>
+    readonly activeComponent: UnwrapRef<typeof import('./composables/resume')['activeComponent']>
+    readonly activeKey: UnwrapRef<typeof import('./composables/resume')['activeKey']>
+    readonly activeName: UnwrapRef<typeof import('./composables/resume')['activeName']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly childrenDrawer: UnwrapRef<typeof import('./composables/resume')['childrenDrawer']>
@@ -361,9 +376,12 @@ declare module '@vue/runtime-core' {
     readonly resolveComponent: UnwrapRef<typeof import('vue')['resolveComponent']>
     readonly resolveRef: UnwrapRef<typeof import('@vueuse/core')['resolveRef']>
     readonly resolveUnref: UnwrapRef<typeof import('@vueuse/core')['resolveUnref']>
+    readonly selfFilter: UnwrapRef<typeof import('./composables/resume')['selfFilter']>
+    readonly selfIntroduce: UnwrapRef<typeof import('./composables/resume')['selfIntroduce']>
     readonly setChildrenDrawer: UnwrapRef<typeof import('./composables/resume')['setChildrenDrawer']>
     readonly setRadius: UnwrapRef<typeof import('./composables/resume')['setRadius']>
     readonly setVisible: UnwrapRef<typeof import('./composables/resume')['setVisible']>
+    readonly settingList: UnwrapRef<typeof import('./composables/resume')['settingList']>
     readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>
     readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>

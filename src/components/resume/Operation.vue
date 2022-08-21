@@ -24,7 +24,7 @@ const BTN_LISt = [
 </script>
 <template>
   <div w-40 flex="~ col" m-5 class="box_btn">
-    <a-button mb-3 bg="#1890ff" c-white v-for="{fn, label} in BTN_LISt" :key="label" @click="fn">{{label}}</a-button>
+    <Button mb-3 bg="#1890ff" c-white v-for="{fn, label} in BTN_LISt" :key="label" @click="fn">{{label}}</Button>
   </div>
 </template>
 <style>

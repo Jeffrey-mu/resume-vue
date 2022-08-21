@@ -3,10 +3,10 @@ const value = ref<number>(2);
 </script>
 <template>
   <div>
-    <div flex>
+    <div flex="~" justify-start v-for="item, index in PersonalSkillsState" :key="index">
       <img src="" alt="" />
-      <p></p>
-      <a-rate flex v-model="value" />
+      <p flex-1>{{item.skill}}</p>
+     <a-rate flex v-model:value="item.level" />
     </div>
   </div>
 </template>
