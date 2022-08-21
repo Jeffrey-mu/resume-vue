@@ -30,7 +30,7 @@ interface SelfProfileStateModel {
   radius: string;
 }
 export const SelfProfileState = ref<SelfProfileStateModel>({
-  name: "王佳峰",
+  name: "myName",
   tel: "185****5387",
   github: "http://github.com/Jeffref-mu",
   email: "1115378579@qq.com",
