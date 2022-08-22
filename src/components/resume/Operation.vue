@@ -50,5 +50,8 @@ const BTN_LISt: BtnList[] = [
   .box_btn {
     display: none !important;
   }
+  nav {
+    display: none !important;
+  }
 }
 </style>

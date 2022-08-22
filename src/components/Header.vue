@@ -9,7 +9,16 @@ const toggleLocales = () => {
 </script>
 
 <template>
-  <nav bg="#1890ff" px-10 flex justify-between h-10 lh-10 class="font2">
+  <nav
+    bg="#1890ff"
+    px-10
+    flex
+    justify-between
+    h-10
+    lh-10
+    class="font2"
+    w="100%"
+  >
     <span c="#fff">Resume</span>
     <div flex>
       <span c="#fff" @click="setModel">{{ model ? "预览" : "编辑" }}</span>
