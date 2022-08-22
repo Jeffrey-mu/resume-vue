@@ -7,7 +7,7 @@
     autocomplete="off"
   >
     <a-form-item
-    ma-0
+      ma-0
       :label="index + 1"
       name=""
       v-for="(item, index) in SelfIntroduce"
@@ -17,4 +17,3 @@
     </a-form-item>
   </a-form>
 </template>
-

@@ -32,7 +32,8 @@ useHead({
   <RouterView />
 </template>
 <style>
-div, p {
+div,
+p {
   font-size: 14px;
 }
 .small {

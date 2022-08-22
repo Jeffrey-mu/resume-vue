@@ -11,11 +11,10 @@ import {
   SelfIntroduce,
   PersonalSkillsState,
   PerjectState,
-  WorkExperienceState
-
+  WorkExperienceState,
 } from "~/composables/resume";
-import { Ref } from "vue"
-import { OperationType } from '~/composables/resume';
+import { Ref } from "vue";
+import { OperationType } from "~/composables/resume";
 export function print() {
   window.print();
 }
@@ -41,16 +40,16 @@ export const getConfig = () => {
 
 export const operationData = (data: Ref) => {
   return (type: OperationType, index: string) => {
-    let newData = JSON.parse(JSON.stringify(data.value[0]))
+    let newData = JSON.parse(JSON.stringify(data.value[0]));
     if (typeof newData === "string") {
-      newData = ""
+      newData = "";
     } else {
-      newData = Object.keys(newData).map(k => newData[k] = "")
+      newData = Object.keys(newData).map((k) => (newData[k] = ""));
     }
     if (type == OperationType.del) {
       data.value.splice(index, 1);
     } else {
       data.value.push(newData);
     }
-  }
-}
+  };
+};

@@ -33,7 +33,12 @@ function setPerjectState(type: Type, index: number) {
           <a-input v-model:value="item[el]"></a-input>
         </template>
         <template v-else>
-          <a-input v-for="_, descIndex in item[el]" v-model:value="item[el][descIndex]" :key="descIndex" mt-2></a-input>
+          <a-input
+            v-for="(_, descIndex) in item[el]"
+            v-model:value="item[el][descIndex]"
+            :key="descIndex"
+            mt-2
+          ></a-input>
         </template>
       </a-form-item>
       <a-button

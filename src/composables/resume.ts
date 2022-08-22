@@ -129,7 +129,8 @@ export const SelfIntroduce = ref([
   `负责前端技术架构设计，探索Web前端与游戏前端技术结合领域，推进新技术在业务中落地`,
   `主导并参与美团游戏项目的设计过程和方案调研，对技术方案、风险进行评审和分析`,
   `深入理解业务，注重产品和用户体验，支持和推动业务的快速迭代发展`,
-  `具备良好学习能力、沟通能力、需求落地能力、数学及抽象思维能力、承压能力`]);
+  `具备良好学习能力、沟通能力、需求落地能力、数学及抽象思维能力、承压能力`,
+]);
 export const selfFilter = ["name", "showImg", "radius"];
 interface PersonalSkillsStateModel {
   skill: string;
@@ -152,13 +153,23 @@ export const WorkExperienceState = ref<WorkExperienceStateModel[]>([
     company: "xxxxxx 公司",
     position: " 独立开发",
     date: "2021-21~2022-01",
-    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+    desc: [
+      "具体功能",
+      "运用了那些技术，技术难点是",
+      "效果如何",
+      "demo演示地址，github地址",
+    ],
   },
   {
     company: "xxxxxx 公司",
     position: " 独立开发",
     date: "2021-21~2022-01",
-    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+    desc: [
+      "具体功能",
+      "运用了那些技术，技术难点是",
+      "效果如何",
+      "demo演示地址，github地址",
+    ],
   },
 ]);
 
@@ -171,22 +182,42 @@ export const PerjectState = ref<PerjectStateModel[]>([
   {
     company: "美团外卖 🐶",
     position: " 技术总监",
-    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+    desc: [
+      "具体功能",
+      "运用了那些技术，技术难点是",
+      "效果如何",
+      "demo演示地址，github地址",
+    ],
   },
   {
     company: "饿了么外卖 🐶",
     position: " 切图仔",
-    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+    desc: [
+      "具体功能",
+      "运用了那些技术，技术难点是",
+      "效果如何",
+      "demo演示地址，github地址",
+    ],
   },
   {
     company: "腾讯视频 🐶",
     position: " 摸鱼程序员",
-    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+    desc: [
+      "具体功能",
+      "运用了那些技术，技术难点是",
+      "效果如何",
+      "demo演示地址，github地址",
+    ],
   },
   {
     company: "微信 🐶",
     position: " 写bug",
-    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+    desc: [
+      "具体功能",
+      "运用了那些技术，技术难点是",
+      "效果如何",
+      "demo演示地址，github地址",
+    ],
   },
 ]);
 export enum OperationType {
