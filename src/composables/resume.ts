@@ -1,9 +1,17 @@
+/**
+ * @Author WangJiaFeng
+ * @Description 简历状态
+ * @email 1115378579@qq.com
+ * @Date 2022-08-22 11:39:08 星期一
+ * @return
+ */
 import HeadImgSetting from "~/components/resume/setting/HeadImgSetting.vue";
 import SelfInfoSetting from "~/components/resume/setting/SelfInfoSetting.vue";
 import SchoolSetting from "~/components/resume/setting/SchoolSetting.vue";
 import SelfSetting from "~/components/resume/setting/SelfSetting.vue";
 import SkillsSetting from "~/components/resume/setting/SkillsSetting.vue";
 import WorkExperienceSetting from "~/components/resume/setting/WorkExperienceSetting.vue";
+import PerjectSetting from "~/components/resume/setting/PerjectSetting.vue";
 import { type Component } from "vue";
 export const radius = ref<string>("50%");
 export const model = ref<boolean>(false);
@@ -31,7 +39,7 @@ interface SelfProfileStateModel {
   radius: string;
 }
 export const SelfProfileState = ref<SelfProfileStateModel>({
-  name: "myName",
+  name: "Jeffrey",
   tel: "185****5387",
   github: "http://github.com/Jeffref-mu",
   email: "1115378579@qq.com",
@@ -96,7 +104,7 @@ export const settingList: SettingListModel[] = [
     header: "项目经历",
     showArrow: true,
     key: "9",
-    componentName: HeadImgSetting,
+    componentName: PerjectSetting,
   },
 ];
 
@@ -153,3 +161,35 @@ export const WorkExperienceState = ref<WorkExperienceStateModel[]>([
     desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
   },
 ]);
+
+interface PerjectStateModel {
+  company: string;
+  position: string;
+  desc: string[];
+}
+export const PerjectState = ref<PerjectStateModel[]>([
+  {
+    company: "美团外卖 🐶",
+    position: " 技术总监",
+    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+  },
+  {
+    company: "饿了么外卖 🐶",
+    position: " 切图仔",
+    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+  },
+  {
+    company: "腾讯视频 🐶",
+    position: " 摸鱼程序员",
+    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+  },
+  {
+    company: "微信 🐶",
+    position: " 写bug",
+    desc: ["具体功能", '运用了那些技术，技术难点是', '效果如何', 'demo演示地址，github地址'],
+  },
+]);
+export enum OperationType {
+  del,
+  add,
+}

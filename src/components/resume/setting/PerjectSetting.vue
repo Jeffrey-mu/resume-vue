@@ -1,11 +1,11 @@
-<script setup lang="ts" name="WorkExperienceSetting">
-import { WorkExperienceState as s } from "~/composables/resume";
+<script setup lang="ts" name="PerjectSetting">
+import { PerjectState as s } from "~/composables/resume";
 enum Type {
   del,
   add,
 }
 const keys = (item: object) => Object.keys(item);
-function setWorkExperienceState(type: Type, index: number) {
+function setPerjectState(type: Type, index: number) {
   if (type == Type.del) {
     s.value.splice(index, 1);
   } else {

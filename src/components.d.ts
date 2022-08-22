@@ -20,6 +20,7 @@ declare module '@vue/runtime-core' {
     HeadImg: typeof import("./components/resume/setting/HeadImg.vue")["default"]
     HeadImgSetting: typeof import('./components/resume/setting/HeadImgSetting.vue')['default']
     Operation: typeof import('./components/resume/Operation.vue')['default']
+    PerjectSetting: typeof import('./components/resume/setting/PerjectSetting.vue')['default']
     PersonalSkills: typeof import('./components/resume/PersonalSkills.vue')['default']
     ProjectExperience: typeof import('./components/resume/ProjectExperience.vue')['default']
     README: typeof import('./components/README.md')['default']

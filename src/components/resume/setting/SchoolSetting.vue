@@ -1,4 +1,4 @@
-<script setup lang="ts" name="SelfInfo">
+<script setup lang="ts" name="SchoolSetting">
 import { SchoolState as s } from "~/composables/resume";
 
 function keys(item) {

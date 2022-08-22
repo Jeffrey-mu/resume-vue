@@ -1,4 +1,4 @@
-<script setup lang="ts" name="SelfInfo">
+<script setup lang="ts" name="SelfInfoSetting">
 import { SelfProfileState as s, selfFilter } from "~/composables/resume";
 
 const info = computed(() => {

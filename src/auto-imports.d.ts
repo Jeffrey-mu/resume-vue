@@ -9,6 +9,7 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
+  const PerjectState: typeof import('./composables/resume')['PerjectState']
   const PersonalSkillsState: typeof import('./composables/resume')['PersonalSkillsState']
   const SchoolState: typeof import('./composables/resume')['SchoolState']
   const SelfIntroduce: typeof import('./composables/resume')['SelfIntroduce']
@@ -293,6 +294,7 @@ declare module '@vue/runtime-core' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly PerjectState: UnwrapRef<typeof import('./composables/resume')['PerjectState']>
     readonly PersonalSkillsState: UnwrapRef<typeof import('./composables/resume')['PersonalSkillsState']>
     readonly SchoolState: UnwrapRef<typeof import('./composables/resume')['SchoolState']>
     readonly SelfIntroduce: UnwrapRef<typeof import('./composables/resume')['SelfIntroduce']>
