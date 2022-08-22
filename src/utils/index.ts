@@ -10,6 +10,9 @@ import {
   SchoolState,
   SelfIntroduce,
   PersonalSkillsState,
+  PerjectState,
+  WorkExperienceState
+
 } from "~/composables/resume";
 import { Ref } from "vue"
 import { OperationType } from '~/composables/resume';
@@ -31,6 +34,8 @@ export const getConfig = () => {
     SchoolState: SchoolState.value,
     SelfIntroduce: SelfIntroduce.value,
     PersonalSkillsState: PersonalSkillsState.value,
+    PerjectState: PerjectState.value,
+    WorkExperienceState: WorkExperienceState.value,
   };
 };
 
