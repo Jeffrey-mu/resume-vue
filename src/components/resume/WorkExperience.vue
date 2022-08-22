@@ -1,13 +1,33 @@
-<script setup lang="ts" name="WorkExperience"></script>
+<script setup lang="ts" name="WorkExperience">
+import { functions } from "cypress/types/lodash";
+import { WorkExperienceState as W } from "~/composables/resume";
+function keys(item: object, filter: string[], model: boolean) {
+  return Object.keys(item).filter((el) =>
+    model ? filter.includes(el) : !filter.includes(el)
+  );
+}
+function style(index: number): any {
+  switch (index) {
+    case 0:
+      return {'font-weight': 'bold'}
+    case 1:
+      return {color: '#777', 'margin-left': '10px'}
+    case 2:
+      return {flex: '1', 'text-align': 'right', color: '#777'}
+  }
+}
+</script>
 <template>
-  <div>
-    蚂蚁集团体验技术部 2018.06 至今 1. 担任蚂蚁高管决策和管理协同产品
-    “数据作战室” 的前端负责人 2. 负责蚂蚁敏捷 BI 产品 “DeepInsight”
-    的可视分析模块产品能力建设 3. 数据可视化 AntV 团队核心成员，负责 G2、G2Plot
-    开源技术的建设 蚂蚁金服大数据部 2017.06 ~ 2017.12 前端实习生。使用 React
-    参与开发多类产品：数据研发平台、数据决策平台、数据分析平台的研发工作，同时也参与大型
-    BI 产品的重构工作，有良好的编码习惯。 数沃信息科技有限公司 2017.03 ~ 2017.05
-    前端实习生。使用 Vue 来实现平台功能和逻辑，再用 ECharts
-    来对数据挖掘分析后的可视化结果进行展示
+  <div v-for="(item, index) in W" :key="index" mb-3>
+    <div flex>
+      <div v-for="el, elIndex in keys(item, ['desc'], false)" :key="el" :style="[style(elIndex)]">
+        {{ item[el] }}
+      </div>
+    </div>
+    <div v-for="el in keys(item, ['desc'], true)" :key="el">
+      <p v-for="text, index in item[el]" :key="text">
+        {{index + 1}}、{{text}}
+      </p>
+    </div>
   </div>
 </template>

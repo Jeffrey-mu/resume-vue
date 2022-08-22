@@ -36,5 +36,6 @@ declare module '@vue/runtime-core' {
     SkillsSetting: typeof import('./components/resume/setting/SkillsSetting.vue')['default']
     Sohcol: typeof import("./components/Sohcol.vue")["default"]
     WorkExperience: typeof import('./components/resume/WorkExperience.vue')['default']
+    WorkExperienceSetting: typeof import('./components/resume/setting/WorkExperienceSetting.vue')['default']
   }
 }

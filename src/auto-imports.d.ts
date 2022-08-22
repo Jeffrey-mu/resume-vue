@@ -13,6 +13,7 @@ declare global {
   const SchoolState: typeof import('./composables/resume')['SchoolState']
   const SelfIntroduce: typeof import('./composables/resume')['SelfIntroduce']
   const SelfProfileState: typeof import('./composables/resume')['SelfProfileState']
+  const WorkExperienceState: typeof import('./composables/resume')['WorkExperienceState']
   const activeComponent: typeof import('./composables/resume')['activeComponent']
   const activeKey: typeof import('./composables/resume')['activeKey']
   const activeName: typeof import('./composables/resume')['activeName']
@@ -296,6 +297,7 @@ declare module '@vue/runtime-core' {
     readonly SchoolState: UnwrapRef<typeof import('./composables/resume')['SchoolState']>
     readonly SelfIntroduce: UnwrapRef<typeof import('./composables/resume')['SelfIntroduce']>
     readonly SelfProfileState: UnwrapRef<typeof import('./composables/resume')['SelfProfileState']>
+    readonly WorkExperienceState: UnwrapRef<typeof import('./composables/resume')['WorkExperienceState']>
     readonly activeComponent: UnwrapRef<typeof import('./composables/resume')['activeComponent']>
     readonly activeKey: UnwrapRef<typeof import('./composables/resume')['activeKey']>
     readonly activeName: UnwrapRef<typeof import('./composables/resume')['activeName']>

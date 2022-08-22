@@ -14,10 +14,6 @@
       <WorkExperience />
       <Divider title="项目经历" />
       <ProjectExperience />
-      <Divider title="工作经历" />
-      <WorkExperience />
-      <Divider title="项目经历" />
-      <ProjectExperience />
     </div>
     <Operation />
   </div>

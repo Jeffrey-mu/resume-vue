@@ -10,10 +10,10 @@ import { SelfIntroduce as s } from "~/composables/resume";
     :wrapper-col="{ span: 20 }"
     autocomplete="off"
   >
-    <a-form-item label="" name="">
-      <a-textarea
-        v-model:value="s"
-        :rows="20"
+    <a-form-item :label="index + 1" name="" v-for="item, index in s" :key="index">
+     <a-textarea inline-block
+        v-model:value="s[index]"
+        :rows="4"
         placeholder="输入个人介绍"
         allow-clear
       />
