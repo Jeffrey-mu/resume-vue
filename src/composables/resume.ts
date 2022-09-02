@@ -76,18 +76,18 @@ export const settingList: SettingListModel[] = [
     componentName: SchoolSetting,
   },
   { header: "自我介绍", showArrow: true, key: "3", componentName: SelfSetting },
-  {
-    header: "更多信息",
-    showArrow: true,
-    key: "4",
-    componentName: HeadImgSetting,
-  },
-  {
-    header: "个人作品",
-    showArrow: true,
-    key: "5",
-    componentName: HeadImgSetting,
-  },
+  // {
+  //   header: "更多信息",
+  //   showArrow: true,
+  //   key: "4",
+  //   componentName: HeadImgSetting,
+  // },
+  // {
+  //   header: "个人作品",
+  //   showArrow: true,
+  //   key: "5",
+  //   componentName: HeadImgSetting,
+  // },
   {
     header: "个人技能",
     showArrow: true,

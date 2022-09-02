@@ -13,6 +13,7 @@ title: About
 - 支持上传头像
 - 支持导出 PDF
 - 支持在线编辑
+- 适配移动端
 <route lang="yaml">
 meta:
   layout: default
