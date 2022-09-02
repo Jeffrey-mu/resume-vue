@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { setModel } from "~/composables/resume";
+defineProps<{type: string}>()
 const { t, availableLocales, locale } = useI18n();
 const toggleLocales = () => {
   // change to some real logic
@@ -19,12 +20,13 @@ const toggleLocales = () => {
     class="font2"
     w="100%"
   >
-    <span c="#fff">Resume</span>
+    <a href="/" c="#fff">Resume</a>
     <div flex>
-      <span c="#fff" @click="setModel">{{ model ? "预览" : "编辑" }}</span>
+      <span v-show="type !== 'default'" c="#fff" @click="setModel">{{ model ? "预览" : "编辑" }}</span>
       <a href="https://github.com/Jeffrey-mu/resume-vue" lh-10
         ><img mt-3 mx-2 src="/self/github1.png" width="16" alt=""
       /></a>
+      <a href="/about" mt-3 mx-2 i-carbon-dicom-overlay></a>
     </div>
   </nav>
 </template>
