@@ -12,6 +12,7 @@ import {
   PersonalSkillsState,
   PerjectState,
   WorkExperienceState,
+  type ResumeStateModel
 } from "~/composables/resume";
 import { Ref } from "vue";
 import { OperationType } from "~/composables/resume";
@@ -52,4 +53,12 @@ export const operationData = (data: Ref) => {
       data.value.push(newData);
     }
   };
+};
+export const importDataToLocal = (data: ResumeStateModel) => {
+  SelfProfileState.value = data.SelfProfileState;
+  SchoolState.value = data.SchoolState;
+  SelfIntroduce.value = data.SelfIntroduce;
+  PersonalSkillsState.value = data.PersonalSkillsState;
+  PerjectState.value = data.PerjectState;
+  WorkExperienceState.value = data.WorkExperienceState;
 };

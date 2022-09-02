@@ -23,6 +23,12 @@ const BTN_LISt: BtnList[] = [
     fn: () => {},
   },
   {
+    label: "导入配置",
+    fn: () => {
+      showImport.value = true;
+    },
+  },
+  {
     label: "导出配置",
     fn: exportData,
   },

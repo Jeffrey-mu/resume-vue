@@ -12,7 +12,7 @@ import SelfSetting from "~/components/resume/setting/SelfSetting.vue";
 import SkillsSetting from "~/components/resume/setting/SkillsSetting.vue";
 import WorkExperienceSetting from "~/components/resume/setting/WorkExperienceSetting.vue";
 import PerjectSetting from "~/components/resume/setting/PerjectSetting.vue";
-import { type Component } from "vue";
+import { type Component, Ref } from "vue";
 export const radius = ref<string>("50%");
 export const model = ref<boolean>(false);
 export const setModel = () => (model.value = !model.value);
@@ -220,7 +220,16 @@ export const PerjectState = ref<PerjectStateModel[]>([
     ],
   },
 ]);
+export interface  ResumeStateModel {
+  PerjectState: PerjectStateModel[]
+  WorkExperienceState: WorkExperienceStateModel[]
+  PersonalSkillsState: PersonalSkillsStateModel[]
+  SelfProfileState: SelfProfileStateModel
+  SchoolState: SchoolStateModel[]
+  SelfIntroduce: []
+}
 export enum OperationType {
   del,
   add,
 }
+export const showImport = ref<boolean>(false)

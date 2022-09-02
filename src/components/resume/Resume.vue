@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div flex="~ 1 justify-center" class="page" ma>
+  <div flex="~ 1 justify-center" pb-10 class="page" ma>
     <div mt-2 p-5 class="content" m-2>
       <SelfProfile />
       <Divider title="教育背景" />
@@ -18,6 +18,7 @@
     <Operation />
   </div>
   <Drawer />
+  <ImportSetting />
 </template>
 
 <style scoped>
