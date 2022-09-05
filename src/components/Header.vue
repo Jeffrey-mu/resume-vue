@@ -27,7 +27,11 @@ const toggleLocales = () => {
         ><img mt-3 mx-2 src="/self/github1.png" width="16" alt=""
       /></a>
       <a href="/about" mt-3 mx-2 i-carbon-dicom-overlay></a>
-      <span ml-2 v-show="type !== 'default'" c="#fff" @click="toggleLocales">{{t("language")}}</span>
+      <span ml-2 v-show="type !== 'default'" @click="toggleLocales" c="#fff" cursor-pointer>
+      <span :style="{color: locale === 'es' ? '#ccc' : ''}">zh</span>
+      /
+      <span :style="{color: locale === 'es' ? '' : '#ccc'}">es</span>
+      </span>
     </div>
   </nav>
 </template>
