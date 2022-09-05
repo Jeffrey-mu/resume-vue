@@ -57,25 +57,25 @@ interface SettingListModel {
 }
 export const settingList: SettingListModel[] = [
   {
-    header: "头像设置",
+    header: "resume.setting.head",
     showArrow: false,
     key: "0",
     collapsible: "disabled",
     componentName: HeadImgSetting,
   },
   {
-    header: "个人信息",
+    header: "resume.setting.self",
     showArrow: true,
     key: "1",
     componentName: SelfInfoSetting,
   },
   {
-    header: "教育背景",
+    header: "resume.setting.education",
     showArrow: true,
     key: "2",
     componentName: SchoolSetting,
   },
-  { header: "自我介绍", showArrow: true, key: "3", componentName: SelfSetting },
+  { header: "resume.setting.introduction", showArrow: true, key: "3", componentName: SelfSetting },
   // {
   //   header: "更多信息",
   //   showArrow: true,
@@ -89,19 +89,19 @@ export const settingList: SettingListModel[] = [
   //   componentName: HeadImgSetting,
   // },
   {
-    header: "个人技能",
+    header: "resume.setting.skills",
     showArrow: true,
     key: "6",
     componentName: SkillsSetting,
   },
   {
-    header: "工作经历",
+    header: "resume.setting.work",
     showArrow: true,
     key: "7",
     componentName: WorkExperienceSetting,
   },
   {
-    header: "项目经历",
+    header: "resume.setting.project",
     showArrow: true,
     key: "9",
     componentName: PerjectSetting,

@@ -3,6 +3,7 @@ import {
   SelfIntroduce as s,
   OperationType as Type,
 } from "~/composables/resume";
+const { t } = useI18n();
 import { operationData } from "~/utils";
 const setSelfIntroduce = operationData(s);
 </script>
@@ -26,14 +27,14 @@ const setSelfIntroduce = operationData(s);
           inline-block
           v-model:value="s[index]"
           :rows="4"
-          placeholder="输入个人介绍"
+          placeholder=""
           allow-clear
         />
         <a-button type="text" danger @click="setSelfIntroduce(Type.del, index)"
-          >DEL</a-button
+          >{{t('resume.operation.del')}}</a-button
         >
       </div>
     </a-form-item>
-    <Button block @click="setSelfIntroduce(Type.add)">ADD</Button>
+    <Button block @click="setSelfIntroduce(Type.add)">{{t('resume.operation.del')}}</Button>
   </a-form>
 </template>

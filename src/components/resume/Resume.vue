@@ -1,18 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
 
 <template>
   <div flex="~ 1 justify-center" pb-10 class="page" ma>
     <div mt-2 p-5 class="content" m-2>
       <SelfProfile />
-      <Divider title="教育背景" />
+      <Divider :title="t('resume.setting.self')" />
       <School />
-      <Divider title="自我介绍" />
+      <Divider :title="t('resume.setting.introduction')" />
       <SelfIntroduction />
-      <Divider title="个人技能" />
+      <Divider :title="t('resume.setting.skills')" />
       <PersonalSkills />
-      <Divider title="工作经历" />
+      <Divider :title="t('resume.setting.work')" />
       <WorkExperience />
-      <Divider title="项目经历" />
+      <Divider :title="t('resume.setting.project')" />
       <ProjectExperience />
     </div>
     <Operation />

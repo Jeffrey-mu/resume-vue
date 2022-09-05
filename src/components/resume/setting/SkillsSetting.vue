@@ -1,6 +1,7 @@
 <script setup lang="ts" name="SkillsSetting">
 import { PersonalSkillsState as s, OperationType } from "~/composables/resume";
 import { operationData } from "~/utils";
+const { t } = useI18n();
 const setPersonalSkillsState = operationData(s);
 </script>
 
@@ -13,16 +14,16 @@ const setPersonalSkillsState = operationData(s);
     autocomplete="off"
   >
     <div v-for="(item, index) in s" :key="index">
-      <a-form-item label="技能" name="">
-        <a-input v-model:value="item.skill" placeholder="输入个人介绍" />
+      <a-form-item :label="t('resume.operation.skills')" name="">
+        <a-input v-model:value="item.skill" placeholder="" />
         <div flex lh-4 mt-2 justify-around>
-          熟练度：<a-rate inline-block flex v-model:value="item.level" />
+          {{t('resume.operation.Proficiency')}}：<a-rate inline-block flex v-model:value="item.level" />
           <a-button
             type="text"
             lh-4
             danger
             @click="setPersonalSkillsState(OperationType.del, index)"
-            >DEL</a-button
+            >{{t('resume.operation.del')}}</a-button
           >
         </div>
 
@@ -30,7 +31,7 @@ const setPersonalSkillsState = operationData(s);
       </a-form-item>
     </div>
     <Button block @click="setPersonalSkillsState(OperationType.add, index)"
-      >ADD</Button
+      >{{t('resume.operation.add')}}</Button
     >
   </a-form>
 </template>

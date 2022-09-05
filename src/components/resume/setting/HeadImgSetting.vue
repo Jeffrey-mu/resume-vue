@@ -1,13 +1,14 @@
 <script setup lang="ts" name="HeadImg">
 import { SelfProfileState as s } from "~/composables/resume";
+const { t } = useI18n();
 </script>
 
 <template>
   <div mb-2>
-    显示头像：<a-switch v-model:checked="s.showImg" bg="#1890ff" />
+    {{t("header.faces")}}：<a-switch v-model:checked="s.showImg" bg="#1890ff" />
   </div>
   <div>
-    开启圆角：<a-switch
+    {{t("header.radius")}}：<a-switch
       v-model:checked="s.radius"
       bg="#1890ff"
       checkedValue="50%"

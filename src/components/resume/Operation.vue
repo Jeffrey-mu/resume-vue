@@ -1,6 +1,7 @@
 <script setup lang="ts" name="operation">
 import { setVisible } from "~/composables/resume";
 import { getConfig, exportDataToLocal } from "~/utils";
+const { t } = useI18n();
 import { print } from "~/utils";
 interface BtnList {
   label: string;
@@ -9,34 +10,34 @@ interface BtnList {
 const exportData = () => {
   exportDataToLocal(getConfig(), "config");
 };
-const BTN_LISt: BtnList[] = [
+const BTN_LISt = ref<BtnList[]>([
   {
-    label: "进行配置",
+    label: "resume.operation.configuration",
     fn: setVisible,
   },
   {
-    label: "保存简历",
+    label: "resume.operation.save",
     fn: exportData,
   },
   {
-    label: "复制配置",
+    label: "resume.operation.copy",
     fn: () => {},
   },
   {
-    label: "导入配置",
+    label: "resume.operation.import",
     fn: () => {
       showImport.value = true;
     },
   },
   {
-    label: "导出配置",
+    label: "resume.operation.export",
     fn: exportData,
   },
   {
-    label: "PDF下载",
+    label: "resume.operation.download",
     fn: print,
   },
-];
+]);
 </script>
 <template>
   <div v-show="model" w-40 flex="~ col" m-5 class="box_btn">
@@ -47,7 +48,7 @@ const BTN_LISt: BtnList[] = [
       v-for="{ fn, label } in BTN_LISt"
       :key="label"
       @click="fn"
-      >{{ label }}</Button
+      >{{ t(label) }}</Button
     >
   </div>
 </template>

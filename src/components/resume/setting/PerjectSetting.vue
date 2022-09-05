@@ -1,5 +1,6 @@
 <script setup lang="ts" name="PerjectSetting">
 import { PerjectState as s } from "~/composables/resume";
+const { t } = useI18n();
 enum Type {
   del,
   add,
@@ -46,10 +47,10 @@ function setPerjectState(type: Type, index: number) {
         danger
         float-right
         @click="setWorkExperienceState(Type.del, index)"
-        >删除</a-button
+        >{{t('resume.operation.del')}}</a-button
       >
       <a-divider />
     </div>
-    <Button block @click="setWorkExperienceState(Type.add, index)">添加</Button>
+    <Button block @click="setWorkExperienceState(Type.add, index)">{{t('resume.operation.add')}}</Button>
   </a-form>
 </template>

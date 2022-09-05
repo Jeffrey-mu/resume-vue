@@ -1,15 +1,31 @@
-button:
-  about: 关于
-  back: 返回
-  go: 确定
-  home: 首页
-  toggle_dark: 切换深色模式
-  toggle_langs: 切换语言
-intro:
-  desc: 固执己见的 Vite 项目模板
-  dynamic-route: 动态路由演示
-  hi: 你好，{name}
-  aka: 也叫
-  whats-your-name: 输入你的名字
-not-found: 未找到页面
+title: 简历
+language: 中文
+header:
+  preview: 预览
+  edit: 编辑
+  faces: 显示头像
+  radius: 开启圆角
 resume:
+  operation:
+    configuration: 进行配置
+    save: 保存简历
+    copy: 复制配置
+    import: 导入配置
+    export: 导出配置
+    download: PDF下载
+    skills: 技能
+    Proficiency: 熟练度
+    add: 添加
+    del: 删除
+  import:
+    des: 将json文件内容复制到此处
+  setting:
+    head: 头像设置
+    self: 个人信息
+    education: 教育背景
+    introduction: 自我介绍
+    skills: 个人技能
+    work: 工作经历
+    project: 项目经历
+    name: 配置
+    drawer: 配置界面

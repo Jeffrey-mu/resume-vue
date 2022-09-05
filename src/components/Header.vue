@@ -20,13 +20,14 @@ const toggleLocales = () => {
     class="font2"
     w="100%"
   >
-    <a href="/" c="#fff">Resume</a>
+    <a href="/" c="#fff">{{t("title")}}</a>
     <div flex>
-      <span v-show="type !== 'default'" c="#fff" @click="setModel">{{ model ? "预览" : "编辑" }}</span>
+      <span v-show="type !== 'default'" c="#fff" @click="setModel">{{ model ? t("header.preview") : t("header.edit") }}</span>
       <a href="https://github.com/Jeffrey-mu/resume-vue" lh-10
         ><img mt-3 mx-2 src="/self/github1.png" width="16" alt=""
       /></a>
       <a href="/about" mt-3 mx-2 i-carbon-dicom-overlay></a>
+      <span ml-2 v-show="type !== 'default'" c="#fff" @click="toggleLocales">{{t("language")}}</span>
     </div>
   </nav>
 </template>

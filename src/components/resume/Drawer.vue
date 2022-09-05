@@ -2,7 +2,7 @@
   <a-drawer
     :visible="visible"
     class="custom-class"
-    title="配置界面"
+    :title="t('resume.setting.drawer')"
     placement="right"
     @close="setVisible"
   >
@@ -17,4 +17,6 @@
     <Collapse />
   </a-drawer>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { t } = useI18n();
+</script>

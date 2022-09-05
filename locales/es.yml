@@ -1,14 +1,31 @@
-button:
-  about: 关于
-  back: 返回
-  go: 确定
-  home: 首页
-  toggle_dark: 切换深色模式
-  toggle_langs: 切换语言
-intro:
-  desc: 固执己见的 Vite 项目模板
-  dynamic-route: 动态路由演示
-  hi: 你好，{name}
-  aka: 也叫
-  whats-your-name: 输入你的名字
-not-found: 未找到页面
+title: Resume
+language: English
+header:
+  preview: Preview
+  edit: Edit
+  faces: Show Faces
+  radius: Turn on Fillet
+resume:
+  operation:
+    configuration: configuration
+    save: save resume
+    copy: copy configuration
+    import: import configuration
+    export: export configuration
+    download: Pdf download
+    skills: Skill
+    Proficiency: Proficiency
+    add: ADD
+    del: Del
+  import:
+    des: Copy the contents of the JSON file here
+  setting:
+    head: head setting
+    self: personal information
+    education: education
+    introduction: self introduction
+    skills: skills
+    work: working experiences
+    project: projects
+    name: Configuration
+    drawer: Configuration interface
