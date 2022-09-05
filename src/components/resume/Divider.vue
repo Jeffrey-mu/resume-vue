@@ -1,5 +1,5 @@
 <script setup lang="ts" name="Divider">
-const { title } = defineProps<{ title: string }>();
+const { title } = defineProps<{ title: string }>()
 </script>
 
 <template>
@@ -8,7 +8,7 @@ const { title } = defineProps<{ title: string }>();
       {{ title }}
     </span>
     <div flex="~ 1 col" justify-center>
-      <p border-b h="1px" ma-3></p>
+      <p border-b h="1px" ma-3 />
     </div>
   </div>
 </template>

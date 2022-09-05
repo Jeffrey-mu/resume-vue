@@ -1,21 +1,22 @@
 <script setup lang="ts" name="WorkExperienceSetting">
-import { WorkExperienceState as s } from "~/composables/resume";
-const { t } = useI18n();
+import { WorkExperienceState as s } from '~/composables/resume'
+const { t } = useI18n()
 enum Type {
   del,
   add,
 }
-const keys = (item: object) => Object.keys(item);
+const keys = (item: object) => Object.keys(item)
 function setWorkExperienceState(type: Type, index: number) {
   if (type == Type.del) {
-    s.value.splice(index, 1);
-  } else {
+    s.value.splice(index, 1)
+  }
+  else {
     s.value.push({
-      company: "",
-      date: "",
-      position: "",
+      company: '',
+      date: '',
+      position: '',
       desc: [],
-    });
+    })
   }
 }
 </script>
@@ -29,17 +30,17 @@ function setWorkExperienceState(type: Type, index: number) {
     autocomplete="off"
   >
     <div v-for="(item, index) in s" :key="index">
-      <a-form-item :label="el" name="" v-for="el in keys(item)" :key="el">
+      <a-form-item v-for="el in keys(item)" :key="el" :label="el" name="">
         <template v-if="el !== 'desc'">
-          <a-input v-model:value="item[el]"></a-input>
+          <a-input v-model:value="item[el]" />
         </template>
         <template v-else>
           <a-input
             v-for="(_, descIndex) in item[el]"
-            v-model:value="item[el][descIndex]"
             :key="descIndex"
+            v-model:value="item[el][descIndex]"
             mt-2
-          ></a-input>
+          />
         </template>
       </a-form-item>
       <a-button
@@ -47,10 +48,13 @@ function setWorkExperienceState(type: Type, index: number) {
         danger
         float-right
         @click="setWorkExperienceState(Type.del, index)"
-        >{{t('resume.operation.del')}}</a-button
       >
+        {{ t('resume.operation.del') }}
+      </a-button>
       <a-divider />
     </div>
-    <Button block @click="setWorkExperienceState(Type.add, index)">{{t('resume.operation.add')}}</Button>
+    <Button block @click="setWorkExperienceState(Type.add, index)">
+      {{ t('resume.operation.add') }}
+    </Button>
   </a-form>
 </template>

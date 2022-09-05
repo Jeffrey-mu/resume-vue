@@ -1,9 +1,9 @@
 <script setup lang="ts" name="SelfInfoSetting">
-import { SelfProfileState as s, selfFilter } from "~/composables/resume";
+import { SelfProfileState as s, selfFilter } from '~/composables/resume'
 
 const info = computed(() => {
-  return Object.keys(s.value).filter((el) => !selfFilter.includes(el));
-});
+  return Object.keys(s.value).filter(el => !selfFilter.includes(el))
+})
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const info = computed(() => {
     autocomplete="off"
   >
     <a-form-item label="name" name="name">
-      <a-input v-model:value="s['name']" />
+      <a-input v-model:value="s.name" />
     </a-form-item>
     <a-form-item v-for="item in info" :key="item" :label="item" :name="item">
       <a-input v-model:value="s[item]" />

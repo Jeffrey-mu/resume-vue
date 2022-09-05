@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
   <a-drawer
     :visible="visible"
@@ -12,11 +16,8 @@
       width="320"
       @close="setChildrenDrawer"
     >
-      <component :is="activeComponent"></component>
+      <component :is="activeComponent" />
     </a-drawer>
     <Collapse />
   </a-drawer>
 </template>
-<script setup lang="ts">
-const { t } = useI18n();
-</script>

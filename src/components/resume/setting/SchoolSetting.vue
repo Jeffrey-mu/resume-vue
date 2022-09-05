@@ -1,11 +1,11 @@
 <script setup lang="ts" name="SchoolSetting">
-import { SchoolState as s } from "~/composables/resume";
+import { SchoolState as s } from '~/composables/resume'
 
 function keys(item) {
-  return Object.keys(item);
+  return Object.keys(item)
 }
 
-const schoolName = "schoolName";
+const schoolName = 'schoolName'
 </script>
 
 <template>
@@ -27,7 +27,7 @@ const schoolName = "schoolName";
         <a-date-picker
           v-else
           v-model:value="item[el]"
-          valueFormat="YYYY-MM-DD"
+          value-format="YYYY-MM-DD"
         />
       </a-form-item>
     </template>

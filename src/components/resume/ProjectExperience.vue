@@ -1,28 +1,29 @@
 <script setup lang="ts" name="ProjectExperience">
-import { functions } from "cypress/types/lodash";
-import { PerjectState as W } from "~/composables/resume";
+import { functions } from 'cypress/types/lodash'
+import { PerjectState as W } from '~/composables/resume'
 function keys(item: object, filter: string[], model: boolean) {
-  return Object.keys(item).filter((el) =>
-    model ? filter.includes(el) : !filter.includes(el)
-  );
+  return Object.keys(item).filter(el =>
+    model ? filter.includes(el) : !filter.includes(el),
+  )
 }
 function style(index: number): any {
   switch (index) {
     case 0:
-      return { "font-weight": "600", flex: "1" };
+      return { 'font-weight': '600', 'flex': '1' }
     case 1:
       return {
-        color: "#ffff",
-        "margin-left": "10px",
-        "background-color": "#1098ff",
-        "font-weight": "600",
-        "text-align": "right",
-        padding: "0 10px",
-        "border-radius": "2px",
-      };
+        'color': '#ffff',
+        'margin-left': '10px',
+        'background-color': '#1098ff',
+        'font-weight': '600',
+        'text-align': 'right',
+        'padding': '0 10px',
+        'border-radius': '2px',
+      }
   }
 }
 </script>
+
 <template>
   <div v-for="(item, index) in W" :key="index" mb-3>
     <div flex>

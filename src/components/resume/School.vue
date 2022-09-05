@@ -1,11 +1,12 @@
 <script setup lang="ts" name="School"></script>
+
 <template>
   <div>
     <div
-      flex="~"
-      justify-between
       v-for="(item, index) in SchoolState"
       :key="index"
+      flex="~"
+      justify-between
     >
       <div>
         {{ item.schoolName }}
