@@ -3,34 +3,35 @@
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: "resume",
+  title: 'resume',
   meta: [
-    { name: "description", content: "Opinionated Vite Starter Template" },
+    { name: 'description', content: 'Opinionated Vite Starter Template' },
     {
-      name: "keywords",
+      name: 'keywords',
       content:
-        "resume 简历 在线制作简历 下载简历 前端程序员简历 程序员简历 在线写简历 PDF",
+        'resume 简历 在线制作简历 下载简历 前端程序员简历 程序员简历 在线写简历 PDF',
     },
     {
-      name: "theme-color",
-      content: computed(() => (isDark.value ? "#00aba9" : "#ffffff")),
+      name: 'theme-color',
+      content: computed(() => (isDark.value ? '#00aba9' : '#ffffff')),
     },
   ],
   link: [
     {
-      rel: "icon",
-      type: "image/svg+xml",
+      rel: 'icon',
+      type: 'image/svg+xml',
       href: computed(() =>
-        preferredDark.value ? "/favicon-dark.svg" : "/favicon.svg"
+        preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg',
       ),
     },
   ],
-});
+})
 </script>
 
 <template>
   <RouterView />
 </template>
+
 <style>
 div,
 p {
