@@ -142,7 +142,7 @@ export const PersonalSkillsState = ref<PersonalSkillsStateModel[]>([
     level: 5,
   },
 ])
-interface WorkExperienceStateModel {
+export interface WorkExperienceStateModel {
   company: string
   position: string
   date: string

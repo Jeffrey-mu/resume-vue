@@ -7,7 +7,7 @@ enum Type {
 }
 const keys = (item: object) => Object.keys(item)
 function setWorkExperienceState(type: Type, index: number) {
-  if (type == Type.del) {
+  if (type === Type.del) {
     s.value.splice(index, 1)
   }
   else {
@@ -53,7 +53,7 @@ function setWorkExperienceState(type: Type, index: number) {
       </a-button>
       <a-divider />
     </div>
-    <Button block @click="setWorkExperienceState(Type.add, index)">
+    <Button block @click="setWorkExperienceState(Type.add, 0)">
       {{ t('resume.operation.add') }}
     </Button>
   </a-form>
