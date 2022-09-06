@@ -6,7 +6,7 @@ const { t } = useI18n()
   <div flex="~ 1 justify-center" pb-10 class="page" ma>
     <div mt-2 p-5 class="content" m-2>
       <SelfProfile />
-      <Divider :title="t('resume.setting.self')" />
+      <Divider :title="t('resume.setting.education')" />
       <School />
       <Divider :title="t('resume.setting.introduction')" />
       <SelfIntroduction />
