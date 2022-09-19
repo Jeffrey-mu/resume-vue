@@ -4,7 +4,7 @@ const { t } = useI18n()
 
 <template>
   <div flex="~ 1 justify-center" pb-10 class="page" ma>
-    <div mt-2 p-5 class="content" m-2>
+    <div mt-2 p-5 class="content page" m-2>
       <SelfProfile />
       <Divider :title="t('resume.setting.introduction')" />
       <SelfIntroduction />

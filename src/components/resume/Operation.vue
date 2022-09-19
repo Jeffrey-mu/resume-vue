@@ -62,6 +62,15 @@ const BTN_LISt = ref<BtnList[]>([
 
 <style>
 @media print {
+  @page {
+      size: A4;
+    }
+    body,
+    body .page {
+      padding: 0;
+      margin: 0;
+      padding-bottom: 30px;
+    }
   .box_btn {
     display: none !important;
   }
