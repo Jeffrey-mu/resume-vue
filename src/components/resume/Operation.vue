@@ -1,6 +1,7 @@
 <script setup lang="ts" name="operation">
 import { setVisible } from '~/composables/resume'
 import { clipboard, exportDataToLocal, getConfig, print } from '~/utils'
+import { useResumeStore } from '~/store/resume'
 const { t } = useI18n()
 interface BtnList {
   label: string
@@ -16,7 +17,10 @@ const BTN_LISt = ref<BtnList[]>([
   },
   {
     label: 'resume.operation.save',
-    fn: exportData,
+    fn: () => {
+      const resume = useResumeStore()
+      resume.setState(getConfig())
+    },
   },
   {
     label: 'resume.operation.copy',
