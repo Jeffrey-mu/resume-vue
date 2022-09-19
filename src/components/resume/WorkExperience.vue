@@ -1,5 +1,4 @@
 <script setup lang="ts" name="WorkExperience">
-import { functions } from 'cypress/types/lodash'
 import { WorkExperienceState as W } from '~/composables/resume'
 function keys(item: object, filter: string[], model: boolean) {
   return Object.keys(item).filter(el =>

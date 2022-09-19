@@ -1,5 +1,4 @@
 <script setup lang="ts" name="ProjectExperience">
-import { functions } from 'cypress/types/lodash'
 import { PerjectState as W } from '~/composables/resume'
 function keys(item: object, filter: string[], model: boolean) {
   return Object.keys(item).filter(el =>

@@ -13,6 +13,7 @@ import SelfSetting from '~/components/resume/setting/SelfSetting.vue'
 import SkillsSetting from '~/components/resume/setting/SkillsSetting.vue'
 import WorkExperienceSetting from '~/components/resume/setting/WorkExperienceSetting.vue'
 import PerjectSetting from '~/components/resume/setting/PerjectSetting.vue'
+import OpenSourceProjectSetting from '~/components/resume/setting/OpenSourceProjectSetting.vue'
 export const radius = ref<string>('50%')
 export const model = ref<boolean>(false)
 export const setModel = () => (model.value = !model.value)
@@ -105,6 +106,12 @@ export const settingList: SettingListModel[] = [
     showArrow: true,
     key: '9',
     componentName: PerjectSetting,
+  },
+  {
+    header: 'resume.setting.openSourceProject',
+    showArrow: true,
+    key: '10',
+    componentName: OpenSourceProjectSetting,
   },
 ]
 
@@ -220,6 +227,20 @@ export const PerjectState = ref<PerjectStateModel[]>([
     ],
   },
 ])
+interface OpenSourceProjectStateModel {
+  name: string
+  github: string
+  desc: string
+  link: string
+}
+export const OpenSourceProjectState = ref<OpenSourceProjectStateModel[]>([
+  {
+    name: 'resume-vue',
+    github: 'https://github.com/Jeffrey-mu/resume-vue',
+    desc: '在线制作简历 支持导出、导入、打印PDF。',
+    link: 'https://resume-vue.vercel.app/',
+  },
+])
 export interface ResumeStateModel {
   PerjectState: PerjectStateModel[]
   WorkExperienceState: WorkExperienceStateModel[]
@@ -227,6 +248,7 @@ export interface ResumeStateModel {
   SelfProfileState: SelfProfileStateModel
   SchoolState: SchoolStateModel[]
   SelfIntroduce: []
+  OpenSourceProjectState: OpenSourceProjectStateModel[]
 }
 export enum OperationType {
   del,

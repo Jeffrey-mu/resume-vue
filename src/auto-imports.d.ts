@@ -9,6 +9,7 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
+  const OpenSourceProjectState: typeof import('./composables/resume')['OpenSourceProjectState']
   const PerjectState: typeof import('./composables/resume')['PerjectState']
   const PersonalSkillsState: typeof import('./composables/resume')['PersonalSkillsState']
   const SchoolState: typeof import('./composables/resume')['SchoolState']
@@ -220,7 +221,6 @@ declare global {
   const useRafFn: typeof import('@vueuse/core')['useRafFn']
   const useRefHistory: typeof import('@vueuse/core')['useRefHistory']
   const useResizeObserver: typeof import('@vueuse/core')['useResizeObserver']
-  const useResumeStore: typeof import('./store/resume')['useResumeStore']
   const useRoute: typeof import('vue-router')['useRoute']
   const useRouter: typeof import('vue-router')['useRouter']
   const useScreenOrientation: typeof import('@vueuse/core')['useScreenOrientation']
@@ -295,6 +295,7 @@ declare module '@vue/runtime-core' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly OpenSourceProjectState: UnwrapRef<typeof import('./composables/resume')['OpenSourceProjectState']>
     readonly PerjectState: UnwrapRef<typeof import('./composables/resume')['PerjectState']>
     readonly PersonalSkillsState: UnwrapRef<typeof import('./composables/resume')['PersonalSkillsState']>
     readonly SchoolState: UnwrapRef<typeof import('./composables/resume')['SchoolState']>
@@ -506,7 +507,6 @@ declare module '@vue/runtime-core' {
     readonly useRafFn: UnwrapRef<typeof import('@vueuse/core')['useRafFn']>
     readonly useRefHistory: UnwrapRef<typeof import('@vueuse/core')['useRefHistory']>
     readonly useResizeObserver: UnwrapRef<typeof import('@vueuse/core')['useResizeObserver']>
-    readonly useResumeStore: UnwrapRef<typeof import('./store/resume')['useResumeStore']>
     readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
     readonly useScreenOrientation: UnwrapRef<typeof import('@vueuse/core')['useScreenOrientation']>

@@ -14,7 +14,7 @@ const info = computed(() => {
       <div flex="~ wrap 1" class="SelfProfile">
         <p v-for="item in info" :key="item" lh-8 w="45%" media="">
           <img mx-1 inline-block :src="`/self/${item}.png`" alt="" width="16">
-          <a href="">{{ s[item] }}</a>
+          <a :href="s[item]">{{ s[item] }}</a>
         </p>
       </div>
       <div v-show="s.showImg" mr-20 class="SelfProfile-img">

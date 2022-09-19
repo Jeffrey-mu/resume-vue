@@ -8,7 +8,7 @@ const { t } = useI18n()
     <a-collapse-panel
       v-for="{ header, key, showArrow } in settingList"
       :key="key"
-      :header="t(header)"
+      :header="t(`${header}`)"
       :show-arrow="showArrow"
     >
       <Button block @click="setChildrenDrawer">

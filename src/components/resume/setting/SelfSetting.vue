@@ -17,7 +17,7 @@ const setSelfIntroduce = operationData(s)
     autocomplete="off"
   >
     <a-form-item
-      v-for="(item, index) in s"
+      v-for="(_item, index) in s"
       :key="index"
       :label="index + 1"
       name=""
@@ -35,8 +35,8 @@ const setSelfIntroduce = operationData(s)
         </a-button>
       </div>
     </a-form-item>
-    <Button block @click="setSelfIntroduce(Type.add)">
-      {{ t('resume.operation.del') }}
+    <Button block @click="setSelfIntroduce(Type.add, 0)">
+      {{ t('resume.operation.add') }}
     </Button>
   </a-form>
 </template>

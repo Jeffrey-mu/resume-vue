@@ -27,6 +27,9 @@ resume:
     skills: 个人技能
     work: 工作经历
     project: 项目经历
+    openSourceProject: 开源项目
     name: 配置
     drawer: 配置界面
+    thank: 致谢
+    thankText: 感谢您花时间阅读我的简历，期待能有机会和您共事。
   copy: 复制配置成功!

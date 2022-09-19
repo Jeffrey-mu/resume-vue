@@ -7,15 +7,14 @@ enum Type {
 }
 const keys = (item: object) => Object.keys(item)
 function setPerjectState(type: Type, index: number) {
-  if (type == Type.del) {
+  if (type === Type.del) {
     s.value.splice(index, 1)
   }
   else {
     s.value.push({
       company: '',
-      date: '',
       position: '',
-      desc: [],
+      desc: [''],
     })
   }
 }
@@ -35,25 +34,28 @@ function setPerjectState(type: Type, index: number) {
           <a-input v-model:value="item[el]" />
         </template>
         <template v-else>
-          <a-input
-            v-for="(_, descIndex) in item[el]"
-            :key="descIndex"
-            v-model:value="item[el][descIndex]"
-            mt-2
-          />
+          <template v-for="(_, descIndex) in item[el]" :key="descIndex">
+            <div flex>
+              <a-input v-model:value="item[el][descIndex]" mt-2 />
+              <i c-red mx-2 cursor-pointer pt-2 @click="item[el].splice(descIndex, 1)">x</i>
+            </div>
+          </template>
+          <Button mt-2 block @click="item[el].push('')">
+            {{ t('resume.operation.add') }}
+          </Button>
         </template>
       </a-form-item>
       <a-button
         my-2
         danger
         float-right
-        @click="setWorkExperienceState(Type.del, index)"
+        @click="setPerjectState(Type.del, index)"
       >
         {{ t('resume.operation.del') }}
       </a-button>
       <a-divider />
     </div>
-    <Button block @click="setWorkExperienceState(Type.add, index)">
+    <Button block @click="setPerjectState(Type.add, index)">
       {{ t('resume.operation.add') }}
     </Button>
   </a-form>

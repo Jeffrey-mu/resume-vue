@@ -8,14 +8,15 @@
 import type { Ref } from 'vue'
 import { message } from 'ant-design-vue'
 import {
+  OpenSourceProjectState,
   OperationType,
   PerjectState,
   PersonalSkillsState,
   type ResumeStateModel,
   SchoolState,
-  SelfIntroduce,
-  SelfProfileState
-  , WorkExperienceState,
+  SelfIntroduce
+  , SelfProfileState,
+  WorkExperienceState,
 } from '~/composables/resume'
 export const print = () => {
   window.print()
@@ -37,11 +38,12 @@ export const getConfig = () => {
     PersonalSkillsState: PersonalSkillsState.value,
     PerjectState: PerjectState.value,
     WorkExperienceState: WorkExperienceState.value,
+    OpenSourceProjectState: OpenSourceProjectState.value,
   } as ResumeStateModel
 }
 
 export const operationData = (data: Ref) => {
-  return (type: OperationType, index: string) => {
+  return (type: OperationType, index: number) => {
     let newData = JSON.parse(JSON.stringify(data.value[0]))
     if (typeof newData === 'string')
       newData = ''
@@ -63,6 +65,7 @@ export const importDataToLocal = (data: ResumeStateModel) => {
   PersonalSkillsState.value = data.PersonalSkillsState
   PerjectState.value = data.PerjectState
   WorkExperienceState.value = data.WorkExperienceState
+  OpenSourceProjectState.value = data.OpenSourceProjectState
 }
 export const clipboard = (copyData: string) => {
   window.navigator.clipboard.writeText(copyData).then((_res) => {

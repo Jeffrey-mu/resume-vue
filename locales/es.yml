@@ -27,6 +27,9 @@ resume:
     skills: skills
     work: working experiences
     project: projects
+    openSourceProject: open source project
     name: Configuration
     drawer: Configuration interface
+    thank: thank
+    thankText: Thank you for taking the time to read my resume and look forward to working with you.
   copy: Copying configuration succeeded！

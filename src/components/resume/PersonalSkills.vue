@@ -1,5 +1,4 @@
 <script setup lang="ts" name="PersonalSkills">
-const value = ref<number>(2)
 </script>
 
 <template>
