@@ -1,5 +1,4 @@
 - A website for online editing resumes, which supports importing, exporting and printing pdf.
-
 <p align='center'>
   <img src='https://user-images.githubusercontent.com/11247099/154486817-f86b8f20-5463-4122-b6e9-930622e757f2.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
 </p>
@@ -9,10 +8,6 @@ Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
 </p>
 
 <br>
-
-<p align='center'>
-<a href="https://vitesse.netlify.app/">Live Demo</a>
-</p>
 
 <br>
 

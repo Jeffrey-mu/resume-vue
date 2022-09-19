@@ -10,14 +10,10 @@
 
 <br>
 
-<p align='center'>
-<a href="https://vitesse.netlify.app/">在线 Demo</a>
-</p>
-
 <br>
 
 <p align='center'>
-<a href="https://github.com/antfu/vitesse/blob/main/README.md">English</a> | <b>简体中文</b>
+<a href="https://github.com/Jeffrey-mu/resume-vue/blob/main/README.md">English</a> | <b>简体中文</b>
 </p>
 
 <br>
