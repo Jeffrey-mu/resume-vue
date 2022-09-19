@@ -1,12 +1,13 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import type { ResumeStateModel } from '~/composables/resume'
 export const useResumeStore = defineStore('resume', () => {
-  const radius = ref('50%')
-  function setRadius(boolean: boolean) {
-    radius.value = boolean ? '50%' : '0%'
+  const resumeState = ref<ResumeStateModel>()
+  function setState(state: ResumeStateModel) {
+    resumeState.value = state
   }
   return {
-    setRadius,
-    radius,
+    setState,
+    resumeState,
   }
 })
 

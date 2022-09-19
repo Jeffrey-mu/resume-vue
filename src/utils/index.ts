@@ -37,7 +37,7 @@ export const getConfig = () => {
     PersonalSkillsState: PersonalSkillsState.value,
     PerjectState: PerjectState.value,
     WorkExperienceState: WorkExperienceState.value,
-  }
+  } as ResumeStateModel
 }
 
 export const operationData = (data: Ref) => {
