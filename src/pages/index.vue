@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { useResumeStore } from '~/store/resume'
 import { importDataToLocal } from '~/utils'
-const resume = useResumeStore()
 
 onMounted(() => {
-  resume.resumeState && importDataToLocal(resume.resumeState)
+  const resumeState = localStorage.getItem('resume')
+  resumeState && importDataToLocal(JSON.parse(resumeState))
 })
 </script>
 

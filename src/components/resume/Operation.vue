@@ -1,7 +1,7 @@
 <script setup lang="ts" name="operation">
+import { message } from 'ant-design-vue'
 import { setVisible } from '~/composables/resume'
 import { clipboard, exportDataToLocal, getConfig, print } from '~/utils'
-import { useResumeStore } from '~/store/resume'
 const { t } = useI18n()
 interface BtnList {
   label: string
@@ -18,8 +18,8 @@ const BTN_LISt = ref<BtnList[]>([
   {
     label: 'resume.operation.save',
     fn: () => {
-      const resume = useResumeStore()
-      resume.setState(getConfig())
+      localStorage.setItem('resume', JSON.stringify(getConfig()))
+      message.success('配置已保存到本地！')
     },
   },
   {
