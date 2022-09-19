@@ -1,4 +1,8 @@
 - A website for online editing resumes, which supports importing, exporting and printing pdf.
+## Project screenshot
+![image](https://user-images.githubusercontent.com/66287770/190972520-97da2706-110e-4db5-a341-59f28a6e9201.png)
+![image](https://user-images.githubusercontent.com/66287770/190972540-a21ee6fe-bc08-466b-b5f9-51903236bbd2.png)
+
 <p align='center'>
   <img src='./public/pwa-192x192.png' alt='logo' />
 </p>
