@@ -6,6 +6,7 @@
  * @return
  */
 import type { Ref } from 'vue'
+import { message } from 'ant-design-vue'
 import {
   OperationType,
   PerjectState,
@@ -16,7 +17,7 @@ import {
   SelfProfileState
   , WorkExperienceState,
 } from '~/composables/resume'
-export function print() {
+export const print = () => {
   window.print()
 }
 export const exportDataToLocal = (data: string | object, fileName: string) => {
@@ -62,4 +63,9 @@ export const importDataToLocal = (data: ResumeStateModel) => {
   PersonalSkillsState.value = data.PersonalSkillsState
   PerjectState.value = data.PerjectState
   WorkExperienceState.value = data.WorkExperienceState
+}
+export const clipboard = (copyData: string) => {
+  window.navigator.clipboard.writeText(copyData).then((_res) => {
+    message.success('配置复制成功！')
+  })
 }

@@ -1,10 +1,10 @@
 <script setup lang="ts" name="operation">
 import { setVisible } from '~/composables/resume'
-import { exportDataToLocal, getConfig, print } from '~/utils'
+import { clipboard, exportDataToLocal, getConfig, print } from '~/utils'
 const { t } = useI18n()
 interface BtnList {
   label: string
-  fn: Function
+  fn: (() => void)
 }
 const exportData = () => {
   exportDataToLocal(getConfig(), 'config')
@@ -20,7 +20,9 @@ const BTN_LISt = ref<BtnList[]>([
   },
   {
     label: 'resume.operation.copy',
-    fn: () => {},
+    fn: () => {
+      clipboard(JSON.stringify(unref(getConfig())))
+    },
   },
   {
     label: 'resume.operation.import',
