@@ -190,6 +190,9 @@ And you will see the generated file in `dist` that ready to be served.
 
 Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along the way, and your App will be live in a minute.
 
+Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along the way, and your App will be live in a minute.
+### Deploy on Vercel
+
 ### Docker Production Build
 
 First, build the vitesse image by opening the terminal in the project's root directory.
