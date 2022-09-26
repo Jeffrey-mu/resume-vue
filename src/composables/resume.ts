@@ -145,7 +145,35 @@ interface PersonalSkillsStateModel {
 }
 export const PersonalSkillsState = ref<PersonalSkillsStateModel[]>([
   {
-    skill: 'javascript',
+    skill: 'Web开发：PHP/Hack/Node',
+    level: 5,
+  },
+  {
+    skill: 'Web框架：ThinkPHP/Yaf/Yii/Lavaral/LazyPHP',
+    level: 5,
+  },
+  {
+    skill: '前端框架：Bootstrap/AngularJS/EmberJS/HTML5/Cocos2dJS/ionic',
+    level: 5,
+  },
+  {
+    skill: '前端工具：Bower/Gulp/SaSS/LeSS/PhoneGap',
+    level: 5,
+  },
+  {
+    skill: '数据库相关：MySQL/PgSQL/PDO/SQLite',
+    level: 5,
+  },
+  {
+    skill: '版本管理、文档和自动化部署工具：Svn/Git/PHPDoc/Phing/Composer',
+    level: 5,
+  },
+  {
+    skill: '单元测试：PHPUnit/SimpleTest/Qunit',
+    level: 5,
+  },
+  {
+    skill: '云和开放平台：SAE/BAE/AWS/微博开放平台/微信应用开发',
     level: 5,
   },
 ])
@@ -157,14 +185,13 @@ export interface WorkExperienceStateModel {
 }
 export const WorkExperienceState = ref<WorkExperienceStateModel[]>([
   {
-    company: 'xxxxxx 公司',
+    company: 'JKL公司',
     position: ' 独立开发',
     date: '2021-21~2022-01',
     desc: [
-      '具体功能',
-      '运用了那些技术，技术难点是',
-      '效果如何',
-      'demo演示地址，github地址',
+      '我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快',
+      '这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。',
+      '这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。',
     ],
   },
   {
@@ -172,10 +199,9 @@ export const WorkExperienceState = ref<WorkExperienceStateModel[]>([
     position: ' 独立开发',
     date: '2021-21~2022-01',
     desc: [
-      '具体功能',
-      '运用了那些技术，技术难点是',
-      '效果如何',
-      'demo演示地址，github地址',
+      '我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快',
+      '这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。',
+      '这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。',
     ],
   },
 ])
@@ -187,43 +213,30 @@ interface PerjectStateModel {
 }
 export const PerjectState = ref<PerjectStateModel[]>([
   {
-    company: '美团外卖 🐶',
+    company: 'MNO项目',
     position: ' 技术总监',
     desc: [
-      '具体功能',
-      '运用了那些技术，技术难点是',
-      '效果如何',
-      'demo演示地址，github地址',
+      '我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快',
+      '这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。',
+      '这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。',
     ],
   },
   {
-    company: '饿了么外卖 🐶',
+    company: 'PQR项目',
     position: ' 切图仔',
     desc: [
-      '具体功能',
-      '运用了那些技术，技术难点是',
-      '效果如何',
-      'demo演示地址，github地址',
+      '我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快',
+      '这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。',
+      '这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。',
     ],
   },
   {
     company: '腾讯视频 🐶',
     position: ' 摸鱼程序员',
     desc: [
-      '具体功能',
-      '运用了那些技术，技术难点是',
-      '效果如何',
-      'demo演示地址，github地址',
-    ],
-  },
-  {
-    company: '微信 🐶',
-    position: ' 写bug',
-    desc: [
-      '具体功能',
-      '运用了那些技术，技术难点是',
-      '效果如何',
-      'demo演示地址，github地址',
+      '我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快',
+      '这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。',
+      '这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。',
     ],
   },
 ])
@@ -238,6 +251,12 @@ export const OpenSourceProjectState = ref<OpenSourceProjectStateModel[]>([
     name: 'resume-vue',
     github: 'https://github.com/Jeffrey-mu/resume-vue',
     desc: '在线制作简历 支持导出、导入、打印PDF。',
+    link: 'https://resume-vue.vercel.app/',
+  },
+  {
+    name: 'STU',
+    github: 'https://github.com/Jeffrey-mu/resume-vue',
+    desc: '项目的简要说明，Star和Fork数多的可以注明',
     link: 'https://resume-vue.vercel.app/',
   },
 ])
