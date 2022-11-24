@@ -2,7 +2,6 @@
 <p align='center'>
   <img src='./public/pwa-192x192.png' alt='logo' />
 </p>
-hello
 <p align='center'>
 快速地<sup><em>Vitesse</em></sup> 创建 Web 应用
 <br>
