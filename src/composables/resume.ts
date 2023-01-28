@@ -43,7 +43,7 @@ export const SelfProfileState = ref<SelfProfileStateModel>({
   name: 'Jeffrey',
   tel: '185****5387',
   github: 'http://github.com/Jeffref-mu',
-  email: '1115378579@qq.com',
+  email: 'jeffrey.muc@gmail.com',
   blog: 'http://blog.com',
   position: 'web开发',
   showImg: true,
