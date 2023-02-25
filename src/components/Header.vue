@@ -11,7 +11,7 @@ const toggleLocales = () => {
 
 <template>
   <nav
-    bg="#1890ff"
+    :style="{background: currentColor }"
     px-10
     flex
     justify-between
@@ -25,6 +25,7 @@ const toggleLocales = () => {
       <span v-show="type !== 'default'" c="#fff" @click="setModel">{{ model ? t("header.preview") : t("header.edit") }}</span>
       <a href="https://github.com/Jeffrey-mu/resume-vue" lh-10><img mt-3 mx-2 src="/self/github1.png" width="16" alt=""></a>
       <a href="/about" c="#fff" mt-3 mx-2 i-carbon-dicom-overlay />
+      <ColorSetting />
       <span v-show="type !== 'default'" ml-2 c="#fff" cursor-pointer @click="toggleLocales">
         <span :style="{ color: locale === 'es' ? '#ccc' : '' }">zh</span>
         /

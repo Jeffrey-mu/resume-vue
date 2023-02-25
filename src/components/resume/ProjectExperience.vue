@@ -13,7 +13,7 @@ function style(index: number): any {
       return {
         'color': '#ffff',
         'margin-left': '10px',
-        'background-color': '#1098ff',
+        'background-color': currentColor.value,
         'font-weight': '600',
         'text-align': 'right',
         'padding': '0 10px',

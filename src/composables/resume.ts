@@ -5,7 +5,7 @@
  * @Date 2022-08-22 11:39:08 星期一
  * @return
  */
-import { type Component } from 'vue'
+import { type Component, onMounted } from 'vue'
 import HeadImgSetting from '~/components/resume/setting/HeadImgSetting.vue'
 import SelfInfoSetting from '~/components/resume/setting/SelfInfoSetting.vue'
 import SchoolSetting from '~/components/resume/setting/SchoolSetting.vue'
@@ -274,3 +274,4 @@ export enum OperationType {
   add,
 }
 export const showImport = ref<boolean>(false)
+export const currentColor = ref('#1890ff')

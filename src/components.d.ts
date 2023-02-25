@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Button: typeof import('./components/Button.vue')['default']
     Collapse: typeof import('./components/resume/Collapse.vue')['default']
+    ColorSetting: typeof import('./components/ColorSetting.vue')['default']
     Divider: typeof import('./components/resume/Divider.vue')['default']
     Drawer: typeof import('./components/resume/Drawer.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']

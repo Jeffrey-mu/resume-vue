@@ -3,7 +3,7 @@
 <template>
   <nav
     text-1xl
-    bg="#1890ff"
+    :style="{ background: currentColor }"
     lh-10
     text-center
     c="#fff"
