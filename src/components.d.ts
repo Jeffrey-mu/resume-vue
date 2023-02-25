@@ -16,6 +16,7 @@ declare module '@vue/runtime-core' {
     Header: typeof import('./components/Header.vue')['default']
     HeadImgSetting: typeof import('./components/resume/setting/HeadImgSetting.vue')['default']
     ImportSetting: typeof import('./components/resume/setting/ImportSetting.vue')['default']
+    Logo: typeof import('./components/Logo.vue')['default']
     OpenSourceProject: typeof import('./components/resume/OpenSourceProject.vue')['default']
     OpenSourceProjectSetting: typeof import('./components/resume/setting/OpenSourceProjectSetting.vue')['default']
     Operation: typeof import('./components/resume/Operation.vue')['default']
