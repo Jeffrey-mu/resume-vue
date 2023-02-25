@@ -273,5 +273,6 @@ export enum OperationType {
   del,
   add,
 }
+export const defaultColor = '#1890ff'
 export const showImport = ref<boolean>(false)
-export const currentColor = ref('#1890ff')
+export const currentColor = ref(defaultColor)

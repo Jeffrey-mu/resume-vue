@@ -2,7 +2,7 @@
 import { importDataToLocal } from '~/utils'
 
 onMounted(() => {
-  currentColor.value = localStorage.getItem('currentColor') || ''
+  currentColor.value = localStorage.getItem('currentColor') || defaultColor
 
   const resumeState = localStorage.getItem('resume')
   resumeState && importDataToLocal(JSON.parse(resumeState))
