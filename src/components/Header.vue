@@ -27,7 +27,7 @@ const toggleLocales = () => {
       <a href="/about" c="#fff" mt-3 mx-2 i-carbon-dicom-overlay />
       <ColorSetting />
       <span v-show="type !== 'default'" ml-2 c="#fff" cursor-pointer @click="toggleLocales">
-        <span :style="{ color: locale === 'es' ? '#ccc' : '' }">zh</span>
+        <span :style="{ color: locale === 'es' ? '#ccc' : '' }">中文</span>
         /
         <span :style="{ color: locale === 'es' ? '' : '#ccc' }">es</span>
       </span>
