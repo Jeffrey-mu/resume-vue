@@ -32,4 +32,7 @@ const { t } = useI18n()
   box-shadow: 1px 1px 6px 1px #ccc;
   overflow: auto;
 }
+.page {
+  max-width: 100%;
+}
 </style>

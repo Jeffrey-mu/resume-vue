@@ -6,7 +6,7 @@ const info = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div class="SelfProfile_box">
     <h2 text-4xl mb-3>
       {{ s.name }}
     </h2>
@@ -32,11 +32,17 @@ const info = computed(() => {
 
 <style scoped>
 @media screen and (max-width: 700px) {
+  .SelfProfile_box {
+    position: relative;
+  }
   .SelfProfile p{
     width: 90%;
   }
   .SelfProfile-img {
-    margin: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin: 0;
   }
  }
 </style>
