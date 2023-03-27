@@ -1,8 +1,9 @@
 <script setup lang="ts" name="SelfInfoSetting">
 import { SelfProfileState as s, selfFilter } from '~/composables/resume'
+import type{ SelfProfileStateModel } from '~/composables/resume'
 
 const info = computed(() => {
-  return Object.keys(s.value).filter(el => !selfFilter.includes(el))
+  return Object.keys(s.value).filter(el => !selfFilter.includes(el)) as Array<keyof SelfProfileStateModel>
 })
 </script>
 

@@ -1,9 +1,10 @@
 <script setup lang="ts" name="WorkExperience">
 import { WorkExperienceState as W } from '~/composables/resume'
+import type { WorkExperienceStateModel } from '~/composables/resume'
 function keys(item: object, filter: string[], model: boolean) {
   return Object.keys(item).filter(el =>
     model ? filter.includes(el) : !filter.includes(el),
-  )
+  ) as Array<keyof WorkExperienceStateModel>
 }
 function style(index: number): any {
   switch (index) {
@@ -20,11 +21,7 @@ function style(index: number): any {
 <template>
   <div v-for="(item, index) in W" :key="index" mb-3>
     <div flex>
-      <div
-        v-for="(el, elIndex) in keys(item, ['desc'], false)"
-        :key="el"
-        :style="[style(elIndex)]"
-      >
+      <div v-for="(el, elIndex) in keys(item, ['desc'], false)" :key="el" :style="[style(elIndex)]">
         {{ item[el] }}
       </div>
     </div>

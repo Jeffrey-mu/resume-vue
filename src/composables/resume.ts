@@ -14,6 +14,7 @@ import SkillsSetting from '~/components/resume/setting/SkillsSetting.vue'
 import WorkExperienceSetting from '~/components/resume/setting/WorkExperienceSetting.vue'
 import PerjectSetting from '~/components/resume/setting/PerjectSetting.vue'
 import OpenSourceProjectSetting from '~/components/resume/setting/OpenSourceProjectSetting.vue'
+import type { UploadProps } from 'ant-design-vue';
 export const radius = ref<string>('50%')
 export const model = ref<boolean>(false)
 export const setModel = () => (model.value = !model.value)
@@ -29,7 +30,7 @@ export const setChildrenDrawer = () => {
   childrenDrawer.value = !childrenDrawer.value
 }
 export const collapseTitle = ref<string>('')
-interface SelfProfileStateModel {
+export interface SelfProfileStateModel {
   name: string
   tel: string
   github: string
@@ -37,19 +38,23 @@ interface SelfProfileStateModel {
   blog: string
   position: string
   showImg: boolean
-  radius: string
+  radius: string,
+  avatar: string,
+  fileList: UploadProps['fileList']
 }
 export const SelfProfileState = ref<SelfProfileStateModel>({
   name: 'Jeffrey',
   tel: '185****5387',
-  github: 'http://github.com/Jeffref-mu',
+  github: 'https://github.com/Jeffrey-mu',
   email: 'jeffrey.muc@gmail.com',
   blog: 'http://blog.com',
   position: 'web开发',
   showImg: true,
   radius: '50%',
+  avatar: "https://avatars.githubusercontent.com/u/66287770?v=4",
+  fileList: []
 })
-interface SettingListModel {
+export interface SettingListModel {
   header: string
   showArrow: boolean
   key: string
@@ -115,7 +120,7 @@ export const settingList: SettingListModel[] = [
   },
 ]
 
-interface SchoolStateModel {
+export interface SchoolStateModel {
   schoolName: string
   start: string
   end: string
@@ -138,8 +143,8 @@ export const SelfIntroduce = ref([
   '深入理解业务，注重产品和用户体验，支持和推动业务的快速迭代发展',
   '具备良好学习能力、沟通能力、需求落地能力、数学及抽象思维能力、承压能力',
 ])
-export const selfFilter = ['name', 'showImg', 'radius']
-interface PersonalSkillsStateModel {
+export const selfFilter = ['name', 'showImg', 'radius', 'avatar', 'fileList']
+export interface PersonalSkillsStateModel {
   skill: string
   level: number
 }
@@ -206,7 +211,7 @@ export const WorkExperienceState = ref<WorkExperienceStateModel[]>([
   },
 ])
 
-interface PerjectStateModel {
+export interface PerjectStateModel {
   company: string
   position: string
   desc: string[]
@@ -240,7 +245,7 @@ export const PerjectState = ref<PerjectStateModel[]>([
     ],
   },
 ])
-interface OpenSourceProjectStateModel {
+export interface OpenSourceProjectStateModel {
   name: string
   github: string
   desc: string

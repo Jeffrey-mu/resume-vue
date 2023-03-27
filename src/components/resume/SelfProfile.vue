@@ -1,7 +1,8 @@
 <script setup lang="ts" name="SelfProfile">
 import { SelfProfileState as s, selfFilter } from '~/composables/resume'
-const info = computed(() => {
-  return Object.keys(s.value).filter(el => !selfFilter.includes(el))
+import type { SelfProfileStateModel } from '~/composables/resume'
+const info = computed(() =>{
+  return Object.keys(s.value).filter(el => !selfFilter.includes(el)) as Array<keyof SelfProfileStateModel>
 })
 </script>
 
@@ -19,7 +20,7 @@ const info = computed(() => {
       </div>
       <div v-show="s.showImg" mr-20 class="SelfProfile-img">
         <img
-          src="https://t7.baidu.com/it/u=2437883441,1459291069&fm=193&f=GIF"
+          :src="SelfProfileState.avatar"
           alt=""
           w-20
           h-20

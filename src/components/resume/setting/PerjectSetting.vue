@@ -1,11 +1,12 @@
 <script setup lang="ts" name="PerjectSetting">
 import { PerjectState as s } from '~/composables/resume'
+import type { PerjectStateModel } from '~/composables/resume'
 const { t } = useI18n()
 enum Type {
   del,
   add,
 }
-const keys = (item: object) => Object.keys(item)
+const keys = (item: object) => Object.keys(item) as Array<keyof PerjectStateModel>
 function setPerjectState(type: Type, index: number) {
   if (type === Type.del) {
     s.value.splice(index, 1)

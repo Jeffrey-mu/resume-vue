@@ -72,3 +72,12 @@ export const clipboard = (copyData: string) => {
     message.success('配置复制成功！')
   })
 }
+
+export function getBase64(file: File) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+  });
+}

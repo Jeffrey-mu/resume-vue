@@ -1,9 +1,10 @@
 <script setup lang="ts" name="ProjectExperience">
 import { PerjectState as W } from '~/composables/resume'
+import type { PerjectStateModel } from '~/composables/resume'
 function keys(item: object, filter: string[], model: boolean) {
   return Object.keys(item).filter(el =>
     model ? filter.includes(el) : !filter.includes(el),
-  )
+  ) as  Array<keyof PerjectStateModel>
 }
 function style(index: number): any {
   switch (index) {
