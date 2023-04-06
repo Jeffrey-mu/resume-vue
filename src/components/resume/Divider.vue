@@ -20,6 +20,7 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
 .template_2 {
   .divider-line__title {
     font-size: 25px;
+    margin: 5px 0;
   }
 
   .divider-line__title_bg {
@@ -31,7 +32,7 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
     width: 150px;
     color: #fff;
     border-radius: 5px 0 0 5px;
-    margin: 20px 0;
+    margin: 10px 0;
 
     &::after {
       content: " ";
@@ -46,5 +47,32 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
       transform: rotate(45deg);
     }
   }
+}
+
+.template_3 {
+  .template_3__left {
+
+    .divider-line__title {
+      color: #ffffff;
+    }
+  }
+
+  .template_3__right {
+    .divider-line {
+      flex-direction: column;
+      line-height: 20px;
+      .divider-line__title {
+        font-weight: 700;
+      }
+
+      p {
+        margin: 0;
+        margin-bottom: 10px;
+        height: .1px;
+        transform: scaleY(.5);
+      }
+    }
+  }
+
 }
 </style>

@@ -47,14 +47,7 @@ const BTN_LISt = ref<BtnList[]>([
 
 <template>
   <div v-show="model" w-40 flex="~ col" m-5 class="box_btn">
-    <Button
-      v-for="{ fn, label } in BTN_LISt"
-      :key="label"
-      mb-3
-      bg="#1890ff"
-      c-white
-      @click="fn"
-    >
+    <Button v-for="{ fn, label } in BTN_LISt" :key="label" mb-3 bg="#1890ff" c-white @click="fn">
       {{ t(label) }}
     </Button>
   </div>
@@ -63,17 +56,23 @@ const BTN_LISt = ref<BtnList[]>([
 <style>
 @media print {
   @page {
-      size: A4;
-    }
-    body,
-    body .page {
-      padding: 0;
-      margin: 0;
-      padding-bottom: 30px;
-    }
+    size: A4;
+  }
+
+  body,
+  body .template {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 30px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+  }
+
   .box_btn {
     display: none !important;
   }
+
   nav {
     display: none !important;
   }

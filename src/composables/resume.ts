@@ -146,7 +146,7 @@ export interface SchoolStateModel {
   end: string
 }
 export const SchoolState = ref<SchoolStateModel[]>([
-  { schoolName: 'xxx学校', start: '2016-07-01', end: '2016-07-01' },
+  { schoolName: 'xxx学校  (软件工程)', start: '2016-07.01', end: '2016-07.01' },
 ])
 
 export const activeKey = ref('0')

@@ -16,13 +16,12 @@ withDefaults(defineProps<{ hideScore?: boolean }>(), { hideScore: false })
 </template>
 
 <style lang="scss">
-.template_2 {
+.template {
   .personal_skills_item {
     .personal_skills_item_des {
       width: 100%;
       word-wrap:break-word;
     }
   }
-
 }
 </style>

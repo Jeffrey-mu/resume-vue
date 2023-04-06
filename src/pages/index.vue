@@ -19,13 +19,16 @@ onMounted(() => {
   width: 790px;
   flex-shrink: 0;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 790px) {
     width: 100%;
   }
 }
 
 .page {
   max-width: 100%;
+}
+body {
+  -webkit-print-color-adjust: exact;
 }
 </style>
 

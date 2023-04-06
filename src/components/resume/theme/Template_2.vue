@@ -47,7 +47,7 @@ const { t } = useI18n()
 
   @include proview;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 790px) {
     flex-direction: column;
 
     .template_2__left {
@@ -61,7 +61,7 @@ const { t } = useI18n()
 }
 
 .proview {
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 790px) {
     flex-direction: row;
 
     @include proview;

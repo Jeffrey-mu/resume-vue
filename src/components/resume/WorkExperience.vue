@@ -35,10 +35,13 @@ function style(index: number): any {
 </template>
 
 <style lang="scss">
-.work_experience__data {
+.work_experience__date {
     color: rgba(0,0,0,.45);
     font-size: 12px;
     margin-left: 8px;
     font-weight: 300;
+}
+.work_experience__position {
+  padding-top: 8px;
 }
 </style>

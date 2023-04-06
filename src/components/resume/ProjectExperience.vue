@@ -50,8 +50,9 @@ function style(index: number): any {
 <style lang="scss">
 .project_experience {
   .project_experience__position {
-    line-height: 23px;
-    height: 23px;
+    line-height: 21px;
+    font-size: 12px;
+    height: 21px;
   }
 }
 </style>

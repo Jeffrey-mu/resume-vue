@@ -3,9 +3,9 @@
 
 <template>
   <div flex="~ 1 justify-center" pb-10 class="page" ma>
-    <div v-for="item in templates" :key="item.id">
+    <template v-for="item in templates" :key="item.id">
       <component :is="item.template" v-if="theme === item.id" />
-    </div>
+    </template>
     <Operation />
   </div>
   <Drawer />
@@ -14,9 +14,17 @@
 
 <style lang="scss">
 .page {
+  .template {
+    width: 790px;
+  }
+
   .company {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
+  }
+
+  .work_experience__position {
+    font-size: 12px;
   }
 }
 </style>

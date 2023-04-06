@@ -35,7 +35,7 @@ const MAPPING_TABLE = {
     </div>
     <div flex class="self-profile-info">
       <div flex="~ wrap 1" class="self-profile-item">
-        <p v-for="item in info" :key="item" lh-8 w="45%" media="">
+        <p v-for="item in info" :key="item" w="35%" media="">
           <Skeleton><Icon :icon="MAPPING_TABLE[item]" mr-2 /><a :href="format(s[item])">{{ s[item] }}</a></Skeleton>
         </p>
       </div>
@@ -44,13 +44,22 @@ const MAPPING_TABLE = {
 </template>
 
 <style scoped lang="scss">
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 790px) {
   .self-profile_box {
     position: relative;
   }
 
   .self-profile-item p {
     width: 90%;
+  }
+}
+.template {
+   .self-profile-info {
+    .self-profile-item {
+      p {
+        line-height: 25px;
+      }
+    }
   }
 }
 .template_1 {
@@ -63,7 +72,7 @@ const MAPPING_TABLE = {
     }
   }
 }
-.template_2 {
+.template_2, .template_3 {
   .name_head {
     text-align: center;
     flex-direction: column-reverse;
