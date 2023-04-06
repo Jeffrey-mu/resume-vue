@@ -4,6 +4,9 @@ import type { SelfProfileStateModel } from '~/composables/resume'
 const info = computed(() => {
   return Object.keys(s.value).filter(el => !selfFilter.includes(el)) as Array<keyof SelfProfileStateModel>
 })
+function format(value: any) {
+  return value || '#'
+}
 </script>
 
 <template>
@@ -20,7 +23,7 @@ const info = computed(() => {
       <div flex="~ wrap 1" class="self-profile-item">
         <p v-for="item in info" :key="item" lh-8 w="45%" media="">
           <img mx-1 inline-block :src="`/self/${item}.png`" alt="" width="16">
-          <a :href="s[item] as string">{{ s[item] }}</a>
+          <a :href="format(s[item])">{{ s[item] }}</a>
         </p>
       </div>
     </div>

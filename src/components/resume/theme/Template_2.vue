@@ -4,7 +4,7 @@ const { t } = useI18n()
 
 <template>
   <div mt-2 p-5 class="content template_2" m-2 flex>
-    <div p-2 class="template_2__left">
+    <div p-3 class="template_2__left">
       <SelfProfile />
       <Divider :title="t('resume.setting.introduction')" :hide-line="true" />
       <SelfIntroduction />
@@ -13,7 +13,7 @@ const { t } = useI18n()
       <Divider :title="t('resume.setting.education')" :hide-line="true" />
       <School />
     </div>
-    <div flex-1 p-2 class="template_2__right">
+    <div flex-1 p-3 class="template_2__right">
       <Divider :title="t('resume.setting.work')" :show-b-g="true" />
       <WorkExperience />
       <Divider :title="t('resume.setting.project')" :show-b-g="true" />
@@ -28,14 +28,29 @@ const { t } = useI18n()
 
 <style scoped lang="scss">
 .template_2 {
+
   padding: 0;
+
   .template_2__left {
     width: 250px;
     flex-shrink: 0;
   }
+
   .template_2__right {
     background: #f2f2f2;
     flex: 1;
+  }
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+
+    .template_2__left {
+      width: 100%;
+    }
+
+    .template_2__right {
+      width: 100%;
+    }
   }
 }
 </style>
