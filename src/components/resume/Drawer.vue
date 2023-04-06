@@ -12,7 +12,7 @@ const { t } = useI18n()
   >
     <a-drawer
       :visible="childrenDrawer"
-      :title="t(activeName)"
+      :title="t(activeName as string)"
       width="320"
       @close="setChildrenDrawer"
     >

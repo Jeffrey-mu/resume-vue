@@ -5,7 +5,8 @@
  * @Date 2022-08-22 11:39:08 星期一
  * @return
  */
-import { type Component, onMounted } from 'vue'
+import { type Component } from 'vue'
+import type { UploadProps } from 'ant-design-vue'
 import HeadImgSetting from '~/components/resume/setting/HeadImgSetting.vue'
 import SelfInfoSetting from '~/components/resume/setting/SelfInfoSetting.vue'
 import SchoolSetting from '~/components/resume/setting/SchoolSetting.vue'
@@ -14,7 +15,6 @@ import SkillsSetting from '~/components/resume/setting/SkillsSetting.vue'
 import WorkExperienceSetting from '~/components/resume/setting/WorkExperienceSetting.vue'
 import PerjectSetting from '~/components/resume/setting/PerjectSetting.vue'
 import OpenSourceProjectSetting from '~/components/resume/setting/OpenSourceProjectSetting.vue'
-import type { UploadProps } from 'ant-design-vue';
 export const radius = ref<string>('50%')
 export const model = ref<boolean>(false)
 export const setModel = () => (model.value = !model.value)
@@ -38,8 +38,8 @@ export interface SelfProfileStateModel {
   blog: string
   position: string
   showImg: boolean
-  radius: string,
-  avatar: string,
+  radius: string
+  avatar: string
   fileList: UploadProps['fileList']
 }
 export const SelfProfileState = ref<SelfProfileStateModel>({
@@ -51,8 +51,8 @@ export const SelfProfileState = ref<SelfProfileStateModel>({
   position: 'web开发',
   showImg: true,
   radius: '50%',
-  avatar: "https://avatars.githubusercontent.com/u/66287770?v=4",
-  fileList: []
+  avatar: 'https://avatars.githubusercontent.com/u/66287770?v=4',
+  fileList: [],
 })
 export interface SettingListModel {
   header: string
@@ -281,3 +281,10 @@ export enum OperationType {
 export const defaultColor = '#1890ff'
 export const showImport = ref<boolean>(false)
 export const currentColor = ref(defaultColor)
+export const theme = ref(1)
+export function useTheme() {
+  function setTheme(value: number) {
+    theme.value = value
+  }
+  return [theme, setTheme]
+}

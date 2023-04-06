@@ -1,4 +1,5 @@
 <script setup lang="ts" name="PersonalSkills">
+withDefaults(defineProps<{ hideScore?: boolean }>(), { hideScore: false })
 </script>
 
 <template>
@@ -13,7 +14,7 @@
       <p flex-1>
         {{ item.skill }}
       </p>
-      <a-rate v-model:value="item.level" flex />
+      <a-rate v-show="!hideScore" v-model:value="item.level" flex />
     </div>
   </div>
 </template>
