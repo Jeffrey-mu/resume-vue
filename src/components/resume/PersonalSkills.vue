@@ -23,5 +23,15 @@ withDefaults(defineProps<{ hideScore?: boolean }>(), { hideScore: false })
       word-wrap:break-word;
     }
   }
+  .personal_skills_item_des {
+    &::before {
+      content: ' ';
+      width: 10px;
+      height: 4px;
+      padding-right: 10px;
+      // background: rgb(0, 0, 0);
+      display: block;
+    }
+  }
 }
 </style>

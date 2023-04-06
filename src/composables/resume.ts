@@ -15,6 +15,7 @@ import SkillsSetting from '~/components/resume/setting/SkillsSetting.vue'
 import WorkExperienceSetting from '~/components/resume/setting/WorkExperienceSetting.vue'
 import PerjectSetting from '~/components/resume/setting/PerjectSetting.vue'
 import OpenSourceProjectSetting from '~/components/resume/setting/OpenSourceProjectSetting.vue'
+import ThemeSetting from '~/components/resume/setting/ThemeSetting.vue'
 
 // Template
 import Template_1 from '~/components/resume/theme/Template_1.vue'
@@ -83,8 +84,15 @@ export interface SettingListModel {
 }
 export const settingList: SettingListModel[] = [
   {
+    header: 'settingTheme',
+    showArrow: true,
+    key: '-1',
+    collapsible: 'disabled',
+    componentName: ThemeSetting,
+  },
+  {
     header: 'resume.setting.head',
-    showArrow: false,
+    showArrow: true,
     key: '0',
     collapsible: 'disabled',
     componentName: HeadImgSetting,
@@ -149,7 +157,7 @@ export const SchoolState = ref<SchoolStateModel[]>([
   { schoolName: 'xxx学校  (软件工程)', start: '2016-07.01', end: '2016-07.01' },
 ])
 
-export const activeKey = ref('0')
+export const activeKey = ref('-1')
 export const activeName = computed(() => {
   return settingList.find(item => item.key === activeKey.value)?.header
 })
@@ -170,35 +178,35 @@ export interface PersonalSkillsStateModel {
 }
 export const PersonalSkillsState = ref<PersonalSkillsStateModel[]>([
   {
-    skill: 'Web开发：PHP/Hack/Node',
+    skill: 'PHP/Hack/Node',
     level: 5,
   },
   {
-    skill: 'Web框架：ThinkPHP/Yaf/Yii/Lavaral/LazyPHP',
+    skill: 'ThinkPHP/Yaf/Yii/Lavaral/LazyPHP',
     level: 5,
   },
   {
-    skill: '前端框架：Bootstrap/AngularJS/EmberJS/HTML5/Cocos2dJS/ionic',
+    skill: 'Bootstrap/AngularJS/EmberJS/HTML5/Cocos2dJS/ionic',
     level: 5,
   },
   {
-    skill: '前端工具：Bower/Gulp/SaSS/LeSS/PhoneGap',
+    skill: 'Bower/Gulp/SaSS/LeSS/PhoneGap',
     level: 5,
   },
   {
-    skill: '数据库相关：MySQL/PgSQL/PDO/SQLite',
+    skill: 'MySQL/PgSQL/PDO/SQLite',
     level: 5,
   },
   {
-    skill: '版本管理、文档和自动化部署工具：Svn/Git/PHPDoc/Phing/Composer',
+    skill: 'Svn/Git/PHPDoc/Phing/Composer',
     level: 5,
   },
   {
-    skill: '单元测试：PHPUnit/SimpleTest/Qunit',
+    skill: 'PHPUnit/SimpleTest/Qunit',
     level: 5,
   },
   {
-    skill: '云和开放平台：SAE/BAE/AWS/微博开放平台/微信应用开发',
+    skill: 'SAE/BAE/AWS/微博开放平台/微信应用开发',
     level: 5,
   },
 ])

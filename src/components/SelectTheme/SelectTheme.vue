@@ -38,6 +38,8 @@ function ok() {
 
 <style lang="scss">
 .theme_box {
+  flex-wrap: wrap;
+  justify-content: center;
   .theme_card {
     display: flex;
     justify-content: center;
