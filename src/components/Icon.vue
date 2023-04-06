@@ -15,3 +15,7 @@ const style = computed(() => {
 <template>
   <i class="iconfont" :class="`icon-${icon}`" :style="style" />
 </template>
+
+<style lang="scss">
+
+</style>

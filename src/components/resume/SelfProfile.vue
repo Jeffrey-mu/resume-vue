@@ -1,5 +1,6 @@
 <script setup lang="ts" name="SelfProfile">
 import { SelfProfileState as s, selfFilter } from '~/composables/resume'
+import { hexToRgb } from '~/utils'
 interface IconInfo {
   tel: string
   github: string
@@ -86,11 +87,20 @@ const MAPPING_TABLE = {
       justify-content: center;
     }
   }
-
   .self-profile-info {
     .self-profile-item {
       p {
         width: 100%;
+      }
+    }
+  }
+
+}
+.template_2 {
+ .self-profile-info {
+    .self-profile-item {
+      .iconfont {
+        color: v-bind(hexToRgb(currentColor, 0.8)) !important;
       }
     }
   }
