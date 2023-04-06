@@ -18,6 +18,13 @@
     width: 790px;
   }
 
+  @media screen and (max-width: 790px) {
+    .template {
+      width: 95%;
+      margin:10px auto;
+    }
+  }
+
   .company {
     font-size: 17px;
     font-weight: 600;

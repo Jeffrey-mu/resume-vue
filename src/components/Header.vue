@@ -12,20 +12,21 @@ const toggleLocales = () => {
 <template>
   <nav :style="{ background: '#1890ff' }" px-10 pl flex justify-between h-10 lh-10 class="font2" w="100%">
     <Logo />
-    <div flex>
+    <div flex gap-2>
       <span v-show="type !== 'default'" c="#fff" @click="setModel">{{ model ? t("header.preview") : t("header.edit")
       }}</span>
+
+      <a href="/about" c="#fff" mt-3 i-carbon-dicom-overlay />
+      <!-- <ThemeSetting /> -->
+      <span v-show="type !== 'default'" ml-2 c="#fff" cursor-pointer @click="toggleLocales">
+        <span :style="{ color: locale === 'es' ? '#ccc' : '' }">中</span>
+        /
+        <span :style="{ color: locale === 'es' ? '' : '#ccc' }">en</span>
+      </span>
       <a href="https://github.com/Jeffrey-mu/resume-vue" lh-10><img
-        mt-3 mx-2 src="/self/github1.png" width="16"
+        mt-3 src="/self/github1.png" width="16"
         alt=""
       ></a>
-      <a href="/about" c="#fff" mt-3 mx-2 i-carbon-dicom-overlay />
-      <ThemeSetting />
-      <span v-show="type !== 'default'" ml-2 c="#fff" cursor-pointer @click="toggleLocales">
-        <span :style="{ color: locale === 'es' ? '#ccc' : '' }">中文</span>
-        /
-        <span :style="{ color: locale === 'es' ? '' : '#ccc' }">es</span>
-      </span>
     </div>
   </nav>
 </template>

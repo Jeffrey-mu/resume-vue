@@ -7,6 +7,7 @@
  */
 import { type Component } from 'vue'
 import type { UploadProps } from 'ant-design-vue'
+import { message } from 'ant-design-vue'
 import HeadImgSetting from '~/components/resume/setting/HeadImgSetting.vue'
 import SelfInfoSetting from '~/components/resume/setting/SelfInfoSetting.vue'
 import SchoolSetting from '~/components/resume/setting/SchoolSetting.vue'
@@ -16,7 +17,7 @@ import WorkExperienceSetting from '~/components/resume/setting/WorkExperienceSet
 import PerjectSetting from '~/components/resume/setting/PerjectSetting.vue'
 import OpenSourceProjectSetting from '~/components/resume/setting/OpenSourceProjectSetting.vue'
 import ThemeSetting from '~/components/resume/setting/ThemeSetting.vue'
-
+import { getDevice } from '~/utils'
 // Template
 import Template_1 from '~/components/resume/theme/Template_1.vue'
 import Template_2 from '~/components/resume/theme/Template_2.vue'
@@ -38,7 +39,13 @@ export const templates = [{
 // Template
 export const radius = ref<string>('50%')
 export const model = ref<boolean>(false)
-export const setModel = () => (model.value = !model.value)
+export const setModel = () => {
+  if (getDevice() === 'mobile') {
+    message.info('移动端只提供查看功能，在线制作请前往 PC 端!')
+    return
+  }
+  model.value = !model.value
+}
 export const setRadius = (boolean: boolean) => {
   radius.value = boolean ? '50%' : '0%'
 }
