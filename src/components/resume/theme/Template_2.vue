@@ -1,9 +1,10 @@
 <script setup lang="ts">
+const proview = inject('proview')
 const { t } = useI18n()
 </script>
 
 <template>
-  <div mt-2 p-5 class="content template_2" m-2 flex>
+  <div mt-2 p-5 class="content template template_2" :class="{ proview }" m-2 flex>
     <div p-3 class="template_2__left">
       <SelfProfile />
       <Divider :title="t('resume.setting.introduction')" :hide-line="true" />
@@ -27,10 +28,7 @@ const { t } = useI18n()
 </template>
 
 <style scoped lang="scss">
-.template_2 {
-
-  padding: 0;
-
+@mixin proview {
   .template_2__left {
     width: 250px;
     flex-shrink: 0;
@@ -40,6 +38,14 @@ const { t } = useI18n()
     background: #f2f2f2;
     flex: 1;
   }
+
+}
+
+.template_2 {
+
+  padding: 0;
+
+  @include proview;
 
   @media screen and (max-width: 700px) {
     flex-direction: column;
@@ -51,6 +57,14 @@ const { t } = useI18n()
     .template_2__right {
       width: 100%;
     }
+  }
+}
+
+.proview {
+  @media screen and (max-width: 700px) {
+    flex-direction: row;
+
+    @include proview;
   }
 }
 </style>

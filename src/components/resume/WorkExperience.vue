@@ -1,6 +1,7 @@
 <script setup lang="ts" name="WorkExperience">
 import { WorkExperienceState as W } from '~/composables/resume'
 import type { WorkExperienceStateModel } from '~/composables/resume'
+withDefaults(defineProps<{ preview?: boolean }>(), { preview: false })
 function keys(item: object, filter: string[], model: boolean) {
   return Object.keys(item).filter(el =>
     model ? filter.includes(el) : !filter.includes(el),
@@ -21,13 +22,13 @@ function style(index: number): any {
 <template>
   <div v-for="(item, index) in W" :key="index" mb-3 class="work_experience">
     <div flex mb-1>
-      <div v-for="(el, elIndex) in keys(item, ['desc'], false)" :key="el" :style="[style(elIndex)]" :class="`work_experience__${el}`">
-        {{ item[el] }}
+      <div v-for="(el, elIndex) in keys(item, ['desc'], false)" :key="el" :style="[style(elIndex)]" :class="`work_experience__${el} ${el}`">
+        <Skeleton>{{ item[el] }} </Skeleton>
       </div>
     </div>
     <div v-for="el in keys(item, ['desc'], true)" :key="el">
       <p v-for="(text, index) in item[el]" :key="text">
-        {{ index + 1 }}、{{ text }}
+        <Skeleton>{{ index + 1 }}、{{ text }} </Skeleton>
       </p>
     </div>
   </div>

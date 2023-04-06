@@ -15,6 +15,26 @@ import SkillsSetting from '~/components/resume/setting/SkillsSetting.vue'
 import WorkExperienceSetting from '~/components/resume/setting/WorkExperienceSetting.vue'
 import PerjectSetting from '~/components/resume/setting/PerjectSetting.vue'
 import OpenSourceProjectSetting from '~/components/resume/setting/OpenSourceProjectSetting.vue'
+
+// Template
+import Template_1 from '~/components/resume/theme/Template_1.vue'
+import Template_2 from '~/components/resume/theme/Template_2.vue'
+import Template_3 from '~/components/resume/theme/Template_3.vue'
+export interface Templates {
+  id: number
+  template: Component
+}
+export const templates = [{
+  template: Template_1,
+  id: 1,
+}, {
+  template: Template_2,
+  id: 2,
+}, {
+  template: Template_3,
+  id: 3,
+}]
+// Template
 export const radius = ref<string>('50%')
 export const model = ref<boolean>(false)
 export const setModel = () => (model.value = !model.value)
@@ -281,8 +301,10 @@ export enum OperationType {
 export const defaultColor = '#1890ff'
 export const showImport = ref<boolean>(false)
 export const currentColor = ref(defaultColor)
-export const theme = ref(1)
+export const theme = ref(2)
+
 export function useTheme() {
+  // const thmeme_components = []
   function setTheme(value: number) {
     theme.value = value
   }

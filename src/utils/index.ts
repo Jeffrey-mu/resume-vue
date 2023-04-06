@@ -75,9 +75,36 @@ export const clipboard = (copyData: string) => {
 
 export function getBase64(file: File) {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = error => reject(error);
-  });
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload = () => resolve(reader.result)
+    reader.onerror = error => reject(error)
+  })
+}
+
+export function hexToRgb(hex: string, alpha = 1) {
+  // 将 # 去掉
+  hex = hex.replace('#', '')
+
+  // 判断是否缩写
+  if (hex.length === 3) {
+    hex = hex.split('').map((h) => {
+      return h + h
+    }).join('')
+  }
+
+  // 将十六进制颜色码转换为RGB值
+  const r = parseInt(hex.substring(0, 2), 16)
+  const g = parseInt(hex.substring(2, 4), 16)
+  const b = parseInt(hex.substring(4, 6), 16)
+
+  // 返回RGB值
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`
+}
+export function invertColors(hex: string) {
+  // 将 # 去掉
+  hex = hex.replace('#', '')
+  hex = hex.split('').reverse().join('')
+  // 返回RGB值
+  return `#${hex}`
 }

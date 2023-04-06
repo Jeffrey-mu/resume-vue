@@ -3,8 +3,10 @@
 <template>
   <div>
     <div v-for="(_, index) in SelfIntroduce" :key="index" flex>
-      {{ index + 1 }}、
-      <div v-html="SelfIntroduce[index]" />
+      <Skeleton>
+        {{ index + 1 }}、
+        <div v-html="SelfIntroduce[index]" />
+      </Skeleton>
     </div>
   </div>
 </template>

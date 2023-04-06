@@ -3,7 +3,6 @@ import { importDataToLocal } from '~/utils'
 
 onMounted(() => {
   currentColor.value = localStorage.getItem('currentColor') || defaultColor
-
   const resumeState = localStorage.getItem('resume')
   resumeState && importDataToLocal(JSON.parse(resumeState))
 })
@@ -13,12 +12,16 @@ onMounted(() => {
   <Resume />
 </template>
 
-<style>
+<style lang="scss">
 .content {
   box-shadow: 1px 1px 6px 1px #ccc;
   overflow: auto;
   width: 790px;
+  flex-shrink: 0;
 
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 }
 
 .page {

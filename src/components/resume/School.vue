@@ -9,9 +9,15 @@
       justify-between
     >
       <div>
-        {{ item.schoolName }}
+        <Skeleton>
+          {{ item.schoolName }}
+        </Skeleton>
       </div>
-      <div>{{ item.start }}~{{ item.end }}</div>
+      <div>
+        <Skeleton>
+          {{ item.start }}~{{ item.end }}
+        </Skeleton>
+      </div>
     </div>
   </div>
 </template>

@@ -3,7 +3,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div mt-2 p-5 class="content page" m-2>
+  <div mt-2 p-5 class="content page template template_3" m-2>
     <SelfProfile />
     <Divider :title="t('resume.setting.introduction')" />
     <SelfIntroduction />

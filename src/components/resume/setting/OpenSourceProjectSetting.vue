@@ -15,6 +15,7 @@ function setOpenSourceProjectState(type: Type, index: number) {
       name: '',
       github: '',
       desc: '',
+      link: '',
     })
   }
 }

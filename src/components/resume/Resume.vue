@@ -3,15 +3,20 @@
 
 <template>
   <div flex="~ 1 justify-center" pb-10 class="page" ma>
-    <Template_1 v-if="theme === 1" />
-    <Template_2 v-if="theme === 2" />
-    <Template_3 v-if="theme === 3" />
+    <div v-for="item in templates" :key="item.id">
+      <component :is="item.template" v-if="theme === item.id" />
+    </div>
     <Operation />
   </div>
   <Drawer />
   <ImportSetting />
 </template>
 
-<style>
-
+<style lang="scss">
+.page {
+  .company {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
 </style>
