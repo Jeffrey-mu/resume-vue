@@ -73,7 +73,7 @@ export interface SelfProfileStateModel {
 export const SelfProfileState = ref<SelfProfileStateModel>({
   name: 'Jeffrey',
   tel: '185****5387',
-  github: 'https://github.com/Jeffrey-mu',
+  github: 'github.com/Jeffrey-mu',
   email: 'jeffrey.muc@gmail.com',
   blog: 'http://blog.com',
   position: 'web开发',
@@ -201,14 +201,6 @@ export const PersonalSkillsState = ref<PersonalSkillsStateModel[]>([
     level: 5,
   },
   {
-    skill: 'MySQL/PgSQL/PDO/SQLite',
-    level: 5,
-  },
-  {
-    skill: 'Svn/Git/PHPDoc/Phing/Composer',
-    level: 5,
-  },
-  {
     skill: 'PHPUnit/SimpleTest/Qunit',
     level: 5,
   },
@@ -289,13 +281,13 @@ export interface OpenSourceProjectStateModel {
 export const OpenSourceProjectState = ref<OpenSourceProjectStateModel[]>([
   {
     name: 'resume-vue',
-    github: 'https://github.com/Jeffrey-mu/resume-vue',
+    github: 'github.com/Jeffrey-mu/resume-vue',
     desc: '在线制作简历 支持导出、导入、打印PDF。',
     link: 'https://resume-vue.vercel.app/',
   },
   {
     name: 'STU',
-    github: 'https://github.com/Jeffrey-mu/resume-vue',
+    github: 'github.com/Jeffrey-mu/resume-vue',
     desc: '项目的简要说明，Star和Fork数多的可以注明',
     link: 'https://resume-vue.vercel.app/',
   },
