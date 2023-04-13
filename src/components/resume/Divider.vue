@@ -29,7 +29,7 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
     line-height: 25px;
     height: 25px;
     padding: 0 10px;
-    width: 150px;
+    width: 30%;
     color: #fff;
     border-radius: 5px 0 0 5px;
     margin: 10px 0;

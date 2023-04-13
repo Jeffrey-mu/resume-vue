@@ -65,7 +65,7 @@ const BTN_LISt = ref<BtnList[]>([
     padding: 0;
     margin: 0;
     padding-bottom: 30px;
-    border: 1px solid #eee;
+    border: none;
     box-sizing: border-box;
   }
 
