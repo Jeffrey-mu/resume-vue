@@ -1,6 +1,6 @@
 <template>
   <main flex="~ 1 col">
-    <Header />
+    <Header type="" />
     <RouterView />
     <Footer />
   </main>
