@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const proview = inject('proview')
+const [resume_list_template2, drag] = useTemplate2RefsList()
+provide('showBG', true)
 const { t } = useI18n()
 </script>
 
@@ -7,20 +9,22 @@ const { t } = useI18n()
   <div mt-2 p-5 class="content template template_2" :class="{ proview }" m-2 flex>
     <div p-3 class="template_2__left">
       <SelfProfile />
-      <Divider :title="t('resume.setting.introduction')" :hide-line="true" />
       <SelfIntroduction />
-      <Divider :title="t('resume.setting.skills')" :hide-line="true" />
       <PersonalSkills :hide-score="true" />
-      <Divider :title="t('resume.setting.education')" :hide-line="true" />
       <School />
     </div>
     <div flex-1 p-3 class="template_2__right">
-      <Divider :title="t('resume.setting.work')" :show-b-g="true" />
-      <WorkExperience />
-      <Divider :title="t('resume.setting.project')" :show-b-g="true" />
-      <ProjectExperience />
-      <Divider :title="t('resume.setting.openSourceProject')" />
-      <OpenSourceProject />
+      <draggable
+        v-model="resume_list_template2" ghost-class="ghost" handle=".handle" tag="transition-group"
+        :component-data="{ tag: 'handle', name: 'flip-list', type: 'transition' }" @start="drag = true" @end="drag = false"
+      >
+        <template #item="{ element }">
+          <li>
+            <i v-show="model" class="handle" i-carbon-move />
+            <component :is="element.component" />
+          </li>
+        </template>
+      </draggable>
       <Divider :title="t('resume.setting.thank')" :show-b-g="true" />
       {{ t('resume.setting.thankText') }}
     </div>

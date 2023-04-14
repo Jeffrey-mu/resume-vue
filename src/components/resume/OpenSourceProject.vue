@@ -1,8 +1,10 @@
 <script setup lang="ts" name="ProjectExperience">
 import { OpenSourceProjectState as W } from '~/composables/resume'
+const { t } = useI18n()
 </script>
 
 <template>
+  <Divider :title="t('resume.setting.openSourceProject')" />
   <div v-for="(item, index) in W" :key="index" mb-3 :text="currentColor">
     <div>
       <Skeleton>

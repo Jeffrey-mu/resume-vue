@@ -18,11 +18,12 @@ import WorkExperienceSetting from '~/components/resume/setting/WorkExperienceSet
 import PerjectSetting from '~/components/resume/setting/PerjectSetting.vue'
 import OpenSourceProjectSetting from '~/components/resume/setting/OpenSourceProjectSetting.vue'
 import ThemeSetting from '~/components/resume/setting/ThemeSetting.vue'
-import { getDevice } from '~/utils'
+import { getDevice, importDataToLocal } from '~/utils'
 // Template
 import Template_1 from '~/components/resume/theme/Template_1.vue'
 import Template_2 from '~/components/resume/theme/Template_2.vue'
 import Template_3 from '~/components/resume/theme/Template_3.vue'
+
 export interface Templates {
   id: number
   template: Component
@@ -309,13 +310,23 @@ export enum OperationType {
 export const defaultColor = '#1890ff'
 export const showImport = ref<boolean>(false)
 export const currentColor = ref(defaultColor)
-export const theme = ref(2)
+export const theme = ref(1)
 
 type ReturnEmptyArrowFunction<T> = (value: T) => void
 
 export function useTheme(): [Ref<number>, ReturnEmptyArrowFunction<number>] {
   const setTheme: ReturnEmptyArrowFunction<number> = (value: number) => {
     theme.value = value
+    localStorage.setItem('theme', `${value}`)
   }
   return [theme, setTheme]
+}
+
+export function init_state() {
+  onMounted(() => {
+    currentColor.value = localStorage.getItem('currentColor') || defaultColor
+    const resumeState = localStorage.getItem('resume')
+    theme.value = localStorage.getItem('theme') ? Number(localStorage.getItem('theme')) : 2
+    resumeState && importDataToLocal(JSON.parse(resumeState))
+  })
 }

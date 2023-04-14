@@ -1,8 +1,10 @@
 <script setup lang="ts" name="PersonalSkills">
 withDefaults(defineProps<{ hideScore?: boolean }>(), { hideScore: false })
+const { t } = useI18n()
 </script>
 
 <template>
+  <Divider :title="t('resume.setting.skills')" />
   <div width="100%" class="personal_skills">
     <div v-for="(item, index) in PersonalSkillsState" :key="index" class="personal_skills_item" flex="~" justify-start>
       <p flex-1 class="personal_skills_item_des">

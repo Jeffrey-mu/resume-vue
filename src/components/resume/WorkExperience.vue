@@ -17,9 +17,11 @@ function style(index: number): any {
       return { 'flex': '1', 'text-align': 'right', 'color': '#777' }
   }
 }
+const { t } = useI18n()
 </script>
 
 <template>
+  <Divider :title="t('resume.setting.work')" />
   <div v-for="(item, index) in W" :key="index" mb-3 class="work_experience">
     <div flex mb-1>
       <div v-for="(el, elIndex) in keys(item, ['desc'], false)" :key="el" :style="[style(elIndex)]" :class="`work_experience__${el} ${el}`">

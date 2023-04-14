@@ -23,9 +23,11 @@ function style(index: number): any {
       }
   }
 }
+const { t } = useI18n()
 </script>
 
 <template>
+  <Divider :title="t('resume.setting.project')" />
   <div v-for="(item, index) in W" :key="index" mb-3 class="project_experience">
     <div flex>
       <div

@@ -1,6 +1,9 @@
-<script setup lang="ts" name="School"></script>
+<script setup lang="ts" name="School">
+const { t } = useI18n()
+</script>
 
 <template>
+  <Divider :title="t('resume.setting.education')" />
   <div class="school">
     <div v-for="(item, index) in SchoolState" :key="index" flex="~" justify-between>
       <div>

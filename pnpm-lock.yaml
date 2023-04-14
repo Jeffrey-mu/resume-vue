@@ -45,6 +45,7 @@ specifiers:
   vue-i18n: ^9.1.10
   vue-router: ^4.1.2
   vue-tsc: ^0.38.5
+  vuedraggable: ^4.1.0
 
 dependencies:
   '@vueuse/core': 8.9.2_vue@3.2.37
@@ -59,6 +60,7 @@ dependencies:
   vue-demi: 0.13.4_vue@3.2.37
   vue-i18n: 9.1.10_vue@3.2.37
   vue-router: 4.1.2_vue@3.2.37
+  vuedraggable: 4.1.0_vue@3.2.37
 
 devDependencies:
   '@antfu/eslint-config': 0.25.2_4x5o4skxv6sl53vpwefgt23khm
@@ -6764,6 +6766,10 @@ packages:
       is-fullwidth-code-point: 3.0.0
     dev: true
 
+  /sortablejs/1.14.0:
+    resolution: {integrity: sha512-pBXvQCs5/33fdN1/39pPL0NZF20LeRbLQ5jtnheIPN9JQAaufGjKdWduZn4U7wCtVuzKhmRkI0DFYHYRbB2H1w==}
+    dev: false
+
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -7789,6 +7795,15 @@ packages:
       '@vue/runtime-dom': 3.2.37
       '@vue/server-renderer': 3.2.37_vue@3.2.37
       '@vue/shared': 3.2.37
+
+  /vuedraggable/4.1.0_vue@3.2.37:
+    resolution: {integrity: sha512-FU5HCWBmsf20GpP3eudURW3WdWTKIbEIQxh9/8GE806hydR9qZqRRxRE3RjqX7PkuLuMQG/A7n3cfj9rCEchww==}
+    peerDependencies:
+      vue: ^3.0.1
+    dependencies:
+      sortablejs: 1.14.0
+      vue: 3.2.37
+    dev: false
 
   /w3c-hr-time/1.0.2:
     resolution: {integrity: sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ==}
