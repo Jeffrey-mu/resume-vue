@@ -5,6 +5,7 @@
  * @Date 2022-08-22 11:39:08 星期一
  * @return
  */
+import type { Ref } from 'vue'
 import { type Component } from 'vue'
 import type { UploadProps } from 'ant-design-vue'
 import { message } from 'ant-design-vue'
@@ -255,7 +256,7 @@ export const PerjectState = ref<PerjectStateModel[]>([
   },
   {
     company: 'PQR项目',
-    position: ' 切图仔',
+    position: ' 前端工程师',
     desc: [
       '我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快',
       '这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。',
@@ -264,7 +265,7 @@ export const PerjectState = ref<PerjectStateModel[]>([
   },
   {
     company: '腾讯视频 🐶',
-    position: ' 摸鱼程序员',
+    position: ' 后端工程师',
     desc: [
       '我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快',
       '这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。',
@@ -310,9 +311,10 @@ export const showImport = ref<boolean>(false)
 export const currentColor = ref(defaultColor)
 export const theme = ref(2)
 
-export function useTheme() {
-  // const thmeme_components = []
-  function setTheme(value: number) {
+type ReturnEmptyArrowFunction<T> = (value: T) => void
+
+export function useTheme(): [Ref<number>, ReturnEmptyArrowFunction<number>] {
+  const setTheme: ReturnEmptyArrowFunction<number> = (value: number) => {
     theme.value = value
   }
   return [theme, setTheme]

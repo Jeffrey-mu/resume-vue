@@ -6,7 +6,7 @@ function changeModal(value: boolean) {
   visible.value = value
 }
 provide('proview', true)
-const active = ref(1)
+const active = ref<number>(1)
 
 defineExpose({
   changeModal,
