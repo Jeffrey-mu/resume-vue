@@ -7,19 +7,13 @@ const { t } = useI18n()
   <div mt-2 class="content template template_3" :class="{ proview }" m-2 flex>
     <div p-3 class="template_3__left" :style="{ background: currentColor }">
       <SelfProfile />
-      <Divider :title="t('resume.setting.introduction')" :hide-line="true" />
       <SelfIntroduction />
-      <Divider :title="t('resume.setting.skills')" :hide-line="true" />
       <PersonalSkills :hide-score="true" />
     </div>
     <div flex-1 p-3 class="template_3__right">
-      <Divider :title="t('resume.setting.work')" />
       <WorkExperience />
-      <Divider :title="t('resume.setting.project')" />
       <ProjectExperience />
-      <Divider :title="t('resume.setting.openSourceProject')" />
       <OpenSourceProject />
-      <Divider :title="t('resume.setting.education')" :hide-line="true" />
       <School />
       <Divider :title="t('resume.setting.thank')" />
       {{ t('resume.setting.thankText') }}
