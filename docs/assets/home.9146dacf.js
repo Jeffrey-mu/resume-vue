@@ -1,0 +1,1 @@
+import{_,c,a as e,r as s,o as r,f as a,g as p}from"./app.d4344078.js";const m={},i={flex:"~ 1 col"};function l(u,f){const o=a,n=s("RouterView"),t=p;return r(),c("main",i,[e(o,{type:""}),e(n),e(t)])}const x=_(m,[["render",l]]);export{x as default};

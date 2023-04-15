@@ -1054,7 +1054,7 @@
   "../../../../../__uno.css": [],
   "src/main.ts": [],
   "index.html": [],
-  "assets/app.ba3a8022.js-unocss-hash.css": [],
+  "assets/app.d4344078.js-unocss-hash.css": [],
   "node_modules/.pnpm/workbox-window@6.5.3/node_modules/workbox-window/build/workbox-window.prod.es5.mjs": [
     "/assets/virtual_pwa-register.3ff79d29.js"
   ],
@@ -1062,18 +1062,18 @@
     "/assets/virtual_pwa-register.3ff79d29.js"
   ],
   "src/layouts/404.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/404.a9377267.js"
+    "/assets/404.1aa57ce7.js"
   ],
   "src/layouts/404.vue": [
-    "/assets/404.a9377267.js"
+    "/assets/404.1aa57ce7.js"
   ],
   "src/layouts/home.vue": [
-    "/assets/home.f691f01d.js"
+    "/assets/home.9146dacf.js"
   ],
   "src/pages/README.md": [
-    "/assets/README.53a59cc0.js"
+    "/assets/README.f8a964d7.js"
   ],
   "src/pages/about.md": [
-    "/assets/about.cd3cbdc7.js"
+    "/assets/about.44ce9cb5.js"
   ]
 }
