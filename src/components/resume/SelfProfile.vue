@@ -1,4 +1,5 @@
 <script setup lang="ts" name="SelfProfile">
+import { unref as _unref } from 'vue'
 import { SelfProfileState as s, selfFilter } from '~/composables/resume'
 import { hexToRgb } from '~/utils'
 interface IconInfo {

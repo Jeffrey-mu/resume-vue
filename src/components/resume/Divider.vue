@@ -1,4 +1,5 @@
 <script setup lang="ts" name="Divider">
+import { unref as _unref } from 'vue'
 withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }>(), { hideLine: false, showBG: false })
 </script>
 
