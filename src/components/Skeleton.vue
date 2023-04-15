@@ -13,7 +13,7 @@ function handleBlur(e: Event) {
 <template>
   <!-- <div :class="{ skeleton_line: proview }"> -->
   <slot>
-    <div v-if="data_key" flex class="skeleton">
+    <div v-if="data_key !== undefined" flex class="skeleton">
       <div>
         {{ typeof data_key === 'number' ? `${Number(data_key) + 1}、` : '' }}
       </div>
