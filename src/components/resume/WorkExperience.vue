@@ -42,6 +42,8 @@ const { t } = useI18n()
     font-size: 12px;
     margin-left: 8px;
     font-weight: 300;
+    display: flex;
+    justify-content: end;
 }
 .work_experience__position {
   padding-top: 8px;

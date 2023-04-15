@@ -8,7 +8,13 @@ const { t } = useI18n()
   <div v-for="(item, index) in W" :key="index" mb-3 :text="currentColor">
     <div>
       <Skeleton>
-        <span c-blue mr-2><a :href="item.link" :style="{ color: currentColor }">{{ item.name }}</a></span> <span>{{ item.desc }}</span> <span c-blue mr-2 float-right><a :href="item.github" :style="{ color: currentColor }">{{ item.github.slice(19) }}</a> </span>
+        <span c-blue mr-2><a :href="item.link" :style="{ color: currentColor }">{{ item.name }}</a></span>
+      </Skeleton>
+      <Skeleton>
+        <span>{{ item.desc }}</span>
+      </Skeleton>
+      <Skeleton>
+        <span c-blue mr-2 float-right><a :href="item.github" :style="{ color: currentColor }">{{ item.github.slice(19) }}</a> </span>
       </Skeleton>
     </div>
   </div>

@@ -10,7 +10,7 @@ const toggleLocales = () => {
 </script>
 
 <template>
-  <nav :style="{ background: '#1890ff' }" px-10 pl flex justify-between h-10 lh-10 class="font2 header" w="100%">
+  <nav :style="{ background: '#111111' }" px-10 pl flex justify-between h-10 lh-10 class="font2 header" w="100%">
     <Logo />
     <div flex gap-2 items-center c="#fff">
       <template v-if="type !== 'default'">

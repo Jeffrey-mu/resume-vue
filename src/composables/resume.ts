@@ -307,10 +307,10 @@ export enum OperationType {
   del,
   add,
 }
-export const defaultColor = '#1890ff'
+export const defaultColor = '#111111'
 export const showImport = ref<boolean>(false)
 export const currentColor = ref(defaultColor)
-export const theme = ref(1)
+export const theme = ref(2)
 
 type ReturnEmptyArrowFunction<T> = (value: T) => void
 
