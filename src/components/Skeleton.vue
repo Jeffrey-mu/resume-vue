@@ -14,9 +14,7 @@ function handleBlur(e: Event) {
   <!-- <div :class="{ skeleton_line: proview }"> -->
   <slot>
     <div v-if="data_key !== undefined" flex class="skeleton">
-      <div>
-        {{ typeof data_key === 'number' ? `${Number(data_key) + 1}、` : '' }}
-      </div>
+      {{ typeof data_key === 'number' ? `${Number(data_key) + 1}、` : '' }}
       <div :contenteditable="model" :class="{ contenteditable_div: model }" @blur="handleBlur" v-html="data[data_key]" />
     </div>
   </slot>

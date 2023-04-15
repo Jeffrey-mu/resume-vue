@@ -54,6 +54,8 @@ function ok() {
     .template {
       zoom: .3;
       overflow: hidden;
+      pointer-events: none;
+
     }
 
     .use_template_btn {
@@ -64,8 +66,8 @@ function ok() {
       left: calc(50% - 75px);
       display: none;
     }
-
     &:hover {
+
       .use_template_btn {
         display: block;
 
