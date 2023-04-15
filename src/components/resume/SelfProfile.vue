@@ -68,12 +68,6 @@ const MAPPING_TABLE = {
   .name_head {
     position: relative;
 
-    .self-profile-img {
-      position: absolute;
-      right: 100px;
-      top: 30px;
-    }
-
     h2,
     div {
       line-height: 50px;
