@@ -7,13 +7,13 @@ const { t } = useI18n()
 
 <template>
   <div mt-2 p-5 class="content template template_2" :class="{ proview }" m-2 flex>
-    <div p-3 class="template_2__left">
+    <div p-3 class="template_2__left template_2-left">
       <SelfProfile />
       <SelfIntroduction />
       <PersonalSkills :hide-score="true" />
       <School />
     </div>
-    <div flex-1 p-3 class="template_2__right">
+    <div flex-1 p-3 class="template_2__right template_2-right">
       <draggable
         v-model="resume_list_template2" ghost-class="ghost" handle=".handle" tag="transition-group"
         :component-data="{ tag: 'handle', name: 'flip-list', type: 'transition' }" @start="drag = true" @end="drag = false"

@@ -28,7 +28,7 @@ const MAPPING_TABLE = {
   <div class="self-profile_box">
     <div class="name_head" flex="~ " justify-between>
       <h2 text-4xl>
-        <Skeleton>{{ s.name }}</Skeleton>
+        <Skeleton data_key="name" :data="s" />
       </h2>
       <div v-show="s.showImg" class="self-profile-img">
         <Skeleton><img :src="SelfProfileState.avatar" alt="" w-20 h-20 :style="{ 'border-radius': s.radius }"></Skeleton>
