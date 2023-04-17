@@ -133,7 +133,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'docs',
+    // outDir: 'docs',
   },
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
