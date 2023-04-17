@@ -1,9 +1,11 @@
 {
+  "type": "module",
   "private": true,
   "packageManager": "pnpm@7.4.0",
   "scripts": {
-    "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
+    "dep": "node dep.js",
+    "build": "vite-ssg build",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
@@ -23,6 +25,7 @@
     "prettier": "^2.7.1",
     "prism-theme-vars": "^0.2.4",
     "scss": "^0.2.4",
+    "upload-server-files": "^0.0.3",
     "vue": "^3.2.37",
     "vue-demi": "^0.13.4",
     "vue-i18n": "^9.1.10",
