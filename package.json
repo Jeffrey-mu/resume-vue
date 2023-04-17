@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "private": true,
   "packageManager": "pnpm@7.4.0",
   "scripts": {

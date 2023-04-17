@@ -99,3 +99,30 @@ export function useTemplateRefsList(RESUME_LIST_TEMPLATE1_SYMBOL: string, resume
   ]
 }
 
+interface ManageDisplayModel {
+  [key: string]: boolean
+}
+
+export const ManageDisplay = ref<ManageDisplayModel>({
+  PersonalSkills: true,
+  SelfProfile: true,
+  SelfIntroduction: true,
+  WorkExperience: true,
+  ProjectExperience: true,
+  OpenSourceProject: true,
+  School: true,
+})
+
+export function useManageDisplay() {
+  const ManageDisplayLocalKey = 'ManageDisplay'
+  onMounted(() => {
+    const storedValue = localStorage.getItem(ManageDisplayLocalKey)
+    if (storedValue !== null)
+      ManageDisplay.value = JSON.parse(storedValue)
+  })
+  function setManageDisplay(key: string, value: boolean) {
+    ManageDisplay.value[key] = value
+    localStorage.setItem(ManageDisplayLocalKey, JSON.stringify(ManageDisplay.value))
+  }
+  return [ManageDisplay, setManageDisplay]
+}

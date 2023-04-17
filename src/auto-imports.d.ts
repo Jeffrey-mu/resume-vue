@@ -9,6 +9,7 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
+  const ManageDisplay: typeof import('./composables/theme')['ManageDisplay']
   const OpenSourceProjectState: typeof import('./composables/resume')['OpenSourceProjectState']
   const PerjectState: typeof import('./composables/resume')['PerjectState']
   const PersonalSkillsState: typeof import('./composables/resume')['PersonalSkillsState']
@@ -199,6 +200,7 @@ declare global {
   const useLastChanged: typeof import('@vueuse/core')['useLastChanged']
   const useLocalStorage: typeof import('@vueuse/core')['useLocalStorage']
   const useMagicKeys: typeof import('@vueuse/core')['useMagicKeys']
+  const useManageDisplay: typeof import('./composables/theme')['useManageDisplay']
   const useManualRefHistory: typeof import('@vueuse/core')['useManualRefHistory']
   const useMediaControls: typeof import('@vueuse/core')['useMediaControls']
   const useMediaQuery: typeof import('@vueuse/core')['useMediaQuery']
@@ -305,6 +307,7 @@ declare module '@vue/runtime-core' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly ManageDisplay: UnwrapRef<typeof import('./composables/theme')['ManageDisplay']>
     readonly OpenSourceProjectState: UnwrapRef<typeof import('./composables/resume')['OpenSourceProjectState']>
     readonly PerjectState: UnwrapRef<typeof import('./composables/resume')['PerjectState']>
     readonly PersonalSkillsState: UnwrapRef<typeof import('./composables/resume')['PersonalSkillsState']>
@@ -495,6 +498,7 @@ declare module '@vue/runtime-core' {
     readonly useLastChanged: UnwrapRef<typeof import('@vueuse/core')['useLastChanged']>
     readonly useLocalStorage: UnwrapRef<typeof import('@vueuse/core')['useLocalStorage']>
     readonly useMagicKeys: UnwrapRef<typeof import('@vueuse/core')['useMagicKeys']>
+    readonly useManageDisplay: UnwrapRef<typeof import('./composables/theme')['useManageDisplay']>
     readonly useManualRefHistory: UnwrapRef<typeof import('@vueuse/core')['useManualRefHistory']>
     readonly useMediaControls: UnwrapRef<typeof import('@vueuse/core')['useMediaControls']>
     readonly useMediaQuery: UnwrapRef<typeof import('@vueuse/core')['useMediaQuery']>

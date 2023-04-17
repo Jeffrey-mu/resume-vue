@@ -330,3 +330,4 @@ export function init_state() {
     resumeState && importDataToLocal(JSON.parse(resumeState))
   })
 }
+
