@@ -1,4 +1,6 @@
 - A website for online editing resumes, which supports importing, exporting and printing pdf.
+## preview
+[online preview](https://resume.jiafengfmc.cn/)
 
 ## Project screenshot
 ![image](https://user-images.githubusercontent.com/66287770/192192585-a6e6620b-3f90-4d0f-9b82-2b6c53b6e878.png)
