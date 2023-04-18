@@ -1,4 +1,7 @@
 在线编辑简历的网站，支持导入、导出和打印pdf。
+
+## 预览
+[在线预览](https://resume.jiafengfmc.cn/)
 <p align='center'>
   <img src='./public/pwa-192x192.png' alt='logo' />
 </p>
