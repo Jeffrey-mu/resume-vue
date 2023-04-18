@@ -121,6 +121,9 @@ export function useManageDisplay() {
       ManageDisplay.value = JSON.parse(storedValue)
   })
   function setManageDisplay(key: string, value: boolean) {
+    if (!Object.prototype.hasOwnProperty.call(ManageDisplay.value, key))
+      return
+
     ManageDisplay.value[key] = value
     localStorage.setItem(ManageDisplayLocalKey, JSON.stringify(ManageDisplay.value))
   }
