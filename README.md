@@ -3,8 +3,11 @@
 [online preview](https://resume.jiafengfmc.cn/)
 
 ## Project screenshot
-![image](https://user-images.githubusercontent.com/66287770/192192585-a6e6620b-3f90-4d0f-9b82-2b6c53b6e878.png)
-![image](https://user-images.githubusercontent.com/66287770/192192601-2cc019d9-a53b-4ee5-8876-284ca85a932a.png)
+![571681800545_ pic_hd](https://user-images.githubusercontent.com/66287770/232694756-a1806f46-0d63-46fc-88c2-11f3c2184fd0.jpg)
+![571681800545_ pic_hd](https://user-images.githubusercontent.com/66287770/232695090-00201979-12e7-47e8-9739-35cc97d74a2b.jpg)
+![581681800558_ pic_hd](https://user-images.githubusercontent.com/66287770/232695107-873c8b89-1fb4-4804-a76f-8baad3bdd407.jpg)
+![591681800572_ pic_hd](https://user-images.githubusercontent.com/66287770/232695109-5f916fc7-6a04-49f2-8246-09013ff76042.jpg)
+![601681800585_ pic_hd](https://user-images.githubusercontent.com/66287770/232695115-4b1c424e-26e1-434c-bf50-6e380b56869c.jpg)
 
 
 <p align='center'>
