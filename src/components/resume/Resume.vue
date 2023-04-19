@@ -18,6 +18,7 @@ import { currentColor } from '~/composables/resume'
 .page {
   .template {
     width: 790px;
+    border-radius: 8px;
     * {
       list-style: none;
       transition: all .2;

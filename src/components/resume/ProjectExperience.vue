@@ -34,12 +34,12 @@ const { t } = useI18n()
         v-for="(el, elIndex) in keys(item, ['desc'], false)" :key="el" :style="[style(elIndex)]"
         :class="`project_experience__${el} ${el}`"
       >
-        <Skeleton :data_key="el" :data="item" />
+        <EditablePanel :data_key="el" :data="item" />
       </div>
     </div>
     <div v-for="el in keys(item, ['desc'], true)" :key="el">
       <p v-for="(text, index) in item[el]" :key="text">
-        <Skeleton :data_key="index" :data="item[el]" />
+        <EditablePanel :data_key="index" :data="item[el]" />
       </p>
     </div>
   </div>

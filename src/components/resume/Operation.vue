@@ -1,8 +1,9 @@
 <script setup lang="ts" name="operation">
 import { message } from 'ant-design-vue'
-import { setVisible } from '~/composables/resume'
+// import { setVisible } from '~/composables/resume'
 import { clipboard, exportDataToLocal, getConfig, print } from '~/utils'
 const { t } = useI18n()
+const ThemeRef = ref()
 interface BtnList {
   label: string
   fn: (() => void)
@@ -47,9 +48,13 @@ const BTN_LISt = ref<BtnList[]>([
 
 <template>
   <div v-show="model" w-40 flex="~ col" m-5 class="box_btn">
-    <Button v-for="{ fn, label } in BTN_LISt" :key="label" mb-3 bg="#1890ff" c-white @click="fn">
+    <Button mb-3 bg="#1890ff" c-white @click="ThemeRef.changeModal(true)">
+      {{ t('settingTheme') }}
+    </Button>
+    <Button v-for="{ fn, label } in BTN_LISt" :key="label" mb-3 bg="#1890ff" c-white @click="fn()">
       {{ t(label) }}
     </Button>
+    <SelectTheme ref="ThemeRef" />
   </div>
 </template>
 

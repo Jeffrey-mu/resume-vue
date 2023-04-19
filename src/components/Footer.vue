@@ -7,8 +7,6 @@
     lh-10
     text-center
     c="#fff"
-    fixed
-    bottom-0
     w="100%"
     class="font2"
   >

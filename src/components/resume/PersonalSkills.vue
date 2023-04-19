@@ -8,9 +8,7 @@ const { t } = useI18n()
   <div width="100%" class="personal_skills">
     <div v-for="(item, index) in PersonalSkillsState" :key="index" class="personal_skills_item" flex="~" justify-start>
       <p flex-1 class="personal_skills_item_des">
-        <Skeleton>
-          {{ item.skill }}
-        </Skeleton>
+        <EditablePanel :data="item" data_key="skill" />
       </p>
       <a-rate v-show="!hideScore" v-model:value="item.level" flex />
     </div>

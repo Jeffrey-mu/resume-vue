@@ -24,7 +24,6 @@ function setData(e: Event) {
     </template>
     <a i-carbon-color-palette mt-3 mx-2 c-white />
   </a-popover>
-  <SelectTheme ref="ThemeRef" />
 </template>
 
 <style lang="scss">

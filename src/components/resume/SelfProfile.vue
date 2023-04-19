@@ -28,17 +28,18 @@ const MAPPING_TABLE = {
 <template>
   <div class="self-profile_box">
     <div class="name_head" flex="~ " justify-between>
-      <Skeleton data_key="name" :data="s" />
+      <EditablePanel data_key="name" :data="s" />
       <div v-show="s.showImg" class="self-profile-img">
-        <Skeleton><img :src="SelfProfileState.avatar" alt="" w-20 h-20 :style="{ 'border-radius': s.radius }"></Skeleton>
+        <EditablePanel><img :src="SelfProfileState.avatar" alt="" w-20 h-20 :style="{ 'border-radius': s.radius }"></EditablePanel>
       </div>
     </div>
     <div flex class="self-profile-info">
       <div flex="~ wrap 1" class="self-profile-item">
         <p v-for="item in info" :key="item" w="35%" media="">
-          <Skeleton>
-            <Icon :icon="MAPPING_TABLE[item]" mr-2 /><a :href="format(s[item])">{{ s[item] }}</a>
-          </Skeleton>
+          <EditablePanel>
+            <Icon :icon="MAPPING_TABLE[item]" mr-2 />
+            <EditablePanel :data_key="item" :data="s" />
+          </EditablePanel>
         </p>
       </div>
     </div>

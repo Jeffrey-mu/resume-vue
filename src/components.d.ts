@@ -9,8 +9,10 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Button: typeof import('./components/Button.vue')['default']
     Collapse: typeof import('./components/resume/Collapse.vue')['default']
+    Contenteditable: typeof import('./components/Contenteditable.vue')['default']
     Divider: typeof import('./components/resume/Divider.vue')['default']
     Drawer: typeof import('./components/resume/Drawer.vue')['default']
+    EditablePanel: typeof import('./components/EditablePanel.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     HeadImgSetting: typeof import('./components/resume/setting/HeadImgSetting.vue')['default']
@@ -39,7 +41,8 @@ declare module '@vue/runtime-core' {
     Template_1: typeof import('./components/resume/theme/Template_1.vue')['default']
     Template_2: typeof import('./components/resume/theme/Template_2.vue')['default']
     Template_3: typeof import('./components/resume/theme/Template_3.vue')['default']
-    ThemeSetting: typeof import('./components/ThemeSetting.vue')['default']
+    ThemeSetting: typeof import('./components/resume/setting/ThemeSetting.vue')['default']
+    ThemeSettings: typeof import('./components/ThemeSettings.vue')['default']
     WorkExperience: typeof import('./components/resume/WorkExperience.vue')['default']
     WorkExperienceSetting: typeof import('./components/resume/setting/WorkExperienceSetting.vue')['default']
   }

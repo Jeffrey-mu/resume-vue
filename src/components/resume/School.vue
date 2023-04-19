@@ -7,13 +7,13 @@ const { t } = useI18n()
   <div class="school">
     <div v-for="(item, index) in SchoolState" :key="index" flex="~" justify-between>
       <div>
-        <Skeleton :data="item" data_key="schoolName" />
+        <EditablePanel :data="item" data_key="schoolName" />
       </div>
       <div class="school-date" flex>
-        <Skeleton :data="item" data_key="start" />
+        <EditablePanel :data="item" data_key="start" />
         ~
-        <Skeleton :data="item" data_key="end" />
-        <Skeleton />
+        <EditablePanel :data="item" data_key="end" />
+        <EditablePanel />
       </div>
     </div>
   </div>

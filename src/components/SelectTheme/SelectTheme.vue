@@ -1,4 +1,5 @@
 <script setup lang="ts">
+provide('selectTheme', true)
 const visible = ref(false)
 const { t } = useI18n()
 
@@ -21,7 +22,7 @@ function ok() {
 </script>
 
 <template>
-  <a-modal v-model:visible="visible" width="1000px" :title="t('SelectTheme')" @ok="ok">
+  <a-modal v-if="visible" v-model:visible="visible" width="1000px" :title="t('SelectTheme')" @ok="ok">
     <div class="theme_box" flex>
       <div
         v-for="item in templates" :key="item.id" class="theme_card" :class="{ active: active === item.id }"
@@ -40,6 +41,7 @@ function ok() {
 .theme_box {
   flex-wrap: wrap;
   justify-content: center;
+
   .theme_card {
     display: flex;
     justify-content: center;
@@ -55,7 +57,6 @@ function ok() {
       zoom: .3;
       overflow: hidden;
       pointer-events: none;
-
     }
 
     .use_template_btn {
@@ -66,6 +67,7 @@ function ok() {
       left: calc(50% - 75px);
       display: none;
     }
+
     &:hover {
 
       .use_template_btn {
@@ -75,6 +77,7 @@ function ok() {
 
       transition: all .2s;
       border: 3px solid #5acc5c;
+
     }
   }
 
