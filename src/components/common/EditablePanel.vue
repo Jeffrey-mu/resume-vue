@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data, data_key } = defineProps<{ data?: any; data_key?: string | number }>()
+const { data, data_key } = defineProps<{ data?: any; data_key?: string | number; numberValue?: string }>()
 // interface StringKeyObject<T> {
 //   [key: string]: T
 // }
@@ -13,12 +13,11 @@ function handleBlur(e: Event) {
 
 <template>
   <slot>
-    <div v-if="data_key !== undefined" class="editable_panel">
-      <div class="diamond" />
+    <div v-if="data_key !== undefined" class="editable_panel" :class="{ numberValue }" :data="numberValue">
       <!-- {{  ? `${Number(data_key) + 1}、` : '' }} -->
       <div
         :class="{ editable_panel_identifying: typeof data_key === 'number', contenteditable_div: model }"
-        :contenteditable="model && !selectTheme" class="editable_panel_item" @blur="handleBlur" v-html="data[data_key]"
+        :contenteditable="model && !selectTheme" @blur="handleBlur" v-html="data[data_key]"
       />
     </div>
   </slot>
@@ -28,7 +27,7 @@ function handleBlur(e: Event) {
 
 <style lang="scss" scoped>
 @mixin block {
-  content: "";
+  content: '';
   margin-right: 10px;
   display: inline-block;
   background: none;
@@ -42,7 +41,15 @@ function handleBlur(e: Event) {
 div {
   display: inline-block;
 }
+ .numberValue {
 
+    &::before {
+      @include block;
+       content: attr(data);
+       transform: rotate(0deg);
+       border: none;
+    }
+  }
 .editable_panel {
 
   .editable_panel_identifying {
@@ -74,21 +81,7 @@ div {
     }
 
     &:focus-visible {
-      // outline: 2px solid rgb(0, 255, 38);
       outline: none;
-      // border: 1px #ccc dotted;
-      // cursor: pointer;
-      // padding: 10px;
-      // background: #fff;
-      // background: #111;
-      // // color: v-bind(currentColor);
-      // color: #fff;
-      // font-size: 16px;
-      // font-weight: 400;
-      // z-index: 999;
-      // border-radius: 10px;
-      // min-width: 200px;
-      // text-align: left;
     }
 
   }

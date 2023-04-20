@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { useTemplate } from '~/composables/templates'
+// import { useloading } from '~/composables/common'
 const [TemplatesTypeList, activeTemplate, changeTemplate, templates_computed] = useTemplate()
+// const [loading, , loadingOnce] = useloading()
+//
+// watch(templates_computed, () => {
+//   loadingOnce()
+// })
 provide('selectTheme', true)
 const visible = ref(false)
 const { t } = useI18n()
@@ -21,17 +27,6 @@ function ok() {
   setTheme(active.value)
   changeModal(false)
 }
-function activeTemplateSyle(index: number) {
-  if (index === activeTemplate.value) {
-    return {
-      background: currentColor.value,
-      color: '#fff',
-    }
-  }
-  else {
-    return {}
-  }
-}
 </script>
 
 <template>
@@ -40,28 +35,20 @@ function activeTemplateSyle(index: number) {
     placement="top"
     :closable="false"
     :visible="visible"
-    height="70vh"
+    height="80vh"
     @close="ok"
   >
-    <ul flex gap-3 justify-center cursor-pointer>
-      <li
-        v-for="item, index in TemplatesTypeList"
-        :key="item" p-1 px-3 b-rd b :style="activeTemplateSyle(index)" @click="changeTemplate(index)"
-      >
-        {{ item }}
-      </li>
-    </ul>
+    <div flex gap-3 justify-center cursor-pointer mb-5>
+      <ComTab :tab-list="TemplatesTypeList" :active="activeTemplate" @change="changeTemplate" />
+    </div>
     <div class="theme_box" flex>
-      <div
-        v-for="item in templates_computed" :key="item.id" class="theme_card" :class="{ active: active === item.id }"
-        :style="{ display: item.hide ? 'none' : '' }" @click="active = item.id"
-      >
+      <!-- <Loading :loading="loading" /> -->
+      <ComCard v-for="item in templates_computed" :key="item.id" :style="{ display: item.hide ? 'none' : '' }" class="theme_card" :checked="active === item.id" @click="active = item.id">
         <component :is="item.template" />
         <Button class="use_template_btn" @click="setTheme(item.id)">
           使用
         </Button>
-      </div>
-      <a-empty v-if="!templates_computed.length" ma mt-20 />
+      </ComCard>
     </div>
   </a-drawer>
 </template>
@@ -82,8 +69,9 @@ function activeTemplateSyle(index: number) {
     margin: 10px;
     transition: all .2s;
     position: relative;
-
+    border-radius: 10px;
     .template {
+      border-radius: 10px;
       zoom: .3;
       overflow: hidden;
       pointer-events: none;
@@ -106,14 +94,10 @@ function activeTemplateSyle(index: number) {
       }
 
       transition: all .2s;
-      border: 3px solid #5acc5c;
+      border: 3px solid greenyellow;
 
     }
   }
 
-  .active {
-    transition: all .2s;
-    border: 3px solid #5acc5c;
-  }
 }
 </style>

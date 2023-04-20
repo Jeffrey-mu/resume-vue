@@ -5,9 +5,7 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
 
 <template>
   <div flex :style="{ color: currentColor }" class="divider-com">
-    <div
-      text="17px" h-10 lh-10 class="divider-item__title divider-item__title_bg"
-    >
+    <div text="17px" class="divider-item__title divider-item__title_bg">
       {{ title }}
     </div>
     <div flex="~ 1 col" justify-center class="divider——line">
@@ -17,41 +15,53 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
 </template>
 
 <style lang="scss">
+.template {
+
+  .divider-item__title {
+    line-height: 30px;
+    height: 30px;
+    margin: 10px 0;
+  }
+}
+
 .template_2 {
   .divider-item__title {
     font-size: 25px;
     margin: 5px 0;
   }
-  &-left{
+
+  &-left {
     .divider——line {
       display: none;
     }
   }
-   &-right{
+
+  &-right {
     .divider-item__title_bg {
-    position: relative;
-    font-size: 20px;
-    line-height: 25px;
-    height: 25px;
-    padding: 0 20px;
-    min-width: 30%;
-    color: #fff;
-    border-radius: 5px 0 0 5px;
-    margin: 10px 0;
-    background-color: v-bind(currentColor);
-    &::after {
-      content: " ";
-      display: block;
-      width: 18.4px;
-      height: 18.4px;
-      background: #f2f2f2;
-      position: absolute;
-      right: -9px;
-      top: 4px;
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
+      position: relative;
+      font-size: 20px;
+      line-height: 25px;
+      height: 25px;
+      padding: 0 20px;
+      min-width: 30%;
+      color: #fff;
+      border-radius: 5px 0 0 5px;
+      margin: 10px 0;
+      background-color: v-bind(currentColor);
+
+      &::after {
+        content: " ";
+        display: block;
+        width: 18.4px;
+        height: 18.4px;
+        background: #f2f2f2;
+        position: absolute;
+        right: -9px;
+        top: 4px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
     }
-  }
   }
 
 }
@@ -68,6 +78,7 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
     .divider-item {
       flex-direction: column;
       line-height: 20px;
+
       .divider-item__title {
         font-weight: 700;
       }
@@ -81,5 +92,19 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
     }
   }
 
+}
+
+.template_4 {
+  .divider——line {
+    display: none;
+  }
+
+  .divider-item__title {
+    background-color: v-bind(currentColor);
+    color: #fff;
+    padding: 0px 20px;
+    border-radius: 30px;
+    font-size: 17px;
+  }
 }
 </style>

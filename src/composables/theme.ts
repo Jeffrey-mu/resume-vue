@@ -8,8 +8,9 @@ import ProjectExperience from '~/components/resume/ProjectExperience.vue'
 import OpenSourceProject from '~/components/resume/OpenSourceProject.vue'
 import School from '~/components/resume/School.vue'
 import SelfProfile from '~/components/resume/SelfProfile.vue'
+import ReceivedRewards from '~/components/resume/ReceivedRewards.vue'
 
-type resume_list_template_type = Ref<{ id: number; name: string; component: DefinedComponent }[]>
+type resume_list_template_type = Ref<{ id: number; name: string; component: DefinedComponent; props?: {} }[]>
 
 export function useTemplate1RefsList() {
   const resume_list_template1 = ref([
@@ -73,12 +74,52 @@ export function useTemplate2RefsList() {
   return useTemplateRefsList('resume_list_template2_Symbol', resume_list_template2)
 }
 
+export function useTemplate4RefsList() {
+  const resume_list_template4 = ref([
+    {
+      id: 1,
+      name: 'SelfProfile',
+      component: SelfProfile,
+    },
+    {
+      id: 2,
+      name: 'PersonalSkills',
+      component: PersonalSkills,
+    },
+    {
+      id: 3,
+      name: 'SelfIntroduction',
+      component: SelfIntroduction,
+    },
+    {
+      id: 4,
+      name: 'ReceivedRewards',
+      component: ReceivedRewards,
+    },
+    {
+      id: 4,
+      name: 'WorkExperience',
+      component: WorkExperience,
+    },
+    {
+      id: 5,
+      name: 'ProjectExperience',
+      component: ProjectExperience,
+    },
+    {
+      id: 7,
+      name: 'School',
+      component: School,
+    },
+  ])
+  return useTemplateRefsList('resume_list_template4_Symbol', resume_list_template4)
+}
 export function useTemplateRefsList(RESUME_LIST_TEMPLATE1_SYMBOL: string, resume_list_template: resume_list_template_type) {
   const drag = ref(false)
   onMounted(() => {
     setTemplate('', true)
   })
-
+  resume_list_template.value.map(item => item.props = item.props ? item.props : {})
   watch(resume_list_template, (value) => {
     saveLocalStorage(value.map(item => item.id))
   }, {

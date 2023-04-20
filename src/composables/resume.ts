@@ -65,6 +65,33 @@ export const SelfProfileState = ref<SelfProfileStateModel>({
   avatar: 'https://avatars.githubusercontent.com/u/66287770?v=4',
   fileList: [],
 })
+interface ReceivedRewardsModel {
+  value: string
+  style: { [key: string]: string }
+}
+
+export const ReceivedRewards = ref<ReceivedRewardsModel[]>([
+  {
+    value: '学业类奖励：如优秀毕业生、学习进步奖、学科竞赛奖、学术论文奖等。',
+    style: {},
+  },
+  {
+    value: '社会活动类奖励：如志愿者服务奖、社团工作奖、创新创业大赛奖、文艺比赛奖等。',
+    style: {},
+  },
+  {
+    value: '专业技能类奖励：如计算机证书、外语等级考试证书、职业资格证书等。',
+    style: {},
+  },
+  {
+    value: '综合素质类奖励：如优秀学生干部、优秀班干部、先进个人、三好学生等。',
+    style: {},
+  },
+  {
+    value: '奖学金类奖励：如国家励志奖学金、校内各类奖学金、企业奖学金等。',
+    style: {},
+  },
+])
 export interface SettingListModel {
   header: string
   showArrow: boolean

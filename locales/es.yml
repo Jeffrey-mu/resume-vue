@@ -29,6 +29,7 @@ resume:
     skills: skills
     work: working experiences
     project: projects
+    ReceivedRewards: Received Rewards
     openSourceProject: open source project
     name: Configuration
     drawer: Configuration interface

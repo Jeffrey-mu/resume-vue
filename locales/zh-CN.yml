@@ -29,6 +29,7 @@ resume:
     skills: 个人技能
     work: 工作经历
     project: 项目经历
+    ReceivedRewards: 荣获奖励
     openSourceProject: 开源项目
     name: 配置
     drawer: 配置界面

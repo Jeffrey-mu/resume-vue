@@ -13,6 +13,7 @@ declare global {
   const OpenSourceProjectState: typeof import('./composables/resume')['OpenSourceProjectState']
   const PerjectState: typeof import('./composables/resume')['PerjectState']
   const PersonalSkillsState: typeof import('./composables/resume')['PersonalSkillsState']
+  const ReceivedRewards: typeof import('./composables/resume')['ReceivedRewards']
   const SchoolState: typeof import('./composables/resume')['SchoolState']
   const SelfIntroduce: typeof import('./composables/resume')['SelfIntroduce']
   const SelfProfileState: typeof import('./composables/resume')['SelfProfileState']
@@ -249,6 +250,7 @@ declare global {
   const useSwipe: typeof import('@vueuse/core')['useSwipe']
   const useTemplate1RefsList: typeof import('./composables/theme')['useTemplate1RefsList']
   const useTemplate2RefsList: typeof import('./composables/theme')['useTemplate2RefsList']
+  const useTemplate4RefsList: typeof import('./composables/theme')['useTemplate4RefsList']
   const useTemplate: typeof import('./composables/templates')['useTemplate']
   const useTemplateRefsList: typeof import('./composables/theme')['useTemplateRefsList']
   const useTextSelection: typeof import('@vueuse/core')['useTextSelection']
@@ -280,6 +282,7 @@ declare global {
   const useWindowFocus: typeof import('@vueuse/core')['useWindowFocus']
   const useWindowScroll: typeof import('@vueuse/core')['useWindowScroll']
   const useWindowSize: typeof import('@vueuse/core')['useWindowSize']
+  const useloading: typeof import('./composables/common')['useloading']
   const visible: typeof import('./composables/resume')['visible']
   const watch: typeof import('vue')['watch']
   const watchArray: typeof import('@vueuse/core')['watchArray']
@@ -312,6 +315,7 @@ declare module '@vue/runtime-core' {
     readonly OpenSourceProjectState: UnwrapRef<typeof import('./composables/resume')['OpenSourceProjectState']>
     readonly PerjectState: UnwrapRef<typeof import('./composables/resume')['PerjectState']>
     readonly PersonalSkillsState: UnwrapRef<typeof import('./composables/resume')['PersonalSkillsState']>
+    readonly ReceivedRewards: UnwrapRef<typeof import('./composables/resume')['ReceivedRewards']>
     readonly SchoolState: UnwrapRef<typeof import('./composables/resume')['SchoolState']>
     readonly SelfIntroduce: UnwrapRef<typeof import('./composables/resume')['SelfIntroduce']>
     readonly SelfProfileState: UnwrapRef<typeof import('./composables/resume')['SelfProfileState']>
@@ -548,6 +552,7 @@ declare module '@vue/runtime-core' {
     readonly useSwipe: UnwrapRef<typeof import('@vueuse/core')['useSwipe']>
     readonly useTemplate1RefsList: UnwrapRef<typeof import('./composables/theme')['useTemplate1RefsList']>
     readonly useTemplate2RefsList: UnwrapRef<typeof import('./composables/theme')['useTemplate2RefsList']>
+    readonly useTemplate4RefsList: UnwrapRef<typeof import('./composables/theme')['useTemplate4RefsList']>
     readonly useTemplate: UnwrapRef<typeof import('./composables/templates')['useTemplate']>
     readonly useTemplateRefsList: UnwrapRef<typeof import('./composables/theme')['useTemplateRefsList']>
     readonly useTextSelection: UnwrapRef<typeof import('@vueuse/core')['useTextSelection']>
@@ -579,6 +584,7 @@ declare module '@vue/runtime-core' {
     readonly useWindowFocus: UnwrapRef<typeof import('@vueuse/core')['useWindowFocus']>
     readonly useWindowScroll: UnwrapRef<typeof import('@vueuse/core')['useWindowScroll']>
     readonly useWindowSize: UnwrapRef<typeof import('@vueuse/core')['useWindowSize']>
+    readonly useloading: UnwrapRef<typeof import('./composables/common')['useloading']>
     readonly visible: UnwrapRef<typeof import('./composables/resume')['visible']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchArray: UnwrapRef<typeof import('@vueuse/core')['watchArray']>

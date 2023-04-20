@@ -37,12 +37,9 @@ export const templates: Templates[] = [{
   id: 4,
   type: TemplatesType.freshStudents,
 }]
-export function useTemplate(): [string[], Ref<number>, (index: number) => void, ComputedRef<Templates[]>] {
+export function useTemplate(): [string[], Ref<number>, (index?: number | string) => boolean | undefined, ComputedRef<Templates[]>] {
   const activeTemplate = ref(0)
   const TemplatesTypeList = ['全部', '应届生', '技术开发', '运营', '产品', '考研复试', '设计']
-  function changeTemplate(index: number) {
-    activeTemplate.value = index
-  }
 
   const templates_computed = computed(() => {
     return templates.map((item) => {
@@ -54,5 +51,11 @@ export function useTemplate(): [string[], Ref<number>, (index: number) => void, 
       return item
     })
   })
+
+  function changeTemplate(index?: number | string): boolean | undefined {
+    if (typeof index !== 'number')
+      return templates_computed.value.every(item => item.hide)
+    activeTemplate.value = index
+  }
   return [TemplatesTypeList, activeTemplate, changeTemplate, templates_computed]
 }
