@@ -21,7 +21,6 @@ import { currentColor } from '~/composables/resume'
     width: 790px;
     * {
       list-style: none;
-      transition: all .2;
     }
 
     .ghost {

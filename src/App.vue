@@ -26,7 +26,7 @@ useHead({
     },
     {
       rel: 'stylesheet',
-      href: 'https://at.alicdn.com/t/c/font_3998763_yqc8jwqv97p.css?spm=a313x.7781069.1998910419.52&file=font_3998763_yqc8jwqv97p.css',
+      href: 'https://at.alicdn.com/t/c/font_3998763_sghij8z1czs.css?spm=a313x.7781069.1998910419.52&file=font_3998763_sghij8z1czs.css',
     },
   ],
 })

@@ -65,12 +65,50 @@ export const SelfProfileState = ref<SelfProfileStateModel>({
   avatar: 'https://avatars.githubusercontent.com/u/66287770?v=4',
   fileList: [],
 })
-interface ReceivedRewardsModel {
+interface SelfProfileModel {
+  name: DataModel
+  tel: DataModel
+  email: DataModel
+  address: DataModel
+  birthday: DataModel
+}
+
+interface DataModel {
   value: string
   style: { [key: string]: string }
 }
+export const SelfEvaluation = ref<DataModel[]>([{
+  value: '作为一名应届生，我认为我具备一些优秀的特质和能力。首先，我具有很强的学习能力和适应能力，能够快速掌握新知识和技能，并且能够灵活运用它们解决问题。其次，我有较强的团队合作精神和沟通能力，善于与他人合作完成任务，并能够清晰地表达自己的想法和观点。此外，我注重细节，有良好的时间管理能力和责任心，能够高效地完成工作并保证质量。最后',
+  style: {},
+}])
 
-export const ReceivedRewards = ref<ReceivedRewardsModel[]>([
+interface InternshipExperienceModel {
+  position: DataModel
+  company: DataModel
+  date: DataModel
+  value: DataModel
+
+}
+export const InternshipExperience = ref<InternshipExperienceModel[]>([{
+  date: {
+    value: '2021-07——2022-03',
+    style: {},
+  },
+  company: {
+    value: '北京云上大陆科技',
+    style: {},
+  },
+  position: {
+    value: '暑假人事实习生',
+    style: {},
+  },
+  value: {
+    value: '企业级ERP系统具有非常重大的意义,能够帮助企业更好地对其资源计划进行即时管理井且预见未来资源需要,从而降低管理成本提高管理效率但是,由于ERP在我国企业中的使用范围还较小使用时间不长企业在使用ERP的过程中,必须加强对ERP风险控制、内部控制、全面预算管理等问题的研究,从而使ERP能在企业财务管理中发挥更大的作用',
+    style: {},
+  },
+
+}])
+export const ReceivedRewards = ref<DataModel[]>([
   {
     value: '学业类奖励：如优秀毕业生、学习进步奖、学科竞赛奖、学术论文奖等。',
     style: {},
@@ -171,7 +209,7 @@ export interface SchoolStateModel {
   end: string
 }
 export const SchoolState = ref<SchoolStateModel[]>([
-  { schoolName: 'xxx学校  (软件工程)', start: '2016-07.01', end: '2016-07.01' },
+  { schoolName: 'xxx学校  (软件工程)', start: '2016-07', end: '2016-07' },
 ])
 
 export const activeKey = ref('-1')
@@ -339,3 +377,25 @@ export function init_state() {
   })
 }
 
+export const SelfProfile = ref<SelfProfileModel>({
+  name: {
+    value: '张翠山',
+    style: { color: currentColor.value },
+  },
+  address: {
+    value: '北京市朝阳区前门102',
+    style: {},
+  },
+  birthday: {
+    value: '2000-02-31',
+    style: {},
+  },
+  email: {
+    value: '1115378579@163.com',
+    style: {},
+  },
+  tel: {
+    value: '182****3211',
+    style: {},
+  },
+})

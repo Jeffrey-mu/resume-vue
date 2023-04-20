@@ -9,6 +9,11 @@ function handleBlur(e: Event) {
   if (target instanceof HTMLElement)
     data[data_key] = target?.innerHTML
 }
+
+function getData(data: object, data_key: string | number, key?: 'value' | 'style') {
+  // @ts-expect-error
+  return typeof data[data_key] !== 'string' ? data[data_key][key] : data[data_key]
+}
 </script>
 
 <template>
@@ -17,7 +22,7 @@ function handleBlur(e: Event) {
       <!-- {{  ? `${Number(data_key) + 1}、` : '' }} -->
       <div
         :class="{ editable_panel_identifying: typeof data_key === 'number', contenteditable_div: model }"
-        :contenteditable="model && !selectTheme" @blur="handleBlur" v-html="data[data_key]"
+        :contenteditable="model && !selectTheme" :style="getData(data, data_key, 'style')" @blur="handleBlur" v-html="getData(data, data_key, 'value')"
       />
     </div>
   </slot>
@@ -82,6 +87,7 @@ div {
 
     &:focus-visible {
       outline: none;
+      text-decoration: underline;
     }
 
   }

@@ -9,13 +9,17 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
+  const InternshipExperience: typeof import('./composables/resume')['InternshipExperience']
+  const MAPPING_TABLE_ICON: typeof import('./composables/common')['MAPPING_TABLE_ICON']
   const ManageDisplay: typeof import('./composables/theme')['ManageDisplay']
   const OpenSourceProjectState: typeof import('./composables/resume')['OpenSourceProjectState']
   const PerjectState: typeof import('./composables/resume')['PerjectState']
   const PersonalSkillsState: typeof import('./composables/resume')['PersonalSkillsState']
   const ReceivedRewards: typeof import('./composables/resume')['ReceivedRewards']
   const SchoolState: typeof import('./composables/resume')['SchoolState']
+  const SelfEvaluation: typeof import('./composables/resume')['SelfEvaluation']
   const SelfIntroduce: typeof import('./composables/resume')['SelfIntroduce']
+  const SelfProfile: typeof import('./composables/resume')['SelfProfile']
   const SelfProfileState: typeof import('./composables/resume')['SelfProfileState']
   const WorkExperienceState: typeof import('./composables/resume')['WorkExperienceState']
   const activeComponent: typeof import('./composables/resume')['activeComponent']
@@ -311,13 +315,17 @@ declare module '@vue/runtime-core' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly InternshipExperience: UnwrapRef<typeof import('./composables/resume')['InternshipExperience']>
+    readonly MAPPING_TABLE_ICON: UnwrapRef<typeof import('./composables/common')['MAPPING_TABLE_ICON']>
     readonly ManageDisplay: UnwrapRef<typeof import('./composables/theme')['ManageDisplay']>
     readonly OpenSourceProjectState: UnwrapRef<typeof import('./composables/resume')['OpenSourceProjectState']>
     readonly PerjectState: UnwrapRef<typeof import('./composables/resume')['PerjectState']>
     readonly PersonalSkillsState: UnwrapRef<typeof import('./composables/resume')['PersonalSkillsState']>
     readonly ReceivedRewards: UnwrapRef<typeof import('./composables/resume')['ReceivedRewards']>
     readonly SchoolState: UnwrapRef<typeof import('./composables/resume')['SchoolState']>
+    readonly SelfEvaluation: UnwrapRef<typeof import('./composables/resume')['SelfEvaluation']>
     readonly SelfIntroduce: UnwrapRef<typeof import('./composables/resume')['SelfIntroduce']>
+    readonly SelfProfile: UnwrapRef<typeof import('./composables/resume')['SelfProfile']>
     readonly SelfProfileState: UnwrapRef<typeof import('./composables/resume')['SelfProfileState']>
     readonly WorkExperienceState: UnwrapRef<typeof import('./composables/resume')['WorkExperienceState']>
     readonly activeComponent: UnwrapRef<typeof import('./composables/resume')['activeComponent']>

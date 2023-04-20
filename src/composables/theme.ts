@@ -8,7 +8,10 @@ import ProjectExperience from '~/components/resume/ProjectExperience.vue'
 import OpenSourceProject from '~/components/resume/OpenSourceProject.vue'
 import School from '~/components/resume/School.vue'
 import SelfProfile from '~/components/resume/SelfProfile.vue'
+import SelfProfile1 from '~/components/resume/SelfProfile1.vue'
 import ReceivedRewards from '~/components/resume/ReceivedRewards.vue'
+import SelfEvaluation from '~/components/resume/SelfEvaluation.vue'
+import InternshipExperience from '~/components/resume/InternshipExperience.vue'
 
 type resume_list_template_type = Ref<{ id: number; name: string; component: DefinedComponent; props?: {} }[]>
 
@@ -78,18 +81,18 @@ export function useTemplate4RefsList() {
   const resume_list_template4 = ref([
     {
       id: 1,
-      name: 'SelfProfile',
-      component: SelfProfile,
+      name: 'SelfProfile1',
+      component: SelfProfile1,
     },
     {
-      id: 2,
-      name: 'PersonalSkills',
-      component: PersonalSkills,
+      id: 7,
+      name: 'School',
+      component: School,
     },
     {
-      id: 3,
-      name: 'SelfIntroduction',
-      component: SelfIntroduction,
+      id: 4,
+      name: 'InternshipExperience',
+      component: InternshipExperience,
     },
     {
       id: 4,
@@ -97,20 +100,11 @@ export function useTemplate4RefsList() {
       component: ReceivedRewards,
     },
     {
-      id: 4,
-      name: 'WorkExperience',
-      component: WorkExperience,
+      id: 3,
+      name: 'SelfEvaluation',
+      component: SelfEvaluation,
     },
-    {
-      id: 5,
-      name: 'ProjectExperience',
-      component: ProjectExperience,
-    },
-    {
-      id: 7,
-      name: 'School',
-      component: School,
-    },
+
   ])
   return useTemplateRefsList('resume_list_template4_Symbol', resume_list_template4)
 }

@@ -26,8 +26,10 @@ resume:
     self: personal information
     education: education
     introduction: self introduction
+    InternshipExperience: internship experience
     skills: skills
     work: working experiences
+    SelfEvaluation: self evaluation
     project: projects
     ReceivedRewards: Received Rewards
     openSourceProject: open source project

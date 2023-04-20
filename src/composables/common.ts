@@ -15,3 +15,12 @@ export function useloading(): [Ref<boolean>, (value: boolean) => void, (time?: n
   }
   return [loading, setLoading, autoLoadingOnce]
 }
+export const MAPPING_TABLE_ICON = {
+  tel: 'dianhua',
+  github: 'github-fill',
+  email: 'youxiang',
+  blog: 'diqiu',
+  position: 'position',
+  birthday: 'shijian',
+  address: 'dizhi',
+}

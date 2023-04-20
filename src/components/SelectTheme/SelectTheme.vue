@@ -43,11 +43,8 @@ function ok() {
     </div>
     <div class="theme_box" flex>
       <!-- <Loading :loading="loading" /> -->
-      <ComCard v-for="item in templates_computed" :key="item.id" :style="{ display: item.hide ? 'none' : '' }" class="theme_card" :checked="active === item.id" @click="active = item.id">
+      <ComCard v-for="item in templates_computed" :key="item.id" :style="{ display: item.hide ? 'none' : '' }" class="theme_card" :checked="active === item.id" @click="active = item.id; setTheme(item.id)">
         <component :is="item.template" />
-        <Button class="use_template_btn" @click="setTheme(item.id)">
-          使用
-        </Button>
       </ComCard>
     </div>
   </a-drawer>

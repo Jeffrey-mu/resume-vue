@@ -98,13 +98,17 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
   .divider——line {
     display: none;
   }
-
+  div,p {
+  letter-spacing: 1.5px;
+  line-height: 35px;
+}
   .divider-item__title {
     background-color: v-bind(currentColor);
     color: #fff;
     padding: 0px 20px;
     border-radius: 30px;
     font-size: 17px;
+    margin: 20px 0;
   }
 }
 </style>

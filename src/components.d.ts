@@ -7,11 +7,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Avatar: typeof import('./components/resume/Avatar.vue')['default']
     Button: typeof import('./components/common/Button.vue')['default']
     Collapse: typeof import('./components/resume/Collapse.vue')['default']
     ComCard: typeof import('./components/common/ComCard.vue')['default']
     ComTab: typeof import('./components/common/ComTab.vue')['default']
-    copy: typeof import('./components/svg/i copy.vue')['default']
+    copy: typeof import('./components/resume/SelfProfile copy.vue')['default']
     Corrugation: typeof import('./components/svg/Corrugation.vue')['default']
     Corrugation1: typeof import('./components/svg/Corrugation1.vue')['default']
     Divider: typeof import('./components/resume/Divider.vue')['default']
@@ -23,6 +24,7 @@ declare module '@vue/runtime-core' {
     I: typeof import('./components/svg/i.vue')['default']
     Icon: typeof import('./components/common/Icon.vue')['default']
     ImportSetting: typeof import('./components/resume/setting/ImportSetting.vue')['default']
+    InternshipExperience: typeof import('./components/resume/InternshipExperience.vue')['default']
     Loading: typeof import('./components/common/Loading.vue')['default']
     Logo: typeof import('./components/common/Logo.vue')['default']
     LogoSvg: typeof import('./components/svg/logoSvg.vue')['default']
@@ -40,9 +42,11 @@ declare module '@vue/runtime-core' {
     School: typeof import('./components/resume/School.vue')['default']
     SchoolSetting: typeof import('./components/resume/setting/SchoolSetting.vue')['default']
     SelectTheme: typeof import('./components/SelectTheme/SelectTheme.vue')['default']
+    SelfEvaluation: typeof import('./components/resume/SelfEvaluation.vue')['default']
     SelfInfoSetting: typeof import('./components/resume/setting/SelfInfoSetting.vue')['default']
     SelfIntroduction: typeof import('./components/resume/SelfIntroduction.vue')['default']
     SelfProfile: typeof import('./components/resume/SelfProfile.vue')['default']
+    SelfProfile1: typeof import('./components/resume/SelfProfile1.vue')['default']
     SelfSetting: typeof import('./components/resume/setting/SelfSetting.vue')['default']
     SkillsSetting: typeof import('./components/resume/setting/SkillsSetting.vue')['default']
     Template_1: typeof import('./components/resume/theme/Template_1.vue')['default']

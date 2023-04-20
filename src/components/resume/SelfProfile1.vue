@@ -1,7 +1,9 @@
-<script setup lang="ts" name="SelfProfile">
+<script setup lang="ts" name="SelfProfile1">
 import { unref as _unref } from 'vue'
-import { SelfProfileState as s, selfFilter } from '~/composables/resume'
+import { SelfProfile as s } from '~/composables/resume'
 import { hexToRgb } from '~/utils'
+const SelfProfileFilter = inject('SelfProfileFilter') as string[] || []
+SelfProfileFilter.push('name')
 interface IconInfo {
   tel: string
   github: string
@@ -10,40 +12,30 @@ interface IconInfo {
   position: string
 }
 const info = computed(() => {
-  return Object.keys(s.value).filter(el => !selfFilter.includes(el)) as Array<keyof IconInfo>
+  return Object.keys(s.value).filter(item => !SelfProfileFilter.includes(item)) as Array<keyof IconInfo>
 })
-const MAPPING_TABLE = {
-  tel: 'dianhua',
-  github: 'github-fill',
-  email: 'youxiang',
-  blog: 'diqiu',
-  position: 'position',
-
-}
 </script>
 
 <template>
-  <div class="self-profile_box">
+  <div class="self-profile_box" :style="{ borderColor: currentColor }">
     <div class="name_head" flex="~ " justify-between>
       <EditablePanel data_key="name" :data="s" />
-      <div v-show="s.showImg" class="self-profile-img">
-        <EditablePanel><img :src="SelfProfileState.avatar" alt="" w-20 h-20 :style="{ 'border-radius': s.radius }"></EditablePanel>
-      </div>
     </div>
     <div flex class="self-profile-info">
       <div flex="~ wrap 1" class="self-profile-item">
         <p v-for="item in info" :key="item" w="35%" media="">
           <EditablePanel>
-            <Icon :icon="MAPPING_TABLE[item]" mr-2 />
+            <Icon :icon="MAPPING_TABLE_ICON[item]" mr-2 :color="currentColor" />
             <EditablePanel :data_key="item" :data="s" />
           </EditablePanel>
         </p>
       </div>
     </div>
+    <Avatar style="position: absolute; right: 50px; top: 0px" b-rd />
   </div>
 </template>
 
-<style  lang="scss">
+<style  lang="scss" scoped>
 @media screen and (max-width: 790px) {
   .self-profile_box {
     position: relative;
@@ -52,6 +44,12 @@ const MAPPING_TABLE = {
   .self-profile-item p {
     width: 90%;
   }
+}
+
+.self-profile_box {
+  padding: 20px;
+  border-bottom: 3px solid black;
+  position: relative;
 }
 
 .template {
