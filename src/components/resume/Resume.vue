@@ -16,9 +16,9 @@ import { currentColor } from '~/composables/resume'
 
 <style lang="scss">
 .page {
+
   .template {
     width: 790px;
-    border-radius: 8px;
     * {
       list-style: none;
       transition: all .2;

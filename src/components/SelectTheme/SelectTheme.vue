@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useTemplate } from '~/composables/templates'
+const [TemplatesTypeList, activeTemplate, changeTemplate, templates_computed] = useTemplate()
 provide('selectTheme', true)
 const visible = ref(false)
 const { t } = useI18n()
@@ -19,30 +21,58 @@ function ok() {
   setTheme(active.value)
   changeModal(false)
 }
+function activeTemplateSyle(index: number) {
+  if (index === activeTemplate.value) {
+    return {
+      background: currentColor.value,
+      color: '#fff',
+    }
+  }
+  else {
+    return {}
+  }
+}
 </script>
 
 <template>
-  <a-modal v-if="visible" v-model:visible="visible" width="1000px" :title="t('SelectTheme')" @ok="ok">
+  <a-drawer
+    :title="t('SelectTheme')"
+    placement="top"
+    :closable="false"
+    :visible="visible"
+    height="70vh"
+    @close="ok"
+  >
+    <ul flex gap-3 justify-center cursor-pointer>
+      <li
+        v-for="item, index in TemplatesTypeList"
+        :key="item" p-1 px-3 b-rd b :style="activeTemplateSyle(index)" @click="changeTemplate(index)"
+      >
+        {{ item }}
+      </li>
+    </ul>
     <div class="theme_box" flex>
       <div
-        v-for="item in templates" :key="item.id" class="theme_card" :class="{ active: active === item.id }"
-        @click="active = item.id"
+        v-for="item in templates_computed" :key="item.id" class="theme_card" :class="{ active: active === item.id }"
+        :style="{ display: item.hide ? 'none' : '' }" @click="active = item.id"
       >
         <component :is="item.template" />
         <Button class="use_template_btn" @click="setTheme(item.id)">
           使用
         </Button>
       </div>
+      <a-empty v-if="!templates_computed.length" ma mt-20 />
     </div>
-  </a-modal>
+  </a-drawer>
 </template>
 
 <style lang="scss">
 .theme_box {
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
 
   .theme_card {
+    transition: all .2s;
     display: flex;
     justify-content: center;
     width: 250px;

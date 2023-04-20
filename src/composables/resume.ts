@@ -19,26 +19,7 @@ import PerjectSetting from '~/components/resume/setting/PerjectSetting.vue'
 import OpenSourceProjectSetting from '~/components/resume/setting/OpenSourceProjectSetting.vue'
 import ThemeSetting from '~/components/resume/setting/ThemeSetting.vue'
 import { getDevice, importDataToLocal } from '~/utils'
-// Template
-import Template_1 from '~/components/resume/theme/Template_1.vue'
-import Template_2 from '~/components/resume/theme/Template_2.vue'
-import Template_3 from '~/components/resume/theme/Template_3.vue'
 
-export interface Templates {
-  id: number
-  template: Component
-}
-export const templates = [{
-  template: Template_1,
-  id: 1,
-}, {
-  template: Template_2,
-  id: 2,
-}, {
-  template: Template_3,
-  id: 3,
-}]
-// Template
 export const radius = ref<string>('50%')
 export const model = ref<boolean>(false)
 export const setModel = () => {
