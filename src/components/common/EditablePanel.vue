@@ -22,7 +22,8 @@ function getData(data: object, data_key: string | number, key?: 'value' | 'style
       <!-- {{  ? `${Number(data_key) + 1}、` : '' }} -->
       <div
         :class="{ editable_panel_identifying: typeof data_key === 'number', contenteditable_div: model }"
-        :contenteditable="model && !selectTheme" :style="getData(data, data_key, 'style')" @blur="handleBlur" v-html="getData(data, data_key, 'value')"
+        :contenteditable="model && !selectTheme" :style="getData(data, data_key, 'style')" @blur="handleBlur"
+        v-html="getData(data, data_key, 'value')"
       />
     </div>
   </slot>
@@ -46,15 +47,17 @@ function getData(data: object, data_key: string | number, key?: 'value' | 'style
 div {
   display: inline-block;
 }
- .numberValue {
 
-    &::before {
-      @include block;
-       content: attr(data);
-       transform: rotate(0deg);
-       border: none;
-    }
+.numberValue {
+
+  &::before {
+    @include block;
+    content: attr(data);
+    transform: rotate(0deg);
+    border: none;
   }
+}
+
 .editable_panel {
 
   .editable_panel_identifying {
@@ -75,8 +78,7 @@ div {
     &:focus,
     &:hover {
 
-      &::before,
-      &::after {
+      &::before {
         @include block;
       }
 

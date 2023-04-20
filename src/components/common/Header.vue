@@ -14,17 +14,17 @@ defineProps<{ type: string }>()
     <Logo :color="currentColor" />
     <div flex gap-2 items-center c="#11111">
       <template v-if="type !== 'default'">
-        <i v-if="model" i-carbon-view @click="setModel" />
-        <i v-else i-carbon-edit @click="setModel" />
+        <i v-if="model" i-carbon-view title="预览" @click="setModel" />
+        <i v-else i-carbon-edit title="编辑" @click="setModel" />
       </template>
-      <a href="/about" i-carbon-dicom-overlay />
+      <a href="/about" i-carbon-dicom-overlay title="关于" />
       <!-- <ThemeSetting /> -->
       <!-- <span v-show="type !== 'default'" ml-2 cursor-pointer @click="toggleLocales">
           <span :style="{ color: locale === 'es' ? '#ccc' : '' }">中</span>
           /
           <span :style="{ color: locale === 'es' ? '' : '#ccc' }">en</span>
         </span> -->
-      <a href="https://github.com/Jeffrey-mu/resume-vue" i-carbon-logo-github />
+      <a href="https://github.com/Jeffrey-mu/resume-vue" i-carbon-logo-github title="github" />
     </div>
   </nav>
 </template>
