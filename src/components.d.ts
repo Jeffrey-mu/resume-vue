@@ -9,7 +9,6 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Button: typeof import('./components/Button.vue')['default']
     Collapse: typeof import('./components/resume/Collapse.vue')['default']
-    Contenteditable: typeof import('./components/Contenteditable.vue')['default']
     Divider: typeof import('./components/resume/Divider.vue')['default']
     Drawer: typeof import('./components/resume/Drawer.vue')['default']
     EditablePanel: typeof import('./components/EditablePanel.vue')['default']
@@ -36,7 +35,6 @@ declare module '@vue/runtime-core' {
     SelfIntroduction: typeof import('./components/resume/SelfIntroduction.vue')['default']
     SelfProfile: typeof import('./components/resume/SelfProfile.vue')['default']
     SelfSetting: typeof import('./components/resume/setting/SelfSetting.vue')['default']
-    Skeleton: typeof import('./components/Skeleton.vue')['default']
     SkillsSetting: typeof import('./components/resume/setting/SkillsSetting.vue')['default']
     Template_1: typeof import('./components/resume/theme/Template_1.vue')['default']
     Template_2: typeof import('./components/resume/theme/Template_2.vue')['default']
