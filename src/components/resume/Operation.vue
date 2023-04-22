@@ -1,7 +1,7 @@
 <script setup lang="ts" name="operation">
 import { message } from 'ant-design-vue'
 // import { setVisible } from '~/composables/resume'
-import { clipboard, exportDataToLocal, getConfig, print } from '~/utils'
+import { clipboard, exportDataToLocal, print, savaResumeData } from '~/utils'
 const { t } = useI18n()
 const ThemeRef = ref()
 interface BtnList {
@@ -9,7 +9,7 @@ interface BtnList {
   fn: (() => void)
 }
 const exportData = () => {
-  exportDataToLocal(getConfig(), 'config')
+  exportDataToLocal(getResumeData(), 'config')
 }
 const BTN_LISt = ref<BtnList[]>([
   {
@@ -19,14 +19,14 @@ const BTN_LISt = ref<BtnList[]>([
   {
     label: 'resume.operation.save',
     fn: () => {
-      localStorage.setItem('resume', JSON.stringify(getConfig()))
+      savaResumeData()
       message.success('配置已保存到本地！')
     },
   },
   {
     label: 'resume.operation.copy',
     fn: () => {
-      clipboard(JSON.stringify(unref(getConfig())))
+      clipboard(JSON.stringify(unref(getResumeData())))
     },
   },
   {
@@ -62,6 +62,7 @@ const BTN_LISt = ref<BtnList[]>([
 @media print {
   @page {
     size: A4;
+    margin: 1cm;
   }
 
   body,

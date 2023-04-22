@@ -42,7 +42,9 @@ import { currentColor } from '~/composables/resume'
       height: 25px;
       background: v-bind(currentColor);
       cursor: move;
-
+      // position: absolute;
+      // right: 10px;
+      opacity: .8;
       &:hover {
         transform: scale(1.1);
       }

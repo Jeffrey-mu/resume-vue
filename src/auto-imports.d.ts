@@ -11,6 +11,7 @@ declare global {
   const EffectScope: typeof import('vue')['EffectScope']
   const InternshipExperience: typeof import('./composables/resume')['InternshipExperience']
   const MAPPING_TABLE_ICON: typeof import('./composables/common')['MAPPING_TABLE_ICON']
+  const MAPPING_TABLE_LABEL: typeof import('./composables/common')['MAPPING_TABLE_LABEL']
   const ManageDisplay: typeof import('./composables/theme')['ManageDisplay']
   const OpenSourceProjectState: typeof import('./composables/resume')['OpenSourceProjectState']
   const PerjectState: typeof import('./composables/resume')['PerjectState']
@@ -55,8 +56,10 @@ declare global {
   const extendRef: typeof import('@vueuse/core')['extendRef']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
+  const getResumeData: typeof import('./composables/resume')['getResumeData']
   const h: typeof import('vue')['h']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
+  const importDataForLocal: typeof import('./composables/resume')['importDataForLocal']
   const init_state: typeof import('./composables/resume')['init_state']
   const inject: typeof import('vue')['inject']
   const isDark: typeof import('./composables/dark')['isDark']
@@ -111,6 +114,7 @@ declare global {
   const resolveUnref: typeof import('@vueuse/core')['resolveUnref']
   const selfFilter: typeof import('./composables/resume')['selfFilter']
   const setChildrenDrawer: typeof import('./composables/resume')['setChildrenDrawer']
+  const setCurrentColor: typeof import('./composables/resume')['setCurrentColor']
   const setModel: typeof import('./composables/resume')['setModel']
   const setRadius: typeof import('./composables/resume')['setRadius']
   const setVisible: typeof import('./composables/resume')['setVisible']
@@ -317,6 +321,7 @@ declare module '@vue/runtime-core' {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly InternshipExperience: UnwrapRef<typeof import('./composables/resume')['InternshipExperience']>
     readonly MAPPING_TABLE_ICON: UnwrapRef<typeof import('./composables/common')['MAPPING_TABLE_ICON']>
+    readonly MAPPING_TABLE_LABEL: UnwrapRef<typeof import('./composables/common')['MAPPING_TABLE_LABEL']>
     readonly ManageDisplay: UnwrapRef<typeof import('./composables/theme')['ManageDisplay']>
     readonly OpenSourceProjectState: UnwrapRef<typeof import('./composables/resume')['OpenSourceProjectState']>
     readonly PerjectState: UnwrapRef<typeof import('./composables/resume')['PerjectState']>
@@ -361,8 +366,10 @@ declare module '@vue/runtime-core' {
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
+    readonly getResumeData: UnwrapRef<typeof import('./composables/resume')['getResumeData']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
+    readonly importDataForLocal: UnwrapRef<typeof import('./composables/resume')['importDataForLocal']>
     readonly init_state: UnwrapRef<typeof import('./composables/resume')['init_state']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly isDark: UnwrapRef<typeof import('./composables/dark')['isDark']>
@@ -417,6 +424,7 @@ declare module '@vue/runtime-core' {
     readonly resolveUnref: UnwrapRef<typeof import('@vueuse/core')['resolveUnref']>
     readonly selfFilter: UnwrapRef<typeof import('./composables/resume')['selfFilter']>
     readonly setChildrenDrawer: UnwrapRef<typeof import('./composables/resume')['setChildrenDrawer']>
+    readonly setCurrentColor: UnwrapRef<typeof import('./composables/resume')['setCurrentColor']>
     readonly setModel: UnwrapRef<typeof import('./composables/resume')['setModel']>
     readonly setRadius: UnwrapRef<typeof import('./composables/resume')['setRadius']>
     readonly setVisible: UnwrapRef<typeof import('./composables/resume')['setVisible']>

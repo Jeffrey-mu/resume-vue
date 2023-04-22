@@ -7,14 +7,15 @@ withDefaults(defineProps<{ width: string; height: string }>(), {
 
 <template>
   <div class="resume_avatar" :style="{ width, height }">
-    <img src="https://avatars.githubusercontent.com/u/66287770?v=4" alt="">
+    <img src="images/resume_avatar.jpg" alt="">
   </div>
 </template>
 
 <style lang="scss">
 .resume_avatar {
-  // padding: 14px;
+  padding: 5px;
   overflow: hidden;
+  border: 1px #ccc solid;
   img {
     width: 100%;
     height: 100%

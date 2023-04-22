@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import type { ResumeStateModel } from '~/composables/resume'
 import { showImport } from '~/composables/resume'
-import { importDataToLocal } from '~/utils'
 const { t } = useI18n()
 const value = ref<string>('')
 const handleOk = (e: MouseEvent) => {
   showImport.value = false
   try {
     const data: ResumeStateModel = JSON.parse((value.value))
-    importDataToLocal(data)
+    importDataForLocal(data)
   }
   catch (e) {
     console.error(e)

@@ -5,7 +5,7 @@ const emit = defineEmits(['click'])
 </script>
 
 <template>
-  <button class="btn" mb-3 :style="{ background: hexToRgb(currentColor, .9) }" c-white @click="emit('click')">
+  <button class="btn" :style="{ background: hexToRgb(currentColor, .9) }" c-white @click="emit('click')">
     <slot />
   </button>
 </template>

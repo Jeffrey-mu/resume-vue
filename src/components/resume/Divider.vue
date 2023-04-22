@@ -1,12 +1,18 @@
 <script setup lang="ts" name="Divider">
 import { unref as _unref } from 'vue'
-withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }>(), { hideLine: false, showBG: false })
+import type { MAPPING_TABLE_ICON_MODEL_KEY } from '~/composables/common'
+
+withDefaults(defineProps<{ title: MAPPING_TABLE_ICON_MODEL_KEY; hideLine?: boolean; showBG?: boolean }>(), { hideLine: false, showBG: false })
 </script>
 
 <template>
   <div flex :style="{ color: currentColor }" class="divider-com">
-    <div text="17px" class="divider-item__title divider-item__title_bg">
-      {{ title }}
+    <div flex>
+      <Icon :icon="MAPPING_TABLE_ICON[title] || ''" mr-2 :color="currentColor" class="divider-icon" />
+
+      <div text="17px" class="divider-item__title divider-item__title_bg">
+        {{ title }}
+      </div>
     </div>
     <div flex="~ 1 col" justify-center class="divider——line">
       <p border="~" h="1px" ma-3 />
@@ -16,7 +22,9 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
 
 <style lang="scss">
 .template {
-
+  .divider-icon {
+    display: none;
+  }
   .divider-item__title {
     line-height: 30px;
     height: 30px;
@@ -95,13 +103,13 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
 }
 
 .template_4 {
-  .divider——line {
-    display: none;
+
+  div,
+  p {
+    letter-spacing: 1.5px;
+    line-height: 35px;
   }
-  div,p {
-  letter-spacing: 1.5px;
-  line-height: 35px;
-}
+
   .divider-item__title {
     background-color: v-bind(currentColor);
     color: #fff;
@@ -109,6 +117,14 @@ withDefaults(defineProps<{ title: string; hideLine?: boolean; showBG?: boolean }
     border-radius: 30px;
     font-size: 17px;
     margin: 20px 0;
+  }
+
+  .divider——line {
+    display: none;
+  }
+
+  .divider-com {
+    flex-direction: column;
   }
 }
 </style>

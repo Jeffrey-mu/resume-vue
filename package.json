@@ -24,6 +24,7 @@
     "prettier": "^2.7.1",
     "prism-theme-vars": "^0.2.4",
     "scss": "^0.2.4",
+    "upload-files-to-oss": "^0.0.4",
     "upload-server-files": "^0.0.3",
     "vue": "^3.2.37",
     "vue-demi": "^0.13.4",

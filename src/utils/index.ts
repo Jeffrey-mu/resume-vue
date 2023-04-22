@@ -8,15 +8,8 @@
 import type { Ref } from 'vue'
 import { message } from 'ant-design-vue'
 import {
-  OpenSourceProjectState,
   OperationType,
-  PerjectState,
-  PersonalSkillsState,
-  type ResumeStateModel,
-  SchoolState,
-  SelfIntroduce
-  , SelfProfileState,
-  WorkExperienceState,
+  getResumeData,
 } from '~/composables/resume'
 export const print = () => {
   window.print()
@@ -29,17 +22,6 @@ export const exportDataToLocal = (data: string | object, fileName: string) => {
     new Blob([content], { type: 'application/json' }),
   )
   a.click()
-}
-export const getConfig = () => {
-  return {
-    SelfProfileState: SelfProfileState.value,
-    SchoolState: SchoolState.value,
-    SelfIntroduce: SelfIntroduce.value,
-    PersonalSkillsState: PersonalSkillsState.value,
-    PerjectState: PerjectState.value,
-    WorkExperienceState: WorkExperienceState.value,
-    OpenSourceProjectState: OpenSourceProjectState.value,
-  } as ResumeStateModel
 }
 
 export const operationData = (data: Ref) => {
@@ -57,15 +39,6 @@ export const operationData = (data: Ref) => {
     else
       data.value.push(newData)
   }
-}
-export const importDataToLocal = (data: ResumeStateModel) => {
-  SelfProfileState.value = data.SelfProfileState
-  SchoolState.value = data.SchoolState
-  SelfIntroduce.value = data.SelfIntroduce
-  PersonalSkillsState.value = data.PersonalSkillsState
-  PerjectState.value = data.PerjectState
-  WorkExperienceState.value = data.WorkExperienceState
-  OpenSourceProjectState.value = data.OpenSourceProjectState
 }
 export const clipboard = (copyData: string) => {
   window.navigator.clipboard.writeText(copyData).then((_res) => {
@@ -122,4 +95,23 @@ export const getDevice = (): 'mobile' | 'pc' => {
     && /Android|webOS|iPhone|iPod|BlackBerry/i.test(window.navigator.userAgent)
     ? 'mobile'
     : 'pc'
+}
+
+export function groupByCount(arr: any[], count: number): any[] {
+  const groups: any[] = []
+  let groupIndex = -1
+
+  for (let i = 0; i < arr.length; i++) {
+    if (i % count === 0) {
+      groupIndex++
+      groups[groupIndex] = []
+    }
+    groups[groupIndex].push(arr[i])
+  }
+
+  return groups
+}
+
+export function savaResumeData() {
+  localStorage.setItem('resume', JSON.stringify(getResumeData()))
 }

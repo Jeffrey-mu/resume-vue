@@ -51,7 +51,7 @@ defineProps<{ type: string }>()
 .nav_header {
   position: sticky;
   top: 0;
-  z-index: 999999999999;
+  z-index: 9;
   box-shadow: 0 2px 8px #f0f1f2;
 }
 </style>

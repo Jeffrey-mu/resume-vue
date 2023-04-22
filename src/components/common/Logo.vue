@@ -9,7 +9,7 @@ withDefaults(defineProps<{ color?: string }>(), {
     flex href="/" :style="
       { color }"
   >
-    <svg
+    <!-- <svg
       mt="17px" t="1677332212410" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
       p-id="11688" width="25" height="25"
     >
@@ -33,7 +33,7 @@ withDefaults(defineProps<{ color?: string }>(), {
         d="M113.777778 515.697778l361.908148 168.011852a85.997037 85.997037 0 0 0 35.934815 7.964444 85.333333 85.333333 0 0 0 33.564444-6.826667l363.330371-155.211851v373.475555H113.777778V515.697778m-9.481482-62.957037a44.373333 44.373333 0 0 0-27.591111 9.481481A56.035556 56.035556 0 0 0 56.888889 505.742222v401.066667c0 29.108148 21.333333 53.191111 47.407407 53.191111h813.416297a50.536296 50.536296 0 0 0 47.407407-53.191111V520.248889a54.802963 54.802963 0 0 0-20.48-43.140741 45.511111 45.511111 0 0 0-27.496296-9.481481 42.382222 42.382222 0 0 0-17.066667 3.602963l-377.647407 161.185185a28.444444 28.444444 0 0 1-23.22963 0l-377.362963-175.691852a43.045926 43.045926 0 0 0-17.540741-3.887407z"
         :fill="color" p-id="11693"
       />
-    </svg>
+    </svg> -->
     &nbsp;Rresume
   </a>
 </template>
@@ -46,5 +46,12 @@ a {
   font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji", sans-serif;
   white-space: nowrap;
   text-decoration: none;
+  background-image: linear-gradient(to right, #810CA8 0, #ED2B2A 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 </style>

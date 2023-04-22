@@ -5,11 +5,16 @@ const [resume_list_template1, drag] = useTemplate4RefsList()
 
 <template>
   <div class="content page template template_4" m-2>
-    <div class="left" :style="{ backgroundColor: currentColor }" />
+    <div
+      class="left vertical-text" :style="{ backgroundColor: currentColor }" style="font-family: fantasy;"
+    >
+      personal resume
+    </div>
     <div class="right" mt-2 p-5>
       <draggable
         v-model="resume_list_template1" ghost-class="ghost" handle=".handle" tag="transition-group"
-        :component-data="{ tag: 'handle', name: 'flip-list', type: 'transition' }" @start="drag = true" @end="drag = false"
+        :component-data="{ tag: 'handle', name: 'flip-list', type: 'transition' }" @start="drag = true"
+        @end="drag = false"
       >
         <template #item="{ element }">
           <li>
@@ -28,13 +33,27 @@ const [resume_list_template1, drag] = useTemplate4RefsList()
   overflow: hidden;
 
 }
+
 .template_4 {
   display: flex;
+
   .left {
     width: 40px;
-    height: 100%;
+    height: auto;
   }
-  .right{
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: rgba(#fff, 0.3);
+    line-height: 40px;
+    padding-top: 20px;
+    font-size: 20px;
+    letter-spacing: -0.2rem;
+    text-transform: uppercase;
+  }
+
+  .right {
     flex: 1;
     padding-left: 30px;
   }

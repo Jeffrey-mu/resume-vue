@@ -18,7 +18,7 @@ import WorkExperienceSetting from '~/components/resume/setting/WorkExperienceSet
 import PerjectSetting from '~/components/resume/setting/PerjectSetting.vue'
 import OpenSourceProjectSetting from '~/components/resume/setting/OpenSourceProjectSetting.vue'
 import ThemeSetting from '~/components/resume/setting/ThemeSetting.vue'
-import { getDevice, importDataToLocal } from '~/utils'
+import { getDevice } from '~/utils'
 
 export const radius = ref<string>('50%')
 export const model = ref<boolean>(false)
@@ -62,7 +62,7 @@ export const SelfProfileState = ref<SelfProfileStateModel>({
   position: 'web开发',
   showImg: true,
   radius: '50%',
-  avatar: 'https://avatars.githubusercontent.com/u/66287770?v=4',
+  avatar: 'images/resume_avatar.jpg',
   fileList: [],
 })
 interface SelfProfileModel {
@@ -340,15 +340,7 @@ export const OpenSourceProjectState = ref<OpenSourceProjectStateModel[]>([
     link: 'https://resume-vue.vercel.app/',
   },
 ])
-export interface ResumeStateModel {
-  PerjectState: PerjectStateModel[]
-  WorkExperienceState: WorkExperienceStateModel[]
-  PersonalSkillsState: PersonalSkillsStateModel[]
-  SelfProfileState: SelfProfileStateModel
-  SchoolState: SchoolStateModel[]
-  SelfIntroduce: []
-  OpenSourceProjectState: OpenSourceProjectStateModel[]
-}
+
 export enum OperationType {
   del,
   add,
@@ -373,17 +365,24 @@ export function init_state() {
     currentColor.value = localStorage.getItem('currentColor') || defaultColor
     const resumeState = localStorage.getItem('resume')
     theme.value = localStorage.getItem('theme') ? Number(localStorage.getItem('theme')) : 2
-    resumeState && importDataToLocal(JSON.parse(resumeState))
+    resumeState && importDataForLocal(JSON.parse(resumeState))
   })
 }
-
+export function setCurrentColor(color: string) {
+  currentColor.value = color
+  localStorage.setItem('currentColor', color || '')
+}
 export const SelfProfile = ref<SelfProfileModel>({
   name: {
-    value: '张翠山',
+    value: '小兰花',
     style: { color: currentColor.value },
   },
   address: {
     value: '北京市朝阳区前门102',
+    style: {},
+  },
+  tel: {
+    value: '182****3211',
     style: {},
   },
   birthday: {
@@ -394,8 +393,47 @@ export const SelfProfile = ref<SelfProfileModel>({
     value: '1115378579@163.com',
     style: {},
   },
-  tel: {
-    value: '182****3211',
-    style: {},
-  },
 })
+export interface ResumeStateModel {
+  PerjectState: PerjectStateModel[]
+  WorkExperienceState: WorkExperienceStateModel[]
+  PersonalSkillsState: PersonalSkillsStateModel[]
+  SelfProfileState: SelfProfileStateModel
+  SchoolState: SchoolStateModel[]
+  SelfIntroduce: []
+  OpenSourceProjectState: OpenSourceProjectStateModel[]
+  SelfProfile: SelfProfileModel
+  ReceivedRewards: DataModel[]
+  InternshipExperience: InternshipExperienceModel[]
+  SelfEvaluation: DataModel[]
+}
+
+export const getResumeData = () => {
+  return {
+    SelfProfileState: SelfProfileState.value,
+    SchoolState: SchoolState.value,
+    SelfIntroduce: SelfIntroduce.value,
+    PersonalSkillsState: PersonalSkillsState.value,
+    PerjectState: PerjectState.value,
+    WorkExperienceState: WorkExperienceState.value,
+    OpenSourceProjectState: OpenSourceProjectState.value,
+    SelfProfile: SelfProfile.value,
+    ReceivedRewards: ReceivedRewards.value,
+    InternshipExperience: InternshipExperience.value,
+    SelfEvaluation: SelfEvaluation.value,
+  } as ResumeStateModel
+}
+
+export function importDataForLocal(data: ResumeStateModel) {
+  SelfProfileState.value = data.SelfProfileState
+  SchoolState.value = data.SchoolState
+  SelfIntroduce.value = data.SelfIntroduce
+  PersonalSkillsState.value = data.PersonalSkillsState
+  PerjectState.value = data.PerjectState
+  WorkExperienceState.value = data.WorkExperienceState
+  OpenSourceProjectState.value = data.OpenSourceProjectState
+  SelfProfile.value = data.SelfProfile
+  ReceivedRewards.value = data.ReceivedRewards
+  InternshipExperience.value = data.InternshipExperience
+  SelfEvaluation.value = data.SelfEvaluation
+}
