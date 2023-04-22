@@ -27,7 +27,7 @@ const MAPPING_TABLE = {
     <div class="name_head" flex="~ " justify-between>
       <EditablePanel data_key="name" :data="s" />
       <div v-show="s.showImg" class="self-profile-img">
-        <EditablePanel><img :src="SelfProfileState.avatar" alt="" w-20 h-20 :style="{ 'border-radius': s.radius }"></EditablePanel>
+        <EditablePanel><img :src="SelfProfileState.avatar" alt="" h-20 :style="{ 'border-radius': s.radius }"></EditablePanel>
       </div>
     </div>
     <div flex class="self-profile-info">
@@ -43,7 +43,7 @@ const MAPPING_TABLE = {
   </div>
 </template>
 
-<style  lang="scss">
+<style  lang="scss" scoped>
 @media screen and (max-width: 790px) {
   .self-profile_box {
     position: relative;
