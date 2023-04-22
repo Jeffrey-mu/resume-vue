@@ -43,7 +43,7 @@ const MAPPING_TABLE = {
   </div>
 </template>
 
-<style  lang="scss" scoped>
+<style  lang="scss">
 @media screen and (max-width: 790px) {
   .self-profile_box {
     position: relative;
