@@ -7,7 +7,7 @@ withDefaults(defineProps<{ width: string; height: string }>(), {
 
 <template>
   <div class="resume_avatar" :style="{ width, height }">
-    <img src="images/resume_avatar.jpg" alt="">
+    <img src="/images/resume_avatar.jpg" alt="">
   </div>
 </template>
 

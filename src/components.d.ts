@@ -21,8 +21,6 @@ declare module '@vue/runtime-core' {
     Icon: typeof import('./components/common/Icon.vue')['default']
     ImportSetting: typeof import('./components/resume/setting/ImportSetting.vue')['default']
     InternshipExperience: typeof import('./components/resume/InternshipExperience.vue')['default']
-    KeyLabel: typeof import('./components/common/KeyLabel.vue')['default']
-    KeyToLabel: typeof import('./components/common/KeyToLabel.vue')['default']
     Loading: typeof import('./components/common/Loading.vue')['default']
     Logo: typeof import('./components/common/Logo.vue')['default']
     OpenSourceProject: typeof import('./components/resume/OpenSourceProject.vue')['default']

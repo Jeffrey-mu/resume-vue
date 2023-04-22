@@ -62,7 +62,7 @@ export const SelfProfileState = ref<SelfProfileStateModel>({
   position: 'web开发',
   showImg: true,
   radius: '50%',
-  avatar: 'images/resume_avatar.jpg',
+  avatar: '/images/resume_avatar.jpg',
   fileList: [],
 })
 interface SelfProfileModel {
