@@ -10,16 +10,14 @@ function changeModal(value: boolean) {
   visible.value = value
 }
 provide('proview', true)
-const active = ref<number>(1)
 
 defineExpose({
   changeModal,
 })
 const [theme, setTheme] = useTheme()
-active.value = theme.value
 
 function ok() {
-  setTheme(active.value)
+  setTheme(theme.value)
   changeModal(false)
 }
 const colors = ['#675D50',
@@ -170,7 +168,7 @@ const groupColor = groupByCount(colors, 4)
       <!-- <Loading :loading="loading" /> -->
       <ComCard
         v-for="item in templates_computed" :key="item.id" :style="{ display: item.hide ? 'none' : '' }"
-        class="theme_card" :checked="active === item.id" @click="active = item.id; setTheme(item.id)"
+        class="theme_card" :checked="theme === item.id" @click="theme = item.id; setTheme(item.id)"
       >
         <component :is="item.template" />
       </ComCard>
