@@ -168,7 +168,7 @@ const groupColor = groupByCount(colors, 4)
       <!-- <Loading :loading="loading" /> -->
       <ComCard
         v-for="item in templates_computed" :key="item.id" :style="{ display: item.hide ? 'none' : '' }"
-        class="theme_card" :checked="theme === item.id" @click="theme = item.id; setTheme(item.id)"
+        class="theme_card" :checked="theme === item.id" @click="setTheme(item.id)"
       >
         <component :is="item.template" />
       </ComCard>
