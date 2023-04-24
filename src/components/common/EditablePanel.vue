@@ -7,7 +7,7 @@ import { saveResumeData } from '~/utils'
 const { data, data_key } = defineProps<{ data?: any; data_key?: string | number; numberValue?: string }>()
 const toolbar = ref<HTMLElement | null>(null)
 const { style } = useDraggable(toolbar, {
-  initialValue: { x: 20, y: 40 },
+  initialValue: { x: 120, y: 10 },
 })
 const editorRef = shallowRef()
 const handleCreated = (editor: IDomEditor) => {
@@ -119,13 +119,13 @@ function isEditMode(): boolean {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 10px;
-  max-width: 1200px;
+  max-width: 750px;
   max-height: auto;
   height: auto;
   cursor: move;
   user-select: none;
   resize: both;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .w-e-hover-bar {
