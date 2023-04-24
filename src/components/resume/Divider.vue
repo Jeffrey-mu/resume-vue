@@ -110,7 +110,8 @@ withDefaults(defineProps<{ title: MAPPING_TABLE_ICON_MODEL_KEY; hideLine?: boole
     padding: 0px 20px;
     border-radius: 30px;
     font-size: 17px;
-    margin: 20px 0;
+    margin: 10px 0;
+    margin-top: 20px;
   }
 
   .divider——line {

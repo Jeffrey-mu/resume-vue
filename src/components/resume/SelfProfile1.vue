@@ -59,7 +59,7 @@ const info = computed(() => {
   .self-profile-info {
     .self-profile-item {
       p {
-        line-height: 25px;
+        line-height: 35px;
       }
 
       .self-profile_key_label {

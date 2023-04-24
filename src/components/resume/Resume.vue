@@ -20,6 +20,7 @@ init_state()
 
   .template {
     width: 790px;
+    min-height: 100vh;
     .ghost {
       opacity: .3;
     }

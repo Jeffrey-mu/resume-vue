@@ -6,9 +6,7 @@ provide('draggable_list', resume_list_template1)
 
 <template>
   <div class="content page template template_4" m-2>
-    <div
-      class="left vertical-text" :style="{ backgroundColor: currentColor }" style="font-family: fantasy;"
-    >
+    <div class="left vertical-text" :style="{ backgroundColor: currentColor }" style="font-family: fantasy;">
       personal resume
     </div>
     <div class="right" mt-2 p-5>
@@ -21,11 +19,16 @@ provide('draggable_list', resume_list_template1)
 .template {
   position: relative;
   overflow: hidden;
-
 }
 
 .template_4 {
   display: flex;
+
+  div,
+  p {
+    line-height: 34px;
+    letter-spacing: .1em;
+  }
 
   .left {
     width: 40px;

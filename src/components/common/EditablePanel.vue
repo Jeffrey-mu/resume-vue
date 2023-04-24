@@ -118,14 +118,18 @@ function isEditMode(): boolean {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 10px;
+  padding: 2px;
   max-width: 750px;
   max-height: auto;
   height: auto;
   cursor: move;
+  border-radius: 10px;
   user-select: none;
   resize: both;
   // overflow: hidden;
+}
+.w-e-bar {
+  border-radius: 10px;
 }
 
 .w-e-hover-bar {
