@@ -104,12 +104,6 @@ withDefaults(defineProps<{ title: MAPPING_TABLE_ICON_MODEL_KEY; hideLine?: boole
 
 .template_4 {
 
-  div,
-  p {
-    letter-spacing: 1.5px;
-    line-height: 35px;
-  }
-
   .divider-item__title {
     background-color: v-bind(currentColor);
     color: #fff;

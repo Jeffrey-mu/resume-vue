@@ -1,5 +1,5 @@
 <template>
-  <main flex="~ 1 col">
+  <main flex="~ 1 col" class="home__layouts">
     <Header type="" />
     <div style="min-height: 100vh;" ma>
       <RouterView />

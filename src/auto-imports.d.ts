@@ -26,6 +26,7 @@ declare global {
   const activeComponent: typeof import('./composables/resume')['activeComponent']
   const activeKey: typeof import('./composables/resume')['activeKey']
   const activeName: typeof import('./composables/resume')['activeName']
+  const active_editable_panel_id: typeof import('./composables/editablePanel')['active_editable_panel_id']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const childrenDrawer: typeof import('./composables/resume')['childrenDrawer']
@@ -336,6 +337,7 @@ declare module '@vue/runtime-core' {
     readonly activeComponent: UnwrapRef<typeof import('./composables/resume')['activeComponent']>
     readonly activeKey: UnwrapRef<typeof import('./composables/resume')['activeKey']>
     readonly activeName: UnwrapRef<typeof import('./composables/resume')['activeName']>
+    readonly active_editable_panel_id: UnwrapRef<typeof import('./composables/editablePanel')['active_editable_panel_id']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly childrenDrawer: UnwrapRef<typeof import('./composables/resume')['childrenDrawer']>

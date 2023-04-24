@@ -13,7 +13,7 @@ import ReceivedRewards from '~/components/resume/ReceivedRewards.vue'
 import SelfEvaluation from '~/components/resume/SelfEvaluation.vue'
 import InternshipExperience from '~/components/resume/InternshipExperience.vue'
 
-type resume_list_template_type = Ref<{ id: number; name: string; component: DefinedComponent; props?: {} }[]>
+export type resume_list_template_type = Ref<{ id: number; name: string; component: DefinedComponent; props?: {} }[]>
 
 export function useTemplate1RefsList() {
   const resume_list_template1 = ref([
@@ -85,12 +85,12 @@ export function useTemplate4RefsList() {
       component: SelfProfile1,
     },
     {
-      id: 7,
+      id: 2,
       name: 'School',
       component: School,
     },
     {
-      id: 4,
+      id: 3,
       name: 'InternshipExperience',
       component: InternshipExperience,
     },
@@ -100,7 +100,7 @@ export function useTemplate4RefsList() {
       component: ReceivedRewards,
     },
     {
-      id: 3,
+      id: 5,
       name: 'SelfEvaluation',
       component: SelfEvaluation,
     },
@@ -108,10 +108,10 @@ export function useTemplate4RefsList() {
   ])
   return useTemplateRefsList('resume_list_template4_Symbol', resume_list_template4)
 }
-export function useTemplateRefsList(RESUME_LIST_TEMPLATE1_SYMBOL: string, resume_list_template: resume_list_template_type) {
+export function useTemplateRefsList(RESUME_LIST_TEMPLATE1_SYMBOL: string, resume_list_template: resume_list_template_type): [resume_list_template_type, Ref<boolean>] {
   const drag = ref(false)
   onMounted(() => {
-    setTemplate('', true)
+    setTemplate(RESUME_LIST_TEMPLATE1_SYMBOL, true)
   })
   resume_list_template.value.map(item => item.props = item.props ? item.props : {})
   watch(resume_list_template, (value) => {

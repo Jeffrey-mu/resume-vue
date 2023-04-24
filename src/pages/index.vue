@@ -1,5 +1,4 @@
 <script setup lang="ts">
-init_state()
 </script>
 
 <template>

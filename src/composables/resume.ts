@@ -375,7 +375,7 @@ export function setCurrentColor(color: string) {
 export const SelfProfile = ref<SelfProfileModel>({
   name: {
     value: '小兰花',
-    style: { color: currentColor.value },
+    style: {},
   },
   address: {
     value: '北京市朝阳区前门102',

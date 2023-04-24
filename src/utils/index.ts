@@ -112,6 +112,6 @@ export function groupByCount(arr: any[], count: number): any[] {
   return groups
 }
 
-export function savaResumeData() {
+export function saveResumeData() {
   localStorage.setItem('resume', JSON.stringify(getResumeData()))
 }

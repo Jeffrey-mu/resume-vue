@@ -32,7 +32,7 @@ const MAPPING_TABLE = {
     </div>
     <div flex class="self-profile-info">
       <div flex="~ wrap 1" class="self-profile-item">
-        <p v-for="item in info" :key="item" w="35%" media="">
+        <p v-for="item in info" :key="item" w="35%" media="" flex>
           <EditablePanel>
             <Icon :icon="MAPPING_TABLE[item]" mr-2 />
             <EditablePanel :data_key="item" :data="s" />
@@ -49,7 +49,7 @@ const MAPPING_TABLE = {
     position: relative;
   }
 
-  .self-profile-item p {
+  .self-profile-item > p {
     width: 90%;
   }
 }
@@ -67,6 +67,7 @@ const MAPPING_TABLE = {
     position: relative;
 
     h2,
+    p,
     div {
       line-height: 50px;
       font-size: 35px;

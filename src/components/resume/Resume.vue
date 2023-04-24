@@ -20,10 +20,6 @@ init_state()
 
   .template {
     width: 790px;
-    * {
-      list-style: none;
-    }
-
     .ghost {
       opacity: .3;
     }
@@ -67,5 +63,8 @@ init_state()
   .work_experience__position {
     font-size: 12px;
   }
+}
+ul, ol {
+  list-style: disc outside none;
 }
 </style>

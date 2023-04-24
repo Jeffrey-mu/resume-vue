@@ -23,7 +23,7 @@ const info = computed(() => {
     </div>
     <div flex class="self-profile-info">
       <div flex="~ wrap 1" class="self-profile-item">
-        <p v-for="item in info" :key="item" w="40%" media="">
+        <p v-for="item in info" :key="item" w="40%" media="" flex>
           <EditablePanel>
             <Icon :icon="MAPPING_TABLE_ICON[item]" mr-2 :color="currentColor" />
             <span class="self-profile_key_label">
@@ -44,7 +44,7 @@ const info = computed(() => {
     position: relative;
   }
 
-  .self-profile-item p {
+  .self-profile-item > p {
     width: 90%;
   }
 }
@@ -61,6 +61,7 @@ const info = computed(() => {
       p {
         line-height: 25px;
       }
+
       .self-profile_key_label {
         &::after {
           content: "：";
@@ -73,7 +74,8 @@ const info = computed(() => {
     position: relative;
 
     h2,
-    div {
+    div,
+    p {
       line-height: 50px;
       font-size: 35px;
     }

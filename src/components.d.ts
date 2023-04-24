@@ -32,6 +32,7 @@ declare module '@vue/runtime-core' {
     README: typeof import('./components/README.md')['default']
     ReceivedRewards: typeof import('./components/resume/ReceivedRewards.vue')['default']
     Resume: typeof import('./components/resume/Resume.vue')['default']
+    ResumeDraggable: typeof import('./components/common/ResumeDraggable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     School: typeof import('./components/resume/School.vue')['default']

@@ -1,7 +1,7 @@
 <script setup lang="ts" name="operation">
 import { message } from 'ant-design-vue'
 // import { setVisible } from '~/composables/resume'
-import { clipboard, exportDataToLocal, print, savaResumeData } from '~/utils'
+import { clipboard, exportDataToLocal, print, saveResumeData } from '~/utils'
 const { t } = useI18n()
 const ThemeRef = ref()
 interface BtnList {
@@ -19,7 +19,7 @@ const BTN_LISt = ref<BtnList[]>([
   {
     label: 'resume.operation.save',
     fn: () => {
-      savaResumeData()
+      saveResumeData()
       message.success('配置已保存到本地！')
     },
   },
@@ -74,7 +74,9 @@ const BTN_LISt = ref<BtnList[]>([
     border: none;
     box-sizing: border-box;
   }
-
+  .handle {
+    display: none;
+  }
   .box_btn {
     display: none !important;
   }
