@@ -1,5 +1,5 @@
 import '@wangeditor/editor/dist/css/style.css' // 引入 css
-import { Editor, Toolbar } from '~/utils/editor-for-vue3'
+import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
 import { type UserModule } from '~/types'
 export const install: UserModule = ({ app }) => {
   app.component('Editor', Editor)
