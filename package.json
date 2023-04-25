@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite --port 3333 --open",
     "dep": "node dep.js",
-    "build": "vite-ssg build",
+    "build": "vite build",
+    "build:ssg": "vite-ssg build",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",

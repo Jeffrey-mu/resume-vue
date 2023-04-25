@@ -26,7 +26,7 @@ provide('draggable_list', resume_list_template1)
 
   div,
   p {
-    line-height: 34px;
+    line-height: 30px;
     letter-spacing: .1em;
   }
 
