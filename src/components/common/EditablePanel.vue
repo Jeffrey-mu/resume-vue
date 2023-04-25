@@ -186,13 +186,6 @@ function isEditMode(): boolean {
   }
 
   .editable_panel_identifying {
-    &::before {
-      @include block;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: rgb(0, 0, 0);
-    }
 
   }
 
