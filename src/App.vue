@@ -13,7 +13,7 @@ useHead({
     },
     {
       name: 'theme-color',
-      content: computed(() => (true ? '#00aba9' : '#ffffff')),
+      content: computed(() => (isDark.value ? '#00aba9' : '#ffffff')),
     },
   ],
   link: [
@@ -21,7 +21,7 @@ useHead({
       rel: 'icon',
       type: 'image/svg+xml',
       href: computed(() =>
-        true ? '/favicon-dark.svg' : '/favicon.svg',
+        preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg',
       ),
     },
     {
